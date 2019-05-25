@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+        android:gravity="center"
+              android:background="@android:color/holo_orange_light">
+    <ImageView
+            android:layout_width="283dp"
+            android:layout_height="283dp"
+            android:id="@+id/cellIn"
+            android:layout_gravity="center"
+            android:layout_marginTop="72dp"
+            android:layout_marginBottom="32dp"
+    />
+    <Button
+            android:text="2G"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            tools:layout_editor_absoluteY="230dp"
+            tools:layout_editor_absoluteX="161dp"
+            android:id="@+id/btn2G"
+            style="@style/Widget.AppCompat.Button"
+            android:background="@android:color/background_dark"
+            android:textColor="@android:color/background_light"/>
+    <Button
+            android:text="3G"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            tools:layout_editor_absoluteY="300dp"
+            tools:layout_editor_absoluteX="161dp"
+            android:id="@+id/btn3G"
+            android:background="@android:color/background_dark"
+            android:textColor="@android:color/background_light"/>
+    <Button
+            android:text="4G"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            tools:layout_editor_absoluteY="370dp"
+            tools:layout_editor_absoluteX="161dp"
+            android:id="@+id/btn4G"
+            android:background="@android:color/background_dark"
+            android:textColor="@android:color/background_light"/>
+    <Button
+            android:text="LogOut"
+            android:layout_width="360dp"
+            android:layout_height="44dp" tools:layout_editor_absoluteY="670dp"
+            tools:layout_editor_absoluteX="34dp" android:id="@+id/logoutId"
+            android:background="@android:color/background_dark"
+            android:textColor="@android:color/background_light"/>
+    <TextView
+            android:layout_width="131dp"
+            android:layout_height="26dp" tools:layout_editor_absoluteY="33dp"
+            tools:layout_editor_absoluteX="34dp" android:id="@+id/fileID" android:hint="ID"/>
+
+</LinearLayout>

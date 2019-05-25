@@ -1,0 +1,229 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:2:1-42:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\000b45b3340341649199810655d1e166\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\62f4a4be506afe7889a6e56301a54f0f\AndroidManifest.xml:16:1-20:12
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a6c96c17b74b7061d5808aaf3ed70c51\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.volley:volley:1.1.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\694fb57dd2b19c27e03f136b73b7d5e7\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f50c021ce829e0bb27f42c4b3a315b99\AndroidManifest.xml:2:1-12:12
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e1be4b7fed8e8456dc01a339e224e88f\AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\4e746bb69c3f9c5124a14a9f83b854ac\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f62257fd02c89c69fb2f96c5f3c5d856\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\23fea7d6a1b89e88bfde21f52093c02f\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ca680e0001f0d75802173f2a487a2d3c\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\57a37e0183d3597748087e854e0a176d\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\93bc61a5c164c5fcee6f497ea2746bd2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\9290ec967808aacef111d314078afaf8\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2a4923fc06373edaa4ad15f179c80699\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\8eb6a9fc71a2530440d5674d4f18a90c\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ee886df411ce0bd4e600c2b939e754b1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c065edf8c0178360cba83fb3987c992b\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a6980ccb7a2d98d1e8e42760523d9f93\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\14e4677926ed21a81aee0f89d11ce864\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\d90b5dc0a2f3ef433e67975e39200420\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\8590cd50182b1d4b2084914d5afe5d74\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.1] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\647363ab2962df050592bfa542fcb13d\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\60b5c3f2709bc9942093385b5fb9d3d9\AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\042171e1881595acf4afda6910b297b7\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\84f5894212effe5764a38d67d7cbba34\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\5db20e3a0db37d803fe9d8974ecaceb9\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\b12d2c2aeb273d0b9dc005bdf139ce5b\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\d3fdf7925f051a99dce5a9a880f4d452\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\27a9d7ae149cc38605ceecfbbdfb32ac\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\b2cdb9e88bd5ad77765429227b04884b\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\98e909348de34f0d5296927852f96348\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e0f9c73159f92b6e11405a307ab32d69\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\216553eb208df346a6ec8effd1e25529\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a410753c0797dab293c666231f2192ed\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:2:1-42:12
+	package
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:3:11-46
+		INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:2:1-42:12
+		INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:2:1-42:12
+		INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:5:5-80
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:5:22-78
+uses-permission#android.permission.INTERNET
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:6:5-66
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:6:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:7:5-78
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:7:22-76
+application
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:9:5-40:19
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\000b45b3340341649199810655d1e166\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\000b45b3340341649199810655d1e166\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\62f4a4be506afe7889a6e56301a54f0f\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\62f4a4be506afe7889a6e56301a54f0f\AndroidManifest.xml:19:5-20
+MERGED from [com.android.volley:volley:1.1.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\694fb57dd2b19c27e03f136b73b7d5e7\AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\694fb57dd2b19c27e03f136b73b7d5e7\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f50c021ce829e0bb27f42c4b3a315b99\AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f50c021ce829e0bb27f42c4b3a315b99\AndroidManifest.xml:10:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e1be4b7fed8e8456dc01a339e224e88f\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e1be4b7fed8e8456dc01a339e224e88f\AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.core:core:1.0.1] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\647363ab2962df050592bfa542fcb13d\AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.1] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\647363ab2962df050592bfa542fcb13d\AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\60b5c3f2709bc9942093385b5fb9d3d9\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\60b5c3f2709bc9942093385b5fb9d3d9\AndroidManifest.xml:22:5-23:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\84f5894212effe5764a38d67d7cbba34\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\84f5894212effe5764a38d67d7cbba34\AndroidManifest.xml:9:5-20
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.0.1] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\647363ab2962df050592bfa542fcb13d\AndroidManifest.xml:22:18-86
+	android:supportsRtl
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:15:13-39
+	android:label
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:13:13-45
+	android:roundIcon
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:14:13-49
+	android:icon
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:12:13-44
+	android:allowBackup
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:11:13-39
+	android:theme
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:16:13-44
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:10:13-42
+activity#com.example.myapplication.HalUtamaChoice
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:17:9-18:20
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:17:19-49
+activity#com.example.myapplication.HalUtama3G
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:19:9-20:20
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:19:19-45
+activity#com.example.myapplication.HalUtama2G
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:21:9-22:20
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:21:19-45
+activity#com.example.myapplication.Register
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:23:9-24:20
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:23:19-43
+activity#com.example.myapplication.HalUtama4G
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:29:9-30:20
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:29:19-45
+activity#com.example.myapplication.LogIn
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:31:9-32:20
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:31:19-40
+activity#com.example.myapplication.splash
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:33:9-39:20
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:33:19-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:34:13-38:29
+action#android.intent.action.MAIN
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:35:17-68
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:35:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:37:17-76
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:37:27-74
+uses-sdk
+INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\000b45b3340341649199810655d1e166\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\000b45b3340341649199810655d1e166\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\62f4a4be506afe7889a6e56301a54f0f\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\62f4a4be506afe7889a6e56301a54f0f\AndroidManifest.xml:18:5-42
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a6c96c17b74b7061d5808aaf3ed70c51\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a6c96c17b74b7061d5808aaf3ed70c51\AndroidManifest.xml:20:5-44
+MERGED from [com.android.volley:volley:1.1.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\694fb57dd2b19c27e03f136b73b7d5e7\AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:volley:1.1.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\694fb57dd2b19c27e03f136b73b7d5e7\AndroidManifest.xml:7:5-43
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f50c021ce829e0bb27f42c4b3a315b99\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f50c021ce829e0bb27f42c4b3a315b99\AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e1be4b7fed8e8456dc01a339e224e88f\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e1be4b7fed8e8456dc01a339e224e88f\AndroidManifest.xml:18:5-42
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\4e746bb69c3f9c5124a14a9f83b854ac\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\4e746bb69c3f9c5124a14a9f83b854ac\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f62257fd02c89c69fb2f96c5f3c5d856\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f62257fd02c89c69fb2f96c5f3c5d856\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\23fea7d6a1b89e88bfde21f52093c02f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\23fea7d6a1b89e88bfde21f52093c02f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ca680e0001f0d75802173f2a487a2d3c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ca680e0001f0d75802173f2a487a2d3c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\57a37e0183d3597748087e854e0a176d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\57a37e0183d3597748087e854e0a176d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\93bc61a5c164c5fcee6f497ea2746bd2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\93bc61a5c164c5fcee6f497ea2746bd2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\9290ec967808aacef111d314078afaf8\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\9290ec967808aacef111d314078afaf8\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2a4923fc06373edaa4ad15f179c80699\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2a4923fc06373edaa4ad15f179c80699\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\8eb6a9fc71a2530440d5674d4f18a90c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\8eb6a9fc71a2530440d5674d4f18a90c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ee886df411ce0bd4e600c2b939e754b1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ee886df411ce0bd4e600c2b939e754b1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c065edf8c0178360cba83fb3987c992b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c065edf8c0178360cba83fb3987c992b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a6980ccb7a2d98d1e8e42760523d9f93\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a6980ccb7a2d98d1e8e42760523d9f93\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\14e4677926ed21a81aee0f89d11ce864\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\14e4677926ed21a81aee0f89d11ce864\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\d90b5dc0a2f3ef433e67975e39200420\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\d90b5dc0a2f3ef433e67975e39200420\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\8590cd50182b1d4b2084914d5afe5d74\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\8590cd50182b1d4b2084914d5afe5d74\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\647363ab2962df050592bfa542fcb13d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\647363ab2962df050592bfa542fcb13d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\60b5c3f2709bc9942093385b5fb9d3d9\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\60b5c3f2709bc9942093385b5fb9d3d9\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\042171e1881595acf4afda6910b297b7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\042171e1881595acf4afda6910b297b7\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\84f5894212effe5764a38d67d7cbba34\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\84f5894212effe5764a38d67d7cbba34\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\5db20e3a0db37d803fe9d8974ecaceb9\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\5db20e3a0db37d803fe9d8974ecaceb9\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\b12d2c2aeb273d0b9dc005bdf139ce5b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\b12d2c2aeb273d0b9dc005bdf139ce5b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\d3fdf7925f051a99dce5a9a880f4d452\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\d3fdf7925f051a99dce5a9a880f4d452\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\27a9d7ae149cc38605ceecfbbdfb32ac\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\27a9d7ae149cc38605ceecfbbdfb32ac\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\b2cdb9e88bd5ad77765429227b04884b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\b2cdb9e88bd5ad77765429227b04884b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\98e909348de34f0d5296927852f96348\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\98e909348de34f0d5296927852f96348\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e0f9c73159f92b6e11405a307ab32d69\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e0f9c73159f92b6e11405a307ab32d69\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\216553eb208df346a6ec8effd1e25529\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\216553eb208df346a6ec8effd1e25529\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a410753c0797dab293c666231f2192ed\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a410753c0797dab293c666231f2192ed\AndroidManifest.xml:20:5-44
+INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e1be4b7fed8e8456dc01a339e224e88f\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e1be4b7fed8e8456dc01a339e224e88f\AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e1be4b7fed8e8456dc01a339e224e88f\AndroidManifest.xml:22:13-58
