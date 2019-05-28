@@ -4,11 +4,11 @@ import android.Manifest;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.GradientDrawable;
 import android.location.Criteria;
 import android.location.LocationManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 //import android.support.v4.app.ActivityCompat;
@@ -62,14 +62,16 @@ public class HalUtama3G extends AppCompatActivity {
 
     protected String[] parts;
     protected String ltestr;
-    protected int cellID = 0;
+    protected int cellid = 0;
+    protected int lac = 0, psc = 0, uarfcn = 0, rscp = 0, mcc = 0, mnc = 0;
+    String networkOperator = null;
 
     protected Timer timerCapture;
     protected int numDataPoints = 0;
     protected List<String[]> data;
     protected String csvFilename;
 
-    protected String secno, srscp, slac, scellid;
+    protected String spsc, srscp, slac, scid, suarfcn, snetworkOperator, smcc, smnc;
 
     protected boolean isRecording = false;
     protected boolean animateRecording = true;
@@ -81,7 +83,7 @@ public class HalUtama3G extends AppCompatActivity {
     protected LineChart mChart;
 
     protected Button btnStartRecording, btnPauseResumeRecording, btnStopRecording;
-    protected TextView tvSignalStrength, tvEcNo, tvRSCP, tvLAC, tvCellID, tvDataPoints;
+    protected TextView tvSignalStrength, tvPSC, tvRSCP, tvLAC, tvCID, tvUARFCN, tvNetworkOperator, tvDataPoints;
 
     Context context;
 
@@ -141,10 +143,13 @@ public class HalUtama3G extends AppCompatActivity {
         recAnimation.setRepeatCount(Animation.INFINITE);
         recAnimation.setRepeatMode(Animation.REVERSE);
 
-        tvEcNo = (TextView) findViewById(R.id.numRsrp);
+        tvPSC = (TextView) findViewById(R.id.numRsrp);
         tvRSCP = (TextView) findViewById(R.id.numRsrq);
         tvLAC = (TextView) findViewById(R.id.numPCI);
-        tvCellID = (TextView) findViewById(R.id.numCQI);
+        tvCID = (TextView) findViewById(R.id.numCQI);
+        tvUARFCN = (TextView) findViewById(R.id.numUARFCN);
+        tvNetworkOperator = (TextView) findViewById(R.id.numNetworkOperator);
+
 
         tvRecPau = (TextView) findViewById(R.id.rec_pau);
         tvDataPoints = (TextView) findViewById(R.id.numDataPoints);
@@ -198,38 +203,26 @@ public class HalUtama3G extends AppCompatActivity {
         timerCapture = new Timer();
         timerCapture.scheduleAtFixedRate(new TimerTask() {
 
-            int ecno, rscp, lac, cellid;
-
             @Override
             public void run() {
-
-                if (parts == null || parts.length < 13) {
-                    return;
-                }
-
-
-                ecno = Integer.parseInt(parts[9]);
-                rscp = Integer.parseInt(parts[10]);
-                lac = Integer.parseInt(parts[12]);
-
-                if (ecno == 2147483647) {
-                    ecno = -141;
-                }
-                if (rscp == 2147483647) {
-                    rscp= -30;
-                }
-                if (lac == 2147483647) {
-                    lac = -20;
-                }
-
-                secno = String.valueOf(ecno);
+                
+                spsc = String.valueOf(psc);
                 srscp = String.valueOf(rscp);
                 slac= String.valueOf(lac);
-                scellid = String.valueOf(cellid);
+                scid = String.valueOf(cellid);
+                suarfcn= String.valueOf(lac);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P){
+                    snetworkOperator = String.valueOf(networkOperator);
+                }else{
+                    smcc = String.valueOf(mcc);
+                    smnc = String.valueOf(mnc);
+                    snetworkOperator = smcc+smnc;
+                }
+
 
                 if (isRecording) {
                     String timeCapture = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
-                    data.add(new String[]{timeCapture, secno, srscp, slac, scellid});
+                    data.add(new String[]{timeCapture, spsc, srscp, slac, scid, suarfcn, snetworkOperator});
                     ++numDataPoints;
                 }
 
@@ -237,12 +230,34 @@ public class HalUtama3G extends AppCompatActivity {
                     @Override
                     public void run() {
 
-                        updateSignalStrengthText(ecno);
+                        updateSignalStrengthText(rscp);
 
-                        tvEcNo.setText(secno);
+                        tvPSC.setText(spsc);
                         tvRSCP.setText(srscp);
                         tvLAC.setText(slac);
-                        tvCellID.setText(scellid);
+                        tvCID.setText(scid);
+                        tvUARFCN.setText(suarfcn);
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P){
+                            tvNetworkOperator.setText(snetworkOperator);
+                        } else {
+                            if (snetworkOperator.equals(51010)) {
+                                tvNetworkOperator.setText("Telkomsel");
+                            }
+                            if (snetworkOperator.equals(51011)){
+                                tvNetworkOperator.setText("XL");
+                            }
+                            if (snetworkOperator.equals(51001)){
+                                tvNetworkOperator.setText("Indosat");
+                            }
+                            if (snetworkOperator.equals(51089)){
+                                tvNetworkOperator.setText("Tri");
+                            }
+                            if (snetworkOperator.equals(51009)){
+                                tvNetworkOperator.setText("SmartFren");
+                            }
+
+                        }
+                        tvNetworkOperator.setText(snetworkOperator);
 
                         tvDataPoints.setText(String.valueOf(numDataPoints));
                     }
@@ -251,12 +266,12 @@ public class HalUtama3G extends AppCompatActivity {
         }, 0, 1000);
     }
 
-    protected void updateSignalStrengthText(int ecno) {
-        if (ecno >= -70) {
+    protected void updateSignalStrengthText(int rscp) {
+        if (rscp >= -70) {
             tvSignalStrength.setText(getResources().getString(R.string.signal_excellent));
-        } else if (-71 > ecno && ecno >= -80) {
+        } else if (-71 > rscp && rscp >= -80) {
             tvSignalStrength.setText(getResources().getString(R.string.signal_good));
-        } else if (-81 > ecno && ecno >= -115) {
+        } else if (-81 > rscp && rscp >= -115) {
             tvSignalStrength.setText(getResources().getString(R.string.signal_fair));
         } else {
             tvSignalStrength.setText(getResources().getString(R.string.signal_poor));
@@ -350,7 +365,7 @@ public class HalUtama3G extends AppCompatActivity {
             public void run() {
 
                 CSVWriter writer;
-                String[] headers = "Time, EcNo, RSCP, LAC, CellID".split(",");
+                String[] headers = "PSC, RSCP, LAC, CellID, UARFCN, Network Operator".split(",");
 
                 try {
                     File file = new File(getExternalFilesDir(null), csvFilename + ".csv");
@@ -528,10 +543,12 @@ public class HalUtama3G extends AppCompatActivity {
         ((TextView) findViewById(R.id.filenameLabel)).setVisibility(View.INVISIBLE);
         ((TextView) findViewById(R.id.filenameValue)).setVisibility(View.INVISIBLE);
 
-        tvEcNo.setText("");
+        tvPSC.setText("");
         tvRSCP.setText("");
         tvLAC.setText("");
-        tvCellID.setText("");
+        tvCID.setText("");
+        tvUARFCN.setText("");
+        tvNetworkOperator.setText("");
         tvDataPoints.setText("");
 
         popShim.dismiss();
@@ -752,8 +769,18 @@ public class HalUtama3G extends AppCompatActivity {
                     if (cellInfo instanceof CellInfoWcdma) {
                         // cast to CellInfoLte and call all the CellInfoLte methods you need
                         // Gets the LTE PCI: (returns Physical Cell Id 0..503, Integer.MAX_VALUE if unknown)
-                        cellID = ((CellInfoWcdma) cellInfo).getCellIdentity().getCid();
-//                        smcc = ((CellInfoWcdma) cellInfo).getCellIdentity().
+                        cellid = ((CellInfoWcdma) cellInfo).getCellIdentity().getCid();
+                        lac = ((CellInfoWcdma) cellInfo).getCellIdentity().getLac();
+                        psc = ((CellInfoWcdma) cellInfo).getCellIdentity().getPsc();
+                        uarfcn =((CellInfoWcdma)cellInfo).getCellIdentity().getUarfcn();
+                        rscp = ((CellInfoWcdma)cellInfo).getCellSignalStrength().getDbm();
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P){
+                            networkOperator = ((CellInfoWcdma) cellInfo).getCellIdentity().getMobileNetworkOperator();
+                        } else {
+                            mcc = ((CellInfoWcdma) cellInfo).getCellIdentity().getMcc();
+                            mnc = ((CellInfoWcdma) cellInfo).getCellIdentity().getMnc();
+                        }
+//
                     }
                 }
             } catch (Exception e) {

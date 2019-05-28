@@ -18,6 +18,7 @@
             android:textSize="18dp"
     />
 
+
     <TextView
             android:id="@+id/signalValue"
             android:layout_width="wrap_content"
@@ -84,15 +85,37 @@
     <RelativeLayout
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="30dp"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/filenameValue"
     >
 
         <TextView
+                android:id="@+id/numNetworkOperator"
+                android:layout_width="@dimen/detinfo_value_width"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:padding="2dp"
+                android:text=""
+                android:textColor="@color/detinfo_value"
+                android:textSize="@dimen/detinfo_value_text_size"/>
+
+        <TextView
+                android:id="@+id/NetworkOperatorLabel"
+                android:layout_toRightOf="@id/numNetworkOperator"
+                android:layout_alignBaseline="@id/numNetworkOperator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Operator"
+                android:textColor="#8B8682"
+                android:textSize="@dimen/detinfo_value_label_size"/>
+
+        <TextView
                 android:id="@+id/numRsrp"
                 android:layout_width="@dimen/detinfo_value_width"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/numNetworkOperator"
                 android:gravity="right"
                 android:padding="2dp"
                 android:text=""
@@ -106,7 +129,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:text="Ec/No"
+                android:text="PSC"
                 android:textColor="#8B8682"
                 android:textSize="@dimen/detinfo_value_label_size"/>
 
@@ -155,6 +178,28 @@
                 android:textSize="@dimen/detinfo_value_label_size"/>
 
         <TextView
+                android:id="@+id/numUARFCN"
+                android:layout_below="@id/numCQI"
+                android:layout_width="@dimen/detinfo_value_width"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:padding="2dp"
+                android:text=""
+                android:textColor="@color/detinfo_value"
+                android:textSize="@dimen/detinfo_value_text_size" />
+
+        <TextView
+                android:id="@+id/UARFCNLabel"
+                android:layout_toRightOf="@id/numUARFCN"
+                android:layout_alignBaseline="@id/numUARFCN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="UARFCN"
+                android:textColor="#8B8682"
+                android:textSize="@dimen/detinfo_value_label_size"/>
+
+        <TextView
                 android:id="@+id/numCQI"
                 android:layout_below="@id/numPCI"
                 android:layout_width="@dimen/detinfo_value_width"
@@ -174,13 +219,13 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="4dp"
                 android:layout_toRightOf="@id/numCQI"
-                android:text="Cell ID"
+                android:text="CID"
                 android:textColor="#8B8682"
                 android:textSize="@dimen/detinfo_value_label_size"/>
 
         <TextView
                 android:id="@+id/numDataPoints"
-                android:layout_below="@id/numCQI"
+                android:layout_below="@id/numUARFCN"
                 android:layout_width="@dimen/detinfo_value_width"
                 android:layout_height="wrap_content"
                 android:gravity="right"
