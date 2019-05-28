@@ -233,7 +233,7 @@ public class HalUtama2G extends AppCompatActivity {
                     @Override
                     public void run() {
 
-                        updateSignalStrengthText(srxEqual);
+                        updateSignalStrengthText(rxequal);
 
                         tvRxEqual.setText(srxEqual);
                         tvRxLevel.setText(srxLevel);
@@ -741,6 +741,8 @@ public class HalUtama2G extends AppCompatActivity {
                     // for Activity#requestPermissions for more details.
                     return;
                 }
+
+
                 cellInfoList = tm.getAllCellInfo();
                 for (CellInfo cellInfo : cellInfoList) {
 
@@ -748,6 +750,8 @@ public class HalUtama2G extends AppCompatActivity {
                         // cast to CellInfoLte and call all the CellInfoLte methods you need
                         // Gets the LTE PCI: (returns Physical Cell Id 0..503, Integer.MAX_VALUE if unknown)
                         cellId = ((CellInfoGsm) cellInfo).getCellIdentity().getCid();
+
+
                     }
                 }
             } catch (Exception e) {

@@ -4,13 +4,47 @@
             "outputFile": "C:\\Lucki\\SKRIPSI\\cobaCellIn\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Luckita\\.gradle\\caches\\transforms-2\\files-2.1\\a6c96c17b74b7061d5808aaf3ed70c51\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\Luckita\\.gradle\\caches\\transforms-2\\files-2.1\\18ba2e850a2d7c2c394437e115381348\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
                         "startOffsets": "55,125,196",
                         "endColumns": "69,70,67",
                         "endOffsets": "120,191,259"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Luckita\\.gradle\\caches\\transforms-2\\files-2.1\\f6cd3c4dc9dacbf381e7fed5e624ad66\\res\\values-land\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7",
+                        "startColumns": "0,0,0,0",
+                        "startOffsets": "183,271,358,453",
+                        "endColumns": "87,86,94,90",
+                        "endOffsets": "270,357,452,543"
+                    },
+                    "to": {
+                        "startLines": "5,6,7,8",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "264,356,447,546",
+                        "endColumns": "91,90,98,94",
+                        "endOffsets": "351,442,541,636"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Luckita\\.gradle\\caches\\transforms-2\\files-2.1\\f1bbd3d4a2cc43acf315732fecd666ad\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,130,208",
+                        "endColumns": "74,77,74",
+                        "endOffsets": "125,203,278"
+                    },
+                    "to": {
+                        "startLines": "9,10,11",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "641,716,794",
+                        "endColumns": "74,77,74",
+                        "endOffsets": "711,789,864"
                     }
                 }
             ]

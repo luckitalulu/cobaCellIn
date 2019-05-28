@@ -1,18 +1,18 @@
 package com.example.myapplication;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.GradientDrawable;
+import android.location.Criteria;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
 //import android.support.v4.app.ActivityCompat;
-import android.telephony.CellInfo;
-import android.telephony.CellInfoWcdma;
-import android.telephony.PhoneStateListener;
-import android.telephony.SignalStrength;
-import android.telephony.TelephonyManager;
+import android.telephony.*;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -27,6 +27,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
@@ -43,32 +45,23 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.*;
 
 import au.com.bytecode.opencsv.CSVWriter;
 
 public class HalUtama3G extends AppCompatActivity {
 
-    Button btn;
-    GradientDrawable gd;
-    Button btn_logout;
-    TextView txt_id, txt_username;
-    String id, username;
-    SharedPreferences sharedpreferences;
+    public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
+    private LocationManager locationManager;
+    private Criteria criteria;
+    private String provider;
 
-    public static final String TAG_ID = "id";
-    public static final String TAG_USERNAME = "username";
-
-    protected SignalStrengthListener signalStrengthListener;
+    protected HalUtama3G.SignalStrengthListener signalStrengthListener;
     protected TelephonyManager tm;
     protected List<CellInfo> cellInfoList;
 
     protected String[] parts;
-    protected String wcdmastr;
+    protected String ltestr;
     protected int cellID = 0;
 
     protected Timer timerCapture;
@@ -97,6 +90,17 @@ public class HalUtama3G extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hal_utama_3g);
+        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+
+        criteria = new Criteria();
+        criteria.setAccuracy(Criteria.ACCURACY_FINE);
+        checkLocationPermission();
+        final int min = 1;
+        final int max = 100;
+        final int Id = new Random().nextInt((max - min) + 1) + min;
+
+        Button btn;
+        GradientDrawable gd;
 
         btnStartRecording = (Button) findViewById(R.id.start_recording);
         gd = (GradientDrawable) (btnStartRecording.getBackground());
@@ -202,6 +206,7 @@ public class HalUtama3G extends AppCompatActivity {
                 if (parts == null || parts.length < 13) {
                     return;
                 }
+
 
                 ecno = Integer.parseInt(parts[9]);
                 rscp = Integer.parseInt(parts[10]);
@@ -707,7 +712,7 @@ public class HalUtama3G extends AppCompatActivity {
         Log.d("onDestroyAct SigStr", "+++++++++++++++++++++++++++++++++++ onDestroy");
         try {
             if (signalStrengthListener != null) {
-                tm.listen(signalStrengthListener, SignalStrengthListener.LISTEN_NONE);
+                tm.listen(signalStrengthListener, HalUtama4G.SignalStrengthListener.LISTEN_NONE);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -719,18 +724,18 @@ public class HalUtama3G extends AppCompatActivity {
     //---------------------------------------------------------------------------------------------
     //---------------------------------------------------------------------------------------------
     protected class SignalStrengthListener extends PhoneStateListener {
-        //        @RequiresApi(api = Build.VERSION_CODES.M)
         @Override
-        public void onSignalStrengthsChanged(SignalStrength signalStrength) {
+        public void onSignalStrengthsChanged(android.telephony.SignalStrength signalStrength) {
 
             tm = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
 
-            wcdmastr = signalStrength.toString();
-            parts = wcdmastr.split(" ");
+
+            ltestr = signalStrength.toString();
+            parts = ltestr.split(" ");
 
             try {
 
-                if (checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                     // TODO: Consider calling
                     //    Activity#requestPermissions
                     // here to request the missing permissions, and then overriding
@@ -741,12 +746,14 @@ public class HalUtama3G extends AppCompatActivity {
                     return;
                 }
                 cellInfoList = tm.getAllCellInfo();
+
                 for (CellInfo cellInfo : cellInfoList) {
 
                     if (cellInfo instanceof CellInfoWcdma) {
                         // cast to CellInfoLte and call all the CellInfoLte methods you need
                         // Gets the LTE PCI: (returns Physical Cell Id 0..503, Integer.MAX_VALUE if unknown)
                         cellID = ((CellInfoWcdma) cellInfo).getCellIdentity().getCid();
+//                        smcc = ((CellInfoWcdma) cellInfo).getCellIdentity().
                     }
                 }
             } catch (Exception e) {
@@ -754,6 +761,79 @@ public class HalUtama3G extends AppCompatActivity {
             }
 
             super.onSignalStrengthsChanged(signalStrength);
+        }
+    }
+
+    public boolean checkLocationPermission() {
+        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+
+            // Should we show an explanation?
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.ACCESS_FINE_LOCATION)) {
+
+                // Show an explanation to the user *asynchronously* -- don't block
+                // this thread waiting for the user's response! After the user
+                // sees the explanation, try again to request the permission.
+                new AlertDialog.Builder(this)
+                        .setTitle(R.string.title_location_permission)
+                        .setMessage(R.string.text_location_permission)
+                        .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                //Prompt the user once explanation has been shown
+                                ActivityCompat.requestPermissions(HalUtama3G.this,
+                                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                                        MY_PERMISSIONS_REQUEST_LOCATION);
+                            }
+                        })
+                        .create()
+                        .show();
+
+
+            } else {
+                // No explanation needed, we can request the permission.
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                        MY_PERMISSIONS_REQUEST_LOCATION);
+            }
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case MY_PERMISSIONS_REQUEST_LOCATION: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    // permission was granted, yay! Do the
+                    // location-related task you need to do.
+                    if (ContextCompat.checkSelfPermission(this,
+                            Manifest.permission.ACCESS_FINE_LOCATION)
+                            == PackageManager.PERMISSION_GRANTED) {
+
+                        //Request location updates:
+                        provider = locationManager.getBestProvider(criteria, true);
+                        locationManager.requestLocationUpdates(provider, 400, 1, (android.location.LocationListener) this);
+                    }
+
+                } else {
+
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+
+                }
+                return;
+            }
+
         }
     }
 

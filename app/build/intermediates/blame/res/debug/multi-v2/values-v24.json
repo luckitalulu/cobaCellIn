@@ -4,7 +4,17 @@
             "outputFile": "C:\\Lucki\\SKRIPSI\\cobaCellIn\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Luckita\\.gradle\\caches\\transforms-2\\files-2.1\\2a4923fc06373edaa4ad15f179c80699\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Luckita\\.gradle\\caches\\transforms-2\\files-2.1\\18ba2e850a2d7c2c394437e115381348\\res\\values-v24\\values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Luckita\\.gradle\\caches\\transforms-2\\files-2.1\\6053e9ed32250358012ef2e15e9a26e0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -18,16 +28,6 @@
                         "startOffsets": "347,413,474,540",
                         "endColumns": "65,60,65,66",
                         "endOffsets": "408,469,535,602"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Luckita\\.gradle\\caches\\transforms-2\\files-2.1\\a6c96c17b74b7061d5808aaf3ed70c51\\res\\values-v24\\values-v24.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,212",
-                        "endColumns": "156,134",
-                        "endOffsets": "207,342"
                     }
                 }
             ]
