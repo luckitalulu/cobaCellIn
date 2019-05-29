@@ -1,0 +1,769 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:2:1-48:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c10f56536966b64aba2a250bb61e405b\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.gms:play-services:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c976662571831a4234db5720a90285a1\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-appindexing:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e5bfd4b48e056e126f2785ecc3b13323\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-cast-framework:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f6cd3c4dc9dacbf381e7fed5e624ad66\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-cast:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c0e6ae5cfc8a4b088069385036154346\AndroidManifest.xml:16:1-19:12
+MERGED from [androidx.mediarouter:mediarouter:1.0.0-alpha5] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f1bbd3d4a2cc43acf315732fecd666ad\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\18ba2e850a2d7c2c394437e115381348\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.volley:volley:1.1.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\0ae1faabbafcc054b6dca85dcb517f8c\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ab853ba04648818c57622b017600dc42\AndroidManifest.xml:2:1-12:12
+MERGED from [com.google.android.gms:play-services-ads:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\5a969b47964684031f5d15ab28b1fd60\AndroidManifest.xml:16:1-18:12
+MERGED from [com.google.android.gms:play-services-ads-lite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2cea346bd18ce406f81a052cc92b7803\AndroidManifest.xml:16:1-28:12
+MERGED from [com.google.android.gms:play-services-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\988469da875d8eed4bbad92e6b8d9535\AndroidManifest.xml:16:1-27:12
+MERGED from [com.google.android.gms:play-services-tagmanager:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\1cc081bcef9fc68919ee94db9c09a6df\AndroidManifest.xml:16:1-18:12
+MERGED from [com.google.android.gms:play-services-analytics-impl:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\6abe6f8a9a31612737afaa83b89f0d20\AndroidManifest.xml:16:1-27:12
+MERGED from [com.google.android.gms:play-services-appinvite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\84bd9e02c710285e9ff93db91f61079c\AndroidManifest.xml:16:1-27:12
+MERGED from [com.google.android.gms:play-services-auth:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\b8b2d33ff6730fabc616a9f67a02679c\AndroidManifest.xml:16:1-26:12
+MERGED from [com.google.android.gms:play-services-auth-base:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\06bfc9fdad614c821493a28307523e95\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-clearcut:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\9efb4b241336f8aaee647db383b83ac9\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.firebase:firebase-config:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e84f84f86182293fa3a073a9b5530534\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-awareness:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\03cef62e8e2041fe1f0d8c69642555be\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-games:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a542e0020f9eb626fd31723b333f249f\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-drive:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\44347780679cea5e1d2a1b26516bbf78\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.firebase:firebase-auth:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2986cbcf96157606a428c1ad25bcc146\AndroidManifest.xml:16:1-21:12
+MERGED from [com.google.firebase:firebase-auth-common:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\81dc049e2ceab539e87b57aed7587153\AndroidManifest.xml:16:1-21:12
+MERGED from [com.google.firebase:firebase-auth-module:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\9a82cb1ecb32b0a9521f18b3140aa4a4\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-fitness:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\7a5cad61fb797f6e90e3df3e21122791\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-gcm:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\70c442cac8349d3d85ee106f2aafd7dd\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-wallet:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\cfb21a7cf8b479b6df8292e6def223cc\AndroidManifest.xml:16:1-20:12
+MERGED from [com.google.android.gms:play-services-identity:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c724676010eb6e83ecec2cecf4b765af\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ce5f5993afa7fbed89bf906adf622497\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-instantapps:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f5598ee6ec19c8a4f02bb83a1ceac0e4\AndroidManifest.xml:2:1-4:12
+MERGED from [com.google.android.gms:play-services-location:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\8b77b594a21624716fa8e952fd87b7cc\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-places:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\82701e27488b2e3b117de3a25ba8c478\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\58c893d1c241f7a1d7e7681ab7861365\AndroidManifest.xml:16:1-25:12
+MERGED from [com.google.android.gms:play-services-nearby:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\85bfddbb5948cecf939880edfbd4c519\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-panorama:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\af84ab0722e2ece617961bd5544ea620\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-plus:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\fecb43fc1c6c296b95357f9adfb61ab1\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-safetynet:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a25be2919fdda30795efbe70fbc4a53a\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-vision:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\accaf58e2040229f5931a1251b3207b8\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-wearable:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\741ab023312a92ea941398aeb75483de\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ae50ed1d2f0750a3f722fd95926ee326\AndroidManifest.xml:16:1-21:12
+MERGED from [com.google.firebase:firebase-crash:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\39423684ee51072515daee4e8ff7e3e0\AndroidManifest.xml:16:1-25:12
+MERGED from [com.google.firebase:firebase-database:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2fb8138d1e42d540c4e50f3bce3d0507\AndroidManifest.xml:2:1-4:12
+MERGED from [com.google.firebase:firebase-database-connection:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c7e02e50f77739a52e905103b8c9a112\AndroidManifest.xml:2:1-4:12
+MERGED from [com.google.firebase:firebase-messaging:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\d03517df1745951be503a82e2670fdd5\AndroidManifest.xml:16:1-30:12
+MERGED from [com.google.android.gms:play-services-tagmanager-api:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f8028cf1c01e084719c981910f17c07a\AndroidManifest.xml:16:1-34:12
+MERGED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\eb29a11ed37d5fa463f0213c3a8f9ebd\AndroidManifest.xml:16:1-34:12
+MERGED from [com.google.firebase:firebase-analytics-impl:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f2f16a254c3fadec4280b1e277a7a035\AndroidManifest.xml:16:1-29:12
+MERGED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:16:1-51:12
+MERGED from [com.google.firebase:firebase-storage:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\4c08e4e08acebbbedcd0f4dd2fb5004d\AndroidManifest.xml:2:1-4:12
+MERGED from [com.google.firebase:firebase-storage-common:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\284152a19a4483dcec7122a1f3c89f32\AndroidManifest.xml:2:1-4:12
+MERGED from [com.google.firebase:firebase-common:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e173b656a1c1ad23f76e8a37caab1f32\AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.android.gms:play-services-gass:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2891561158e3021835b26868695077cb\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-tasks:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ac07d8283e07079cb70053c760d922ad\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\728277e9c160f73fe849d537682bbb21\AndroidManifest.xml:16:1-23:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\bde2f0ee5f04f27e8bfa7f1204d7621d\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a381efecfc6dd4a9a9fd9f337939888a\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\94d1f549cab86eb1b5fbb40538e83586\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0-rc01] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\de41ffdd99b304ec6a1bf4bb0b25800a\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\506b351b9f46c4dcc9295f74c5a67695\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.palette:palette:1.0.0-rc01] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\6894f757811f2752bf5e47457554e329\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\7bf59e238da21872c4e7e68789294a84\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\af5e0a60a0f7da79203b73d68bd9a9e6\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\8d3bc30ba6c1204dd3d1896a9ed09e36\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media2:media2:1.0.0-alpha02] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\0ecc136eabd480f91e858afc3e953e4c\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\6053e9ed32250358012ef2e15e9a26e0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f738500e343499d0b91947298a95218b\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\380341b49b9bc8d2148c67a3aa78efa0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\0591df916caea82ee936204cc4053a5c\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\beca19bb8b30e08d2f58c6f4ee272497\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c805d68fa784adfad4a52def2452b667\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\22e43334ff499632cb71dab78e08a0a9\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\855bd48b9858355fed9e62b6e76db2af\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.1] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\6b7188777d43f8f687e902dc3cd42bb9\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\91d5ee6b75ec83d11dc643ded67ff67d\AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a001a858b191d31c1ed4959c614cbac0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a515d87306759a91ed332a6ddf6eae6e\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\1e2869afaccb648fe0a13257dd843d43\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\9191afffec01a83493d4a0bb2f43ce75\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\be83e58e876a6b995b8838007b938bde\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2294338643d717ba9d6a8a540a0e95f1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\4befd31e0caaecad6dcfd94440b0327a\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\b31968ac06fce72e1afddb355237a54d\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\58169d166a633d128d2c4e9e9c4ccab8\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\7cd9435ec0f04b399a84647b7258932c\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\9610457136d8a164139ec9dab8345e1d\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:2:1-48:12
+	package
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:3:11-46
+		INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:2:1-48:12
+		INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:2:1-48:12
+		INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:5:5-67
+MERGED from [com.google.android.gms:play-services-ads-lite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2cea346bd18ce406f81a052cc92b7803\AndroidManifest.xml:19:5-66
+MERGED from [com.google.android.gms:play-services-ads-lite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2cea346bd18ce406f81a052cc92b7803\AndroidManifest.xml:19:5-66
+MERGED from [com.google.android.gms:play-services-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\988469da875d8eed4bbad92e6b8d9535\AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\988469da875d8eed4bbad92e6b8d9535\AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-analytics-impl:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\6abe6f8a9a31612737afaa83b89f0d20\AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-analytics-impl:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\6abe6f8a9a31612737afaa83b89f0d20\AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-appinvite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\84bd9e02c710285e9ff93db91f61079c\AndroidManifest.xml:18:5-66
+MERGED from [com.google.android.gms:play-services-appinvite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\84bd9e02c710285e9ff93db91f61079c\AndroidManifest.xml:18:5-66
+MERGED from [com.google.android.gms:play-services-gcm:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\70c442cac8349d3d85ee106f2aafd7dd\AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-gcm:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\70c442cac8349d3d85ee106f2aafd7dd\AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ce5f5993afa7fbed89bf906adf622497\AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ce5f5993afa7fbed89bf906adf622497\AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\58c893d1c241f7a1d7e7681ab7861365\AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\58c893d1c241f7a1d7e7681ab7861365\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-crash:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\39423684ee51072515daee4e8ff7e3e0\AndroidManifest.xml:18:5-66
+MERGED from [com.google.firebase:firebase-crash:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\39423684ee51072515daee4e8ff7e3e0\AndroidManifest.xml:18:5-66
+MERGED from [com.google.android.gms:play-services-tagmanager-api:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f8028cf1c01e084719c981910f17c07a\AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-tagmanager-api:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f8028cf1c01e084719c981910f17c07a\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\eb29a11ed37d5fa463f0213c3a8f9ebd\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\eb29a11ed37d5fa463f0213c3a8f9ebd\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f2f16a254c3fadec4280b1e277a7a035\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f2f16a254c3fadec4280b1e277a7a035\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:20:5-66
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:6:5-79
+MERGED from [com.google.android.gms:play-services-ads-lite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2cea346bd18ce406f81a052cc92b7803\AndroidManifest.xml:20:5-78
+MERGED from [com.google.android.gms:play-services-ads-lite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2cea346bd18ce406f81a052cc92b7803\AndroidManifest.xml:20:5-78
+MERGED from [com.google.android.gms:play-services-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\988469da875d8eed4bbad92e6b8d9535\AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\988469da875d8eed4bbad92e6b8d9535\AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-analytics-impl:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\6abe6f8a9a31612737afaa83b89f0d20\AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-analytics-impl:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\6abe6f8a9a31612737afaa83b89f0d20\AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\58c893d1c241f7a1d7e7681ab7861365\AndroidManifest.xml:19:5-78
+MERGED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\58c893d1c241f7a1d7e7681ab7861365\AndroidManifest.xml:19:5-78
+MERGED from [com.google.android.gms:play-services-nearby:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\85bfddbb5948cecf939880edfbd4c519\AndroidManifest.xml:4:5-78
+MERGED from [com.google.android.gms:play-services-nearby:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\85bfddbb5948cecf939880edfbd4c519\AndroidManifest.xml:4:5-78
+MERGED from [com.google.android.gms:play-services-tagmanager-api:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f8028cf1c01e084719c981910f17c07a\AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-tagmanager-api:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f8028cf1c01e084719c981910f17c07a\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\eb29a11ed37d5fa463f0213c3a8f9ebd\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\eb29a11ed37d5fa463f0213c3a8f9ebd\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f2f16a254c3fadec4280b1e277a7a035\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f2f16a254c3fadec4280b1e277a7a035\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:19:5-78
+MERGED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:19:5-78
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:6:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:7:5-80
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:7:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:8:5-78
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:8:22-76
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:9:5-74
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:9:22-72
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:10:5-81
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:10:22-78
+application
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:12:5-46:19
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c10f56536966b64aba2a250bb61e405b\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c10f56536966b64aba2a250bb61e405b\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c976662571831a4234db5720a90285a1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c976662571831a4234db5720a90285a1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-appindexing:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e5bfd4b48e056e126f2785ecc3b13323\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-appindexing:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e5bfd4b48e056e126f2785ecc3b13323\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-cast-framework:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f6cd3c4dc9dacbf381e7fed5e624ad66\AndroidManifest.xml:4:5-8:19
+MERGED from [com.google.android.gms:play-services-cast-framework:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f6cd3c4dc9dacbf381e7fed5e624ad66\AndroidManifest.xml:4:5-8:19
+MERGED from [com.google.android.gms:play-services-cast:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c0e6ae5cfc8a4b088069385036154346\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-cast:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c0e6ae5cfc8a4b088069385036154346\AndroidManifest.xml:18:5-19
+MERGED from [com.android.volley:volley:1.1.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\0ae1faabbafcc054b6dca85dcb517f8c\AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\0ae1faabbafcc054b6dca85dcb517f8c\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ab853ba04648818c57622b017600dc42\AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ab853ba04648818c57622b017600dc42\AndroidManifest.xml:10:5-20
+MERGED from [com.google.android.gms:play-services-ads-lite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2cea346bd18ce406f81a052cc92b7803\AndroidManifest.xml:23:5-27:19
+MERGED from [com.google.android.gms:play-services-ads-lite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2cea346bd18ce406f81a052cc92b7803\AndroidManifest.xml:23:5-27:19
+MERGED from [com.google.android.gms:play-services-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\988469da875d8eed4bbad92e6b8d9535\AndroidManifest.xml:26:5-19
+MERGED from [com.google.android.gms:play-services-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\988469da875d8eed4bbad92e6b8d9535\AndroidManifest.xml:26:5-19
+MERGED from [com.google.android.gms:play-services-analytics-impl:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\6abe6f8a9a31612737afaa83b89f0d20\AndroidManifest.xml:26:5-19
+MERGED from [com.google.android.gms:play-services-analytics-impl:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\6abe6f8a9a31612737afaa83b89f0d20\AndroidManifest.xml:26:5-19
+MERGED from [com.google.android.gms:play-services-appinvite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\84bd9e02c710285e9ff93db91f61079c\AndroidManifest.xml:19:5-26:19
+MERGED from [com.google.android.gms:play-services-appinvite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\84bd9e02c710285e9ff93db91f61079c\AndroidManifest.xml:19:5-26:19
+MERGED from [com.google.android.gms:play-services-auth:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\b8b2d33ff6730fabc616a9f67a02679c\AndroidManifest.xml:19:5-25:19
+MERGED from [com.google.android.gms:play-services-auth:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\b8b2d33ff6730fabc616a9f67a02679c\AndroidManifest.xml:19:5-25:19
+MERGED from [com.google.android.gms:play-services-clearcut:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\9efb4b241336f8aaee647db383b83ac9\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-clearcut:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\9efb4b241336f8aaee647db383b83ac9\AndroidManifest.xml:18:5-19
+MERGED from [com.google.firebase:firebase-config:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e84f84f86182293fa3a073a9b5530534\AndroidManifest.xml:18:5-19
+MERGED from [com.google.firebase:firebase-config:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e84f84f86182293fa3a073a9b5530534\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-awareness:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\03cef62e8e2041fe1f0d8c69642555be\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-awareness:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\03cef62e8e2041fe1f0d8c69642555be\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-games:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a542e0020f9eb626fd31723b333f249f\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-games:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a542e0020f9eb626fd31723b333f249f\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-drive:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\44347780679cea5e1d2a1b26516bbf78\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-drive:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\44347780679cea5e1d2a1b26516bbf78\AndroidManifest.xml:18:5-19
+MERGED from [com.google.firebase:firebase-auth:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2986cbcf96157606a428c1ad25bcc146\AndroidManifest.xml:19:5-20:19
+MERGED from [com.google.firebase:firebase-auth:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2986cbcf96157606a428c1ad25bcc146\AndroidManifest.xml:19:5-20:19
+MERGED from [com.google.firebase:firebase-auth-common:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\81dc049e2ceab539e87b57aed7587153\AndroidManifest.xml:19:5-20:19
+MERGED from [com.google.firebase:firebase-auth-common:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\81dc049e2ceab539e87b57aed7587153\AndroidManifest.xml:19:5-20:19
+MERGED from [com.google.android.gms:play-services-fitness:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\7a5cad61fb797f6e90e3df3e21122791\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-fitness:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\7a5cad61fb797f6e90e3df3e21122791\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-gcm:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\70c442cac8349d3d85ee106f2aafd7dd\AndroidManifest.xml:23:5-19
+MERGED from [com.google.android.gms:play-services-gcm:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\70c442cac8349d3d85ee106f2aafd7dd\AndroidManifest.xml:23:5-19
+MERGED from [com.google.android.gms:play-services-identity:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c724676010eb6e83ecec2cecf4b765af\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-identity:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c724676010eb6e83ecec2cecf4b765af\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ce5f5993afa7fbed89bf906adf622497\AndroidManifest.xml:23:5-19
+MERGED from [com.google.android.gms:play-services-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ce5f5993afa7fbed89bf906adf622497\AndroidManifest.xml:23:5-19
+MERGED from [com.google.android.gms:play-services-location:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\8b77b594a21624716fa8e952fd87b7cc\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-location:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\8b77b594a21624716fa8e952fd87b7cc\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-places:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\82701e27488b2e3b117de3a25ba8c478\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-places:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\82701e27488b2e3b117de3a25ba8c478\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\58c893d1c241f7a1d7e7681ab7861365\AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\58c893d1c241f7a1d7e7681ab7861365\AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-nearby:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\85bfddbb5948cecf939880edfbd4c519\AndroidManifest.xml:5:5-19
+MERGED from [com.google.android.gms:play-services-nearby:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\85bfddbb5948cecf939880edfbd4c519\AndroidManifest.xml:5:5-19
+MERGED from [com.google.android.gms:play-services-panorama:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\af84ab0722e2ece617961bd5544ea620\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-panorama:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\af84ab0722e2ece617961bd5544ea620\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-plus:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\fecb43fc1c6c296b95357f9adfb61ab1\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-plus:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\fecb43fc1c6c296b95357f9adfb61ab1\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-safetynet:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a25be2919fdda30795efbe70fbc4a53a\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-safetynet:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a25be2919fdda30795efbe70fbc4a53a\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-vision:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\accaf58e2040229f5931a1251b3207b8\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-vision:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\accaf58e2040229f5931a1251b3207b8\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-wearable:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\741ab023312a92ea941398aeb75483de\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-wearable:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\741ab023312a92ea941398aeb75483de\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ae50ed1d2f0750a3f722fd95926ee326\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ae50ed1d2f0750a3f722fd95926ee326\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.firebase:firebase-crash:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\39423684ee51072515daee4e8ff7e3e0\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-crash:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\39423684ee51072515daee4e8ff7e3e0\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-messaging:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\d03517df1745951be503a82e2670fdd5\AndroidManifest.xml:19:5-29:19
+MERGED from [com.google.firebase:firebase-messaging:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\d03517df1745951be503a82e2670fdd5\AndroidManifest.xml:19:5-29:19
+MERGED from [com.google.android.gms:play-services-tagmanager-api:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f8028cf1c01e084719c981910f17c07a\AndroidManifest.xml:23:5-33:19
+MERGED from [com.google.android.gms:play-services-tagmanager-api:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f8028cf1c01e084719c981910f17c07a\AndroidManifest.xml:23:5-33:19
+MERGED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\eb29a11ed37d5fa463f0213c3a8f9ebd\AndroidManifest.xml:24:5-33:19
+MERGED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\eb29a11ed37d5fa463f0213c3a8f9ebd\AndroidManifest.xml:24:5-33:19
+MERGED from [com.google.firebase:firebase-analytics-impl:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f2f16a254c3fadec4280b1e277a7a035\AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-analytics-impl:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f2f16a254c3fadec4280b1e277a7a035\AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:28:5-50:19
+MERGED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:28:5-50:19
+MERGED from [com.google.firebase:firebase-common:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e173b656a1c1ad23f76e8a37caab1f32\AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.firebase:firebase-common:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e173b656a1c1ad23f76e8a37caab1f32\AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.android.gms:play-services-gass:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2891561158e3021835b26868695077cb\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-gass:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2891561158e3021835b26868695077cb\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-tasks:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ac07d8283e07079cb70053c760d922ad\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-tasks:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ac07d8283e07079cb70053c760d922ad\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\728277e9c160f73fe849d537682bbb21\AndroidManifest.xml:19:5-21:19
+MERGED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\728277e9c160f73fe849d537682bbb21\AndroidManifest.xml:19:5-21:19
+MERGED from [androidx.core:core:1.0.1] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\6b7188777d43f8f687e902dc3cd42bb9\AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.1] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\6b7188777d43f8f687e902dc3cd42bb9\AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\91d5ee6b75ec83d11dc643ded67ff67d\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\91d5ee6b75ec83d11dc643ded67ff67d\AndroidManifest.xml:22:5-23:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a515d87306759a91ed332a6ddf6eae6e\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a515d87306759a91ed332a6ddf6eae6e\AndroidManifest.xml:9:5-20
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.0.1] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\6b7188777d43f8f687e902dc3cd42bb9\AndroidManifest.xml:22:18-86
+	android:supportsRtl
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:18:13-39
+	android:label
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:16:13-45
+	android:roundIcon
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:17:13-49
+	android:icon
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:15:13-44
+	android:allowBackup
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:14:13-39
+	android:theme
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:19:13-44
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:13:13-42
+activity#com.example.myapplication.HalUtamaChoice
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:20:9-21:20
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:20:19-49
+activity#com.example.myapplication.HalUtama3G
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:22:9-23:20
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:22:19-45
+activity#com.example.myapplication.HalUtama2G
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:24:9-25:20
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:24:19-45
+activity#com.example.myapplication.Register
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:26:9-27:20
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:26:19-43
+activity#com.example.myapplication.HalUtama4G
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:32:9-33:20
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:32:19-45
+activity#com.example.myapplication.LogIn
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:34:9-35:20
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:34:19-40
+activity#com.example.myapplication.splash
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:36:9-42:20
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:36:19-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:37:13-41:29
+action#android.intent.action.MAIN
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:38:17-68
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:38:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:40:17-76
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:40:27-74
+meta-data#com.google.android.gms.version
+ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:43:9-45:73
+MERGED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\728277e9c160f73fe849d537682bbb21\AndroidManifest.xml:20:9-121
+MERGED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\728277e9c160f73fe849d537682bbb21\AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:45:17-70
+	android:name
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml:44:17-62
+uses-sdk
+INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c10f56536966b64aba2a250bb61e405b\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c10f56536966b64aba2a250bb61e405b\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c976662571831a4234db5720a90285a1\AndroidManifest.xml:4:5-42
+MERGED from [com.google.android.gms:play-services:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c976662571831a4234db5720a90285a1\AndroidManifest.xml:4:5-42
+MERGED from [com.google.android.gms:play-services-appindexing:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e5bfd4b48e056e126f2785ecc3b13323\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-appindexing:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e5bfd4b48e056e126f2785ecc3b13323\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-cast-framework:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f6cd3c4dc9dacbf381e7fed5e624ad66\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-cast-framework:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f6cd3c4dc9dacbf381e7fed5e624ad66\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-cast:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c0e6ae5cfc8a4b088069385036154346\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-cast:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c0e6ae5cfc8a4b088069385036154346\AndroidManifest.xml:17:5-42
+MERGED from [androidx.mediarouter:mediarouter:1.0.0-alpha5] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f1bbd3d4a2cc43acf315732fecd666ad\AndroidManifest.xml:20:5-44
+MERGED from [androidx.mediarouter:mediarouter:1.0.0-alpha5] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f1bbd3d4a2cc43acf315732fecd666ad\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\18ba2e850a2d7c2c394437e115381348\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\18ba2e850a2d7c2c394437e115381348\AndroidManifest.xml:20:5-44
+MERGED from [com.android.volley:volley:1.1.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\0ae1faabbafcc054b6dca85dcb517f8c\AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:volley:1.1.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\0ae1faabbafcc054b6dca85dcb517f8c\AndroidManifest.xml:7:5-43
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ab853ba04648818c57622b017600dc42\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ab853ba04648818c57622b017600dc42\AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.android.gms:play-services-ads:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\5a969b47964684031f5d15ab28b1fd60\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-ads:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\5a969b47964684031f5d15ab28b1fd60\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-ads-lite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2cea346bd18ce406f81a052cc92b7803\AndroidManifest.xml:22:5-42
+MERGED from [com.google.android.gms:play-services-ads-lite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2cea346bd18ce406f81a052cc92b7803\AndroidManifest.xml:22:5-42
+MERGED from [com.google.android.gms:play-services-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\988469da875d8eed4bbad92e6b8d9535\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\988469da875d8eed4bbad92e6b8d9535\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-tagmanager:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\1cc081bcef9fc68919ee94db9c09a6df\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-tagmanager:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\1cc081bcef9fc68919ee94db9c09a6df\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-analytics-impl:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\6abe6f8a9a31612737afaa83b89f0d20\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-analytics-impl:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\6abe6f8a9a31612737afaa83b89f0d20\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-appinvite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\84bd9e02c710285e9ff93db91f61079c\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-appinvite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\84bd9e02c710285e9ff93db91f61079c\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-auth:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\b8b2d33ff6730fabc616a9f67a02679c\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-auth:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\b8b2d33ff6730fabc616a9f67a02679c\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-auth-base:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\06bfc9fdad614c821493a28307523e95\AndroidManifest.xml:4:5-42
+MERGED from [com.google.android.gms:play-services-auth-base:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\06bfc9fdad614c821493a28307523e95\AndroidManifest.xml:4:5-42
+MERGED from [com.google.android.gms:play-services-clearcut:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\9efb4b241336f8aaee647db383b83ac9\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-clearcut:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\9efb4b241336f8aaee647db383b83ac9\AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-config:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e84f84f86182293fa3a073a9b5530534\AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-config:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e84f84f86182293fa3a073a9b5530534\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-awareness:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\03cef62e8e2041fe1f0d8c69642555be\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-awareness:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\03cef62e8e2041fe1f0d8c69642555be\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-games:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a542e0020f9eb626fd31723b333f249f\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-games:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a542e0020f9eb626fd31723b333f249f\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-drive:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\44347780679cea5e1d2a1b26516bbf78\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-drive:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\44347780679cea5e1d2a1b26516bbf78\AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-auth:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2986cbcf96157606a428c1ad25bcc146\AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-auth:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2986cbcf96157606a428c1ad25bcc146\AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-auth-common:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\81dc049e2ceab539e87b57aed7587153\AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-auth-common:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\81dc049e2ceab539e87b57aed7587153\AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-auth-module:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\9a82cb1ecb32b0a9521f18b3140aa4a4\AndroidManifest.xml:3:5-42
+MERGED from [com.google.firebase:firebase-auth-module:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\9a82cb1ecb32b0a9521f18b3140aa4a4\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-fitness:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\7a5cad61fb797f6e90e3df3e21122791\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-fitness:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\7a5cad61fb797f6e90e3df3e21122791\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-gcm:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\70c442cac8349d3d85ee106f2aafd7dd\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-gcm:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\70c442cac8349d3d85ee106f2aafd7dd\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-wallet:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\cfb21a7cf8b479b6df8292e6def223cc\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-wallet:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\cfb21a7cf8b479b6df8292e6def223cc\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-identity:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c724676010eb6e83ecec2cecf4b765af\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-identity:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c724676010eb6e83ecec2cecf4b765af\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ce5f5993afa7fbed89bf906adf622497\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ce5f5993afa7fbed89bf906adf622497\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-instantapps:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f5598ee6ec19c8a4f02bb83a1ceac0e4\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-instantapps:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f5598ee6ec19c8a4f02bb83a1ceac0e4\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-location:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\8b77b594a21624716fa8e952fd87b7cc\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-location:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\8b77b594a21624716fa8e952fd87b7cc\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-places:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\82701e27488b2e3b117de3a25ba8c478\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-places:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\82701e27488b2e3b117de3a25ba8c478\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\58c893d1c241f7a1d7e7681ab7861365\AndroidManifest.xml:23:5-42
+MERGED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\58c893d1c241f7a1d7e7681ab7861365\AndroidManifest.xml:23:5-42
+MERGED from [com.google.android.gms:play-services-nearby:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\85bfddbb5948cecf939880edfbd4c519\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-nearby:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\85bfddbb5948cecf939880edfbd4c519\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-panorama:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\af84ab0722e2ece617961bd5544ea620\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-panorama:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\af84ab0722e2ece617961bd5544ea620\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-plus:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\fecb43fc1c6c296b95357f9adfb61ab1\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-plus:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\fecb43fc1c6c296b95357f9adfb61ab1\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-safetynet:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a25be2919fdda30795efbe70fbc4a53a\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-safetynet:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a25be2919fdda30795efbe70fbc4a53a\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-vision:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\accaf58e2040229f5931a1251b3207b8\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-vision:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\accaf58e2040229f5931a1251b3207b8\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-wearable:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\741ab023312a92ea941398aeb75483de\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-wearable:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\741ab023312a92ea941398aeb75483de\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ae50ed1d2f0750a3f722fd95926ee326\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ae50ed1d2f0750a3f722fd95926ee326\AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-crash:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\39423684ee51072515daee4e8ff7e3e0\AndroidManifest.xml:20:5-42
+MERGED from [com.google.firebase:firebase-crash:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\39423684ee51072515daee4e8ff7e3e0\AndroidManifest.xml:20:5-42
+MERGED from [com.google.firebase:firebase-database:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2fb8138d1e42d540c4e50f3bce3d0507\AndroidManifest.xml:3:5-42
+MERGED from [com.google.firebase:firebase-database:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2fb8138d1e42d540c4e50f3bce3d0507\AndroidManifest.xml:3:5-42
+MERGED from [com.google.firebase:firebase-database-connection:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c7e02e50f77739a52e905103b8c9a112\AndroidManifest.xml:3:5-42
+MERGED from [com.google.firebase:firebase-database-connection:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c7e02e50f77739a52e905103b8c9a112\AndroidManifest.xml:3:5-42
+MERGED from [com.google.firebase:firebase-messaging:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\d03517df1745951be503a82e2670fdd5\AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-messaging:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\d03517df1745951be503a82e2670fdd5\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-tagmanager-api:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f8028cf1c01e084719c981910f17c07a\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-tagmanager-api:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f8028cf1c01e084719c981910f17c07a\AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\eb29a11ed37d5fa463f0213c3a8f9ebd\AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\eb29a11ed37d5fa463f0213c3a8f9ebd\AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-analytics-impl:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f2f16a254c3fadec4280b1e277a7a035\AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-analytics-impl:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f2f16a254c3fadec4280b1e277a7a035\AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-storage:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\4c08e4e08acebbbedcd0f4dd2fb5004d\AndroidManifest.xml:3:5-42
+MERGED from [com.google.firebase:firebase-storage:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\4c08e4e08acebbbedcd0f4dd2fb5004d\AndroidManifest.xml:3:5-42
+MERGED from [com.google.firebase:firebase-storage-common:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\284152a19a4483dcec7122a1f3c89f32\AndroidManifest.xml:3:5-42
+MERGED from [com.google.firebase:firebase-storage-common:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\284152a19a4483dcec7122a1f3c89f32\AndroidManifest.xml:3:5-42
+MERGED from [com.google.firebase:firebase-common:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e173b656a1c1ad23f76e8a37caab1f32\AndroidManifest.xml:3:5-42
+MERGED from [com.google.firebase:firebase-common:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e173b656a1c1ad23f76e8a37caab1f32\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-gass:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2891561158e3021835b26868695077cb\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-gass:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2891561158e3021835b26868695077cb\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-tasks:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ac07d8283e07079cb70053c760d922ad\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-tasks:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ac07d8283e07079cb70053c760d922ad\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\728277e9c160f73fe849d537682bbb21\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\728277e9c160f73fe849d537682bbb21\AndroidManifest.xml:17:5-42
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\bde2f0ee5f04f27e8bfa7f1204d7621d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\bde2f0ee5f04f27e8bfa7f1204d7621d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a381efecfc6dd4a9a9fd9f337939888a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a381efecfc6dd4a9a9fd9f337939888a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\94d1f549cab86eb1b5fbb40538e83586\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\94d1f549cab86eb1b5fbb40538e83586\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0-rc01] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\de41ffdd99b304ec6a1bf4bb0b25800a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0-rc01] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\de41ffdd99b304ec6a1bf4bb0b25800a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\506b351b9f46c4dcc9295f74c5a67695\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\506b351b9f46c4dcc9295f74c5a67695\AndroidManifest.xml:20:5-44
+MERGED from [androidx.palette:palette:1.0.0-rc01] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\6894f757811f2752bf5e47457554e329\AndroidManifest.xml:20:5-44
+MERGED from [androidx.palette:palette:1.0.0-rc01] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\6894f757811f2752bf5e47457554e329\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\7bf59e238da21872c4e7e68789294a84\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\7bf59e238da21872c4e7e68789294a84\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\af5e0a60a0f7da79203b73d68bd9a9e6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\af5e0a60a0f7da79203b73d68bd9a9e6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\8d3bc30ba6c1204dd3d1896a9ed09e36\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\8d3bc30ba6c1204dd3d1896a9ed09e36\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media2:media2:1.0.0-alpha02] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\0ecc136eabd480f91e858afc3e953e4c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media2:media2:1.0.0-alpha02] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\0ecc136eabd480f91e858afc3e953e4c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\6053e9ed32250358012ef2e15e9a26e0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\6053e9ed32250358012ef2e15e9a26e0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f738500e343499d0b91947298a95218b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f738500e343499d0b91947298a95218b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\380341b49b9bc8d2148c67a3aa78efa0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\380341b49b9bc8d2148c67a3aa78efa0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\0591df916caea82ee936204cc4053a5c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\0591df916caea82ee936204cc4053a5c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\beca19bb8b30e08d2f58c6f4ee272497\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\beca19bb8b30e08d2f58c6f4ee272497\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c805d68fa784adfad4a52def2452b667\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\c805d68fa784adfad4a52def2452b667\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\22e43334ff499632cb71dab78e08a0a9\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\22e43334ff499632cb71dab78e08a0a9\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\855bd48b9858355fed9e62b6e76db2af\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\855bd48b9858355fed9e62b6e76db2af\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\6b7188777d43f8f687e902dc3cd42bb9\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\6b7188777d43f8f687e902dc3cd42bb9\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\91d5ee6b75ec83d11dc643ded67ff67d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\91d5ee6b75ec83d11dc643ded67ff67d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a001a858b191d31c1ed4959c614cbac0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a001a858b191d31c1ed4959c614cbac0\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a515d87306759a91ed332a6ddf6eae6e\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\a515d87306759a91ed332a6ddf6eae6e\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\1e2869afaccb648fe0a13257dd843d43\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\1e2869afaccb648fe0a13257dd843d43\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\9191afffec01a83493d4a0bb2f43ce75\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\9191afffec01a83493d4a0bb2f43ce75\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\be83e58e876a6b995b8838007b938bde\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\be83e58e876a6b995b8838007b938bde\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2294338643d717ba9d6a8a540a0e95f1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2294338643d717ba9d6a8a540a0e95f1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\4befd31e0caaecad6dcfd94440b0327a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\4befd31e0caaecad6dcfd94440b0327a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\b31968ac06fce72e1afddb355237a54d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\b31968ac06fce72e1afddb355237a54d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\58169d166a633d128d2c4e9e9c4ccab8\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\58169d166a633d128d2c4e9e9c4ccab8\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\7cd9435ec0f04b399a84647b7258932c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\7cd9435ec0f04b399a84647b7258932c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\9610457136d8a164139ec9dab8345e1d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\9610457136d8a164139ec9dab8345e1d\AndroidManifest.xml:20:5-44
+INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+		ADDED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Lucki\SKRIPSI\cobaCellIn\app\src\main\AndroidManifest.xml
+receiver#com.google.android.gms.cast.framework.media.MediaIntentReceiver
+ADDED from [com.google.android.gms:play-services-cast-framework:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f6cd3c4dc9dacbf381e7fed5e624ad66\AndroidManifest.xml:5:9-99
+	android:name
+		ADDED from [com.google.android.gms:play-services-cast-framework:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f6cd3c4dc9dacbf381e7fed5e624ad66\AndroidManifest.xml:5:19-97
+service#com.google.android.gms.cast.framework.media.MediaNotificationService
+ADDED from [com.google.android.gms:play-services-cast-framework:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f6cd3c4dc9dacbf381e7fed5e624ad66\AndroidManifest.xml:6:9-103
+	android:name
+		ADDED from [com.google.android.gms:play-services-cast-framework:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f6cd3c4dc9dacbf381e7fed5e624ad66\AndroidManifest.xml:6:18-101
+service#com.google.android.gms.cast.framework.ReconnectionService
+ADDED from [com.google.android.gms:play-services-cast-framework:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f6cd3c4dc9dacbf381e7fed5e624ad66\AndroidManifest.xml:7:9-92
+	android:name
+		ADDED from [com.google.android.gms:play-services-cast-framework:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f6cd3c4dc9dacbf381e7fed5e624ad66\AndroidManifest.xml:7:18-90
+activity#com.google.android.gms.ads.AdActivity
+ADDED from [com.google.android.gms:play-services-ads-lite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2cea346bd18ce406f81a052cc92b7803\AndroidManifest.xml:25:9-232
+	android:configChanges
+		ADDED from [com.google.android.gms:play-services-ads-lite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2cea346bd18ce406f81a052cc92b7803\AndroidManifest.xml:25:72-181
+	android:theme
+		ADDED from [com.google.android.gms:play-services-ads-lite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2cea346bd18ce406f81a052cc92b7803\AndroidManifest.xml:25:182-230
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2cea346bd18ce406f81a052cc92b7803\AndroidManifest.xml:25:19-71
+activity#com.google.android.gms.ads.purchase.InAppPurchaseActivity
+ADDED from [com.google.android.gms:play-services-ads-lite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2cea346bd18ce406f81a052cc92b7803\AndroidManifest.xml:26:9-131
+	android:theme
+		ADDED from [com.google.android.gms:play-services-ads-lite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2cea346bd18ce406f81a052cc92b7803\AndroidManifest.xml:26:92-129
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\2cea346bd18ce406f81a052cc92b7803\AndroidManifest.xml:26:19-91
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.android.gms:play-services-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\988469da875d8eed4bbad92e6b8d9535\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-analytics-impl:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\6abe6f8a9a31612737afaa83b89f0d20\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-analytics-impl:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\6abe6f8a9a31612737afaa83b89f0d20\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\eb29a11ed37d5fa463f0213c3a8f9ebd\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\eb29a11ed37d5fa463f0213c3a8f9ebd\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f2f16a254c3fadec4280b1e277a7a035\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f2f16a254c3fadec4280b1e277a7a035\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:21:5-67
+	android:name
+		ADDED from [com.google.android.gms:play-services-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\988469da875d8eed4bbad92e6b8d9535\AndroidManifest.xml:24:22-65
+activity#com.google.android.gms.appinvite.PreviewActivity
+ADDED from [com.google.android.gms:play-services-appinvite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\84bd9e02c710285e9ff93db91f61079c\AndroidManifest.xml:20:9-25:20
+	android:exported
+		ADDED from [com.google.android.gms:play-services-appinvite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\84bd9e02c710285e9ff93db91f61079c\AndroidManifest.xml:20:51-74
+	android:theme
+		ADDED from [com.google.android.gms:play-services-appinvite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\84bd9e02c710285e9ff93db91f61079c\AndroidManifest.xml:20:75-121
+	android:name
+		ADDED from [com.google.android.gms:play-services-appinvite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\84bd9e02c710285e9ff93db91f61079c\AndroidManifest.xml:20:19-50
+intent-filter#action:name:com.google.android.gms.appinvite.ACTION_PREVIEW+category:name:android.intent.category.DEFAULT
+ADDED from [com.google.android.gms:play-services-appinvite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\84bd9e02c710285e9ff93db91f61079c\AndroidManifest.xml:21:13-24:29
+action#com.google.android.gms.appinvite.ACTION_PREVIEW
+ADDED from [com.google.android.gms:play-services-appinvite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\84bd9e02c710285e9ff93db91f61079c\AndroidManifest.xml:22:17-89
+	android:name
+		ADDED from [com.google.android.gms:play-services-appinvite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\84bd9e02c710285e9ff93db91f61079c\AndroidManifest.xml:22:25-87
+category#android.intent.category.DEFAULT
+ADDED from [com.google.android.gms:play-services-appinvite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\84bd9e02c710285e9ff93db91f61079c\AndroidManifest.xml:23:17-75
+	android:name
+		ADDED from [com.google.android.gms:play-services-appinvite:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\84bd9e02c710285e9ff93db91f61079c\AndroidManifest.xml:23:27-73
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\b8b2d33ff6730fabc616a9f67a02679c\AndroidManifest.xml:20:9-189
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\b8b2d33ff6730fabc616a9f67a02679c\AndroidManifest.xml:20:129-162
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\b8b2d33ff6730fabc616a9f67a02679c\AndroidManifest.xml:20:163-187
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\b8b2d33ff6730fabc616a9f67a02679c\AndroidManifest.xml:20:69-128
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\b8b2d33ff6730fabc616a9f67a02679c\AndroidManifest.xml:20:19-68
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\b8b2d33ff6730fabc616a9f67a02679c\AndroidManifest.xml:24:9-184
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\b8b2d33ff6730fabc616a9f67a02679c\AndroidManifest.xml:24:64-87
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\b8b2d33ff6730fabc616a9f67a02679c\AndroidManifest.xml:24:88-182
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\b8b2d33ff6730fabc616a9f67a02679c\AndroidManifest.xml:24:18-63
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.android.gms:play-services-gcm:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\70c442cac8349d3d85ee106f2aafd7dd\AndroidManifest.xml:20:5-81
+MERGED from [com.google.android.gms:play-services-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ce5f5993afa7fbed89bf906adf622497\AndroidManifest.xml:20:5-81
+MERGED from [com.google.android.gms:play-services-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ce5f5993afa7fbed89bf906adf622497\AndroidManifest.xml:20:5-81
+MERGED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:22:5-81
+MERGED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:22:5-81
+	android:name
+		ADDED from [com.google.android.gms:play-services-gcm:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\70c442cac8349d3d85ee106f2aafd7dd\AndroidManifest.xml:20:22-79
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\58c893d1c241f7a1d7e7681ab7861365\AndroidManifest.xml:21:5-77
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\58c893d1c241f7a1d7e7681ab7861365\AndroidManifest.xml:21:19-51
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\58c893d1c241f7a1d7e7681ab7861365\AndroidManifest.xml:21:52-75
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ae50ed1d2f0750a3f722fd95926ee326\AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ae50ed1d2f0750a3f722fd95926ee326\AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ae50ed1d2f0750a3f722fd95926ee326\AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\ae50ed1d2f0750a3f722fd95926ee326\AndroidManifest.xml:19:19-85
+service#com.google.firebase.messaging.FirebaseMessagingService
+ADDED from [com.google.firebase:firebase-messaging:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\d03517df1745951be503a82e2670fdd5\AndroidManifest.xml:23:9-27:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\d03517df1745951be503a82e2670fdd5\AndroidManifest.xml:23:88-111
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\d03517df1745951be503a82e2670fdd5\AndroidManifest.xml:23:18-87
+intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
+ADDED from [com.google.firebase:firebase-messaging:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\d03517df1745951be503a82e2670fdd5\AndroidManifest.xml:24:13-26:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-messaging:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\d03517df1745951be503a82e2670fdd5\AndroidManifest.xml:24:28-51
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from [com.google.firebase:firebase-messaging:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\d03517df1745951be503a82e2670fdd5\AndroidManifest.xml:25:17-77
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\d03517df1745951be503a82e2670fdd5\AndroidManifest.xml:25:25-75
+service#com.google.android.gms.tagmanager.TagManagerService
+ADDED from [com.google.android.gms:play-services-tagmanager-api:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f8028cf1c01e084719c981910f17c07a\AndroidManifest.xml:24:9-134
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f8028cf1c01e084719c981910f17c07a\AndroidManifest.xml:24:110-132
+	android:exported
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f8028cf1c01e084719c981910f17c07a\AndroidManifest.xml:24:85-109
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f8028cf1c01e084719c981910f17c07a\AndroidManifest.xml:24:18-84
+activity#com.google.android.gms.tagmanager.TagManagerPreviewActivity
+ADDED from [com.google.android.gms:play-services-tagmanager-api:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f8028cf1c01e084719c981910f17c07a\AndroidManifest.xml:25:9-32:20
+	android:noHistory
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f8028cf1c01e084719c981910f17c07a\AndroidManifest.xml:25:94-118
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f8028cf1c01e084719c981910f17c07a\AndroidManifest.xml:25:19-93
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:tagmanager.c.${applicationId}
+ADDED from [com.google.android.gms:play-services-tagmanager-api:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f8028cf1c01e084719c981910f17c07a\AndroidManifest.xml:26:13-31:29
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:tagmanager.c.com.example.myapplication
+ADDED from [com.google.android.gms:play-services-tagmanager-api:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f8028cf1c01e084719c981910f17c07a\AndroidManifest.xml:26:13-31:29
+data
+ADDED from [com.google.android.gms:play-services-tagmanager-api:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f8028cf1c01e084719c981910f17c07a\AndroidManifest.xml:27:17-71
+	android:scheme
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f8028cf1c01e084719c981910f17c07a\AndroidManifest.xml:27:23-69
+action#android.intent.action.VIEW
+ADDED from [com.google.android.gms:play-services-tagmanager-api:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f8028cf1c01e084719c981910f17c07a\AndroidManifest.xml:28:17-68
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f8028cf1c01e084719c981910f17c07a\AndroidManifest.xml:28:25-66
+category#android.intent.category.BROWSABLE
+ADDED from [com.google.android.gms:play-services-tagmanager-api:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f8028cf1c01e084719c981910f17c07a\AndroidManifest.xml:30:17-77
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f8028cf1c01e084719c981910f17c07a\AndroidManifest.xml:30:27-75
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\eb29a11ed37d5fa463f0213c3a8f9ebd\AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f2f16a254c3fadec4280b1e277a7a035\AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f2f16a254c3fadec4280b1e277a7a035\AndroidManifest.xml:25:7-26:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\eb29a11ed37d5fa463f0213c3a8f9ebd\AndroidManifest.xml:25:90-112
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\eb29a11ed37d5fa463f0213c3a8f9ebd\AndroidManifest.xml:25:113-137
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\eb29a11ed37d5fa463f0213c3a8f9ebd\AndroidManifest.xml:25:17-89
+receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
+ADDED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\eb29a11ed37d5fa463f0213c3a8f9ebd\AndroidManifest.xml:27:7-31:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\eb29a11ed37d5fa463f0213c3a8f9ebd\AndroidManifest.xml:27:162-184
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\eb29a11ed37d5fa463f0213c3a8f9ebd\AndroidManifest.xml:27:105-161
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\eb29a11ed37d5fa463f0213c3a8f9ebd\AndroidManifest.xml:27:17-104
+intent-filter#action:name:com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\eb29a11ed37d5fa463f0213c3a8f9ebd\AndroidManifest.xml:28:11-30:27
+action#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\eb29a11ed37d5fa463f0213c3a8f9ebd\AndroidManifest.xml:29:15-76
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\eb29a11ed37d5fa463f0213c3a8f9ebd\AndroidManifest.xml:29:23-74
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\eb29a11ed37d5fa463f0213c3a8f9ebd\AndroidManifest.xml:32:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f2f16a254c3fadec4280b1e277a7a035\AndroidManifest.xml:27:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f2f16a254c3fadec4280b1e277a7a035\AndroidManifest.xml:27:7-137
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\eb29a11ed37d5fa463f0213c3a8f9ebd\AndroidManifest.xml:32:88-110
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\eb29a11ed37d5fa463f0213c3a8f9ebd\AndroidManifest.xml:32:111-135
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\eb29a11ed37d5fa463f0213c3a8f9ebd\AndroidManifest.xml:32:16-87
+permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:24:5-109
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:24:72-107
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:24:17-71
+permission#com.example.myapplication.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:24:5-109
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:24:72-107
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:24:17-71
+uses-permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:26:5-78
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:26:22-76
+uses-permission#com.example.myapplication.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:26:5-78
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:26:22-76
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:30:9-36:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:30:85-108
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:30:109-169
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:30:19-84
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE+action:name:com.google.android.c2dm.intent.REGISTRATION+category:name:${applicationId}
+ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:31:13-35:29
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE+action:name:com.google.android.c2dm.intent.REGISTRATION+category:name:com.example.myapplication
+ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:31:13-35:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:32:17-80
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:32:25-78
+action#com.google.android.c2dm.intent.REGISTRATION
+ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:33:17-85
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:33:25-83
+category#${applicationId}
+ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:34:17-60
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:34:27-58
+category#com.example.myapplication
+ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:34:17-60
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:34:27-58
+receiver#com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
+ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:40:9-119
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:40:93-117
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:40:19-92
+service#com.google.firebase.iid.FirebaseInstanceIdService
+ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:44:9-48:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:44:83-106
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:44:18-82
+intent-filter#action:name:com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:45:13-47:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:45:28-51
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:46:17-79
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\f7c67cfab3c1eb923f3a08d3b1e6e8e4\AndroidManifest.xml:46:25-77
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e173b656a1c1ad23f76e8a37caab1f32\AndroidManifest.xml:6:9-175
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e173b656a1c1ad23f76e8a37caab1f32\AndroidManifest.xml:6:19-78
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e173b656a1c1ad23f76e8a37caab1f32\AndroidManifest.xml:6:125-149
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e173b656a1c1ad23f76e8a37caab1f32\AndroidManifest.xml:6:150-173
+	android:name
+		ADDED from [com.google.firebase:firebase-common:9.8.0] C:\Users\Luckita\.gradle\caches\transforms-2\files-2.1\e173b656a1c1ad23f76e8a37caab1f32\AndroidManifest.xml:6:79-124

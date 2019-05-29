@@ -189,7 +189,7 @@
                 android:textSize="@dimen/detinfo_value_text_size" />
 
         <TextView
-                android:id="@+id/UARFCNLabel"
+                android:id="@+id/ARFCNLabel"
                 android:layout_toRightOf="@id/numUARFCN"
                 android:layout_alignBaseline="@id/numUARFCN"
                 android:layout_width="wrap_content"

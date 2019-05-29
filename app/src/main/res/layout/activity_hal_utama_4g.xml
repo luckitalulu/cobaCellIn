@@ -88,11 +88,33 @@
             android:layout_centerHorizontal="true"
             android:layout_below="@id/filenameValue"
     >
+        <TextView
+                android:id="@+id/numNetworkOperator"
+                android:layout_width="@dimen/detinfo_value_width"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:padding="2dp"
+                android:text=""
+                android:textColor="@color/detinfo_value"
+                android:textSize="@dimen/detinfo_value_text_size"/>
+
+        <TextView
+                android:id="@+id/NetworkOperatorLabel"
+                android:layout_toRightOf="@id/numNetworkOperator"
+                android:layout_alignBaseline="@id/numNetworkOperator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Operator"
+                android:textColor="#8B8682"
+                android:textSize="@dimen/detinfo_value_label_size"/>
+
 
         <TextView
                 android:id="@+id/numRsrp"
                 android:layout_width="@dimen/detinfo_value_width"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/numNetworkOperator"
                 android:gravity="right"
                 android:padding="2dp"
                 android:text=""

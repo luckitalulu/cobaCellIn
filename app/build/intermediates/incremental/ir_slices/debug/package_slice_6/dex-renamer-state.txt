@@ -1,0 +1,4 @@
+#Wed May 29 19:33:36 ICT 2019
+base.0=C\:\\Lucki\\SKRIPSI\\cobaCellIn\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\6
+path.0=classes.dex
+renamed.0=classes.dex

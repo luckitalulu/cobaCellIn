@@ -84,7 +84,7 @@ public class HalUtama3G extends AppCompatActivity {
 
     protected Button btnStartRecording, btnPauseResumeRecording, btnStopRecording;
     protected TextView tvSignalStrength, tvPSC, tvRSCP, tvLAC, tvCID, tvUARFCN, tvNetworkOperator, tvDataPoints;
-
+    protected String stringNetworkOperator, stringMccMnc;
     Context context;
 
     @Override
@@ -205,18 +205,45 @@ public class HalUtama3G extends AppCompatActivity {
 
             @Override
             public void run() {
-                
+
                 spsc = String.valueOf(psc);
                 srscp = String.valueOf(rscp);
                 slac= String.valueOf(lac);
                 scid = String.valueOf(cellid);
                 suarfcn= String.valueOf(lac);
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P){
-                    snetworkOperator = String.valueOf(networkOperator);
-                }else{
-                    smcc = String.valueOf(mcc);
-                    smnc = String.valueOf(mnc);
-                    snetworkOperator = smcc+smnc;
+                smcc = String.valueOf(mcc);
+                smnc = String.valueOf(mnc);
+                snetworkOperator = smcc + smnc;
+
+                if (slac.equals("2147483647")){
+                    slac = "Error Reading";
+                }
+                if (scid.equals("2147483647")){
+                    scid = "Error Reading";
+                }
+                if (suarfcn.equals("2147483647")){
+                    suarfcn = "Error Reading";
+                }
+
+                switch (snetworkOperator) {
+                    case "51010":
+                        stringNetworkOperator = "Telkomsel";
+                        break;
+                    case "51011":
+                        stringNetworkOperator = "XL";
+                        break;
+                    case "51001":
+                        stringNetworkOperator = "Indosat";
+                        break;
+                    case "51089":
+                        stringNetworkOperator = "Tri";
+                        break;
+                    case "51009":
+                        stringNetworkOperator = "SmartFren";
+                        break;
+                    default:
+                        stringNetworkOperator = "Reading";
+                        break;
                 }
 
 
@@ -237,28 +264,7 @@ public class HalUtama3G extends AppCompatActivity {
                         tvLAC.setText(slac);
                         tvCID.setText(scid);
                         tvUARFCN.setText(suarfcn);
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P){
-                            tvNetworkOperator.setText(snetworkOperator);
-                        } else {
-                            if (snetworkOperator.equals(51010)) {
-                                tvNetworkOperator.setText("Telkomsel");
-                            }
-                            if (snetworkOperator.equals(51011)){
-                                tvNetworkOperator.setText("XL");
-                            }
-                            if (snetworkOperator.equals(51001)){
-                                tvNetworkOperator.setText("Indosat");
-                            }
-                            if (snetworkOperator.equals(51089)){
-                                tvNetworkOperator.setText("Tri");
-                            }
-                            if (snetworkOperator.equals(51009)){
-                                tvNetworkOperator.setText("SmartFren");
-                            }
-
-                        }
-                        tvNetworkOperator.setText(snetworkOperator);
-
+                        tvNetworkOperator.setText(stringNetworkOperator);
                         tvDataPoints.setText(String.valueOf(numDataPoints));
                     }
                 });
@@ -774,12 +780,9 @@ public class HalUtama3G extends AppCompatActivity {
                         psc = ((CellInfoWcdma) cellInfo).getCellIdentity().getPsc();
                         uarfcn =((CellInfoWcdma)cellInfo).getCellIdentity().getUarfcn();
                         rscp = ((CellInfoWcdma)cellInfo).getCellSignalStrength().getDbm();
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P){
-                            networkOperator = ((CellInfoWcdma) cellInfo).getCellIdentity().getMobileNetworkOperator();
-                        } else {
-                            mcc = ((CellInfoWcdma) cellInfo).getCellIdentity().getMcc();
-                            mnc = ((CellInfoWcdma) cellInfo).getCellIdentity().getMnc();
-                        }
+                        mcc = ((CellInfoWcdma) cellInfo).getCellIdentity().getMcc();
+                        mnc = ((CellInfoWcdma) cellInfo).getCellIdentity().getMnc();
+
 //
                     }
                 }

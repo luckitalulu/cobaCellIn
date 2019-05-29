@@ -1,19 +1,18 @@
 package com.example.myapplication;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
+import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.GradientDrawable;
+import android.location.Criteria;
+import android.location.LocationManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 //import android.support.v4.app.ActivityCompat;
-import android.telephony.CellInfo;
-import android.telephony.CellInfoGsm;
-import android.telephony.PhoneStateListener;
-import android.telephony.SignalStrength;
-import android.telephony.TelephonyManager;
+import android.telephony.*;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -28,6 +27,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
@@ -44,40 +45,33 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.*;
 
 import au.com.bytecode.opencsv.CSVWriter;
 
 public class HalUtama2G extends AppCompatActivity {
 
-    Button btn;
-    GradientDrawable gd;
-    Button btn_logout;
-    TextView txt_id, txt_username;
-    String id, username;
-    SharedPreferences sharedpreferences;
+    public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
+    private LocationManager locationManager;
+    private Criteria criteria;
+    private String provider;
 
-    public static final String TAG_ID = "id";
-    public static final String TAG_USERNAME = "username";
-
-    protected SignalStrengthListener signalStrengthListener;
+    protected HalUtama2G.SignalStrengthListener signalStrengthListener;
     protected TelephonyManager tm;
     protected List<CellInfo> cellInfoList;
 
     protected String[] parts;
-    protected String gsmstr;
-    protected int cellId = 0;
+    protected String ltestr;
+    protected int cellid = 0;
+    protected int lac = 0, arfcn = 0, bsic = 0, rxLevel = 0, mcc = 0, mnc = 0;
+    String networkOperator = null;
 
     protected Timer timerCapture;
     protected int numDataPoints = 0;
     protected List<String[]> data;
     protected String csvFilename;
 
-    protected String srxEqual, srxLevel, ssqi, scellId;
+    protected String slac, sarfcn, srxlevel, sbsic, scid, snetworkOperator, smcc, smnc;
 
     protected boolean isRecording = false;
     protected boolean animateRecording = true;
@@ -89,8 +83,8 @@ public class HalUtama2G extends AppCompatActivity {
     protected LineChart mChart;
 
     protected Button btnStartRecording, btnPauseResumeRecording, btnStopRecording;
-    protected TextView tvSignalStrength, tvRxEqual, tvRxLevel, tvSQI, tvCellId, tvDataPoints;
-
+    protected TextView tvSignalStrength, tvLAC, tvARFCN, tvRxLevel, tvBSIC, tvCID, tvDataPoints, tvNetworkOperator;
+    protected String stringNetworkOperator, stringMccMnc;
     Context context;
 
     @Override
@@ -98,6 +92,17 @@ public class HalUtama2G extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hal_utama_2g);
+        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+
+        criteria = new Criteria();
+        criteria.setAccuracy(Criteria.ACCURACY_FINE);
+        checkLocationPermission();
+        final int min = 1;
+        final int max = 100;
+        final int Id = new Random().nextInt((max - min) + 1) + min;
+
+        Button btn;
+        GradientDrawable gd;
 
         btnStartRecording = (Button) findViewById(R.id.start_recording);
         gd = (GradientDrawable) (btnStartRecording.getBackground());
@@ -138,10 +143,13 @@ public class HalUtama2G extends AppCompatActivity {
         recAnimation.setRepeatCount(Animation.INFINITE);
         recAnimation.setRepeatMode(Animation.REVERSE);
 
-        tvRxEqual = (TextView) findViewById(R.id.numRsrp);
-        tvRxLevel = (TextView) findViewById(R.id.numRsrq);
-        tvSQI = (TextView) findViewById(R.id.numPCI);
-        tvCellId = (TextView) findViewById(R.id.numCQI);
+        tvARFCN = (TextView) findViewById(R.id.numUARFCN2G);
+        tvRxLevel = (TextView) findViewById(R.id.numRsrq2G);
+        tvBSIC = (TextView) findViewById(R.id.numRsrp2G);
+        tvCID = (TextView) findViewById(R.id.numCQI2G);
+        tvLAC = (TextView) findViewById(R.id.numPCI2G);
+        tvNetworkOperator = (TextView) findViewById(R.id.numNetworkOperator2G);
+
 
         tvRecPau = (TextView) findViewById(R.id.rec_pau);
         tvDataPoints = (TextView) findViewById(R.id.numDataPoints);
@@ -195,37 +203,47 @@ public class HalUtama2G extends AppCompatActivity {
         timerCapture = new Timer();
         timerCapture.scheduleAtFixedRate(new TimerTask() {
 
-            int rxequal, rxlevel, sqi;
-
             @Override
             public void run() {
 
-                if (parts == null || parts.length < 13) {
-                    return;
+                srxlevel = String.valueOf(rxLevel);
+                sbsic = String.valueOf(bsic);
+                scid = String.valueOf(cellid);
+                slac = String.valueOf(lac);
+                sarfcn = String.valueOf(arfcn);
+
+                if (slac.equals("2147483647")){
+                    slac = "Error Reading";
+                }
+                if (scid.equals("2147483647")){
+                    scid = "Error Reading";
+                }
+                smcc = String.valueOf(mcc);
+                smnc = String.valueOf(mnc);
+                snetworkOperator = smcc + smnc;
+                switch (snetworkOperator) {
+                    case "51010":
+                        stringNetworkOperator = "Telkomsel";
+                        break;
+                    case "51011":
+                        stringNetworkOperator = "XL";
+                        break;
+                    case "51001":
+                        stringNetworkOperator = "Indosat";
+                        break;
+                    case "51089":
+                        stringNetworkOperator = "Tri";
+                        break;
+                    case "51009":
+                        stringNetworkOperator = "SmartFren";
+                        break;
+                    default: stringNetworkOperator = "Reading";
                 }
 
-                rxequal = Integer.parseInt(parts[9]);
-                rxlevel = Integer.parseInt(parts[10]);
-                sqi = Integer.parseInt(parts[12]);
-
-                if (rxequal == 2147483647) {
-                    rxequal = -141;
-                }
-                if (rxlevel == 2147483647) {
-                    rxlevel = -30;
-                }
-                if (sqi == 2147483647) {
-                    sqi = -20;
-                }
-
-                srxEqual = String.valueOf(rxequal);
-                srxLevel = String.valueOf(rxlevel);
-                ssqi = String.valueOf(sqi);
-                scellId = String.valueOf(cellId);
 
                 if (isRecording) {
                     String timeCapture = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
-                    data.add(new String[]{timeCapture, srxEqual, srxLevel,  ssqi, scellId});
+                    data.add(new String[]{timeCapture, slac, sarfcn, srxlevel, sbsic, scid, snetworkOperator});
                     ++numDataPoints;
                 }
 
@@ -233,13 +251,14 @@ public class HalUtama2G extends AppCompatActivity {
                     @Override
                     public void run() {
 
-                        updateSignalStrengthText(rxequal);
+                        updateSignalStrengthText(rxLevel);
 
-                        tvRxEqual.setText(srxEqual);
-                        tvRxLevel.setText(srxLevel);
-                        tvSQI.setText(ssqi);
-                        tvCellId.setText(scellId);
-
+                        tvLAC.setText(slac);
+                        tvARFCN.setText(sarfcn);
+                        tvRxLevel.setText(srxlevel);
+                        tvBSIC.setText(sbsic);
+                        tvCID.setText(scid);
+                        tvNetworkOperator.setText(stringNetworkOperator);
                         tvDataPoints.setText(String.valueOf(numDataPoints));
                     }
                 });
@@ -247,12 +266,12 @@ public class HalUtama2G extends AppCompatActivity {
         }, 0, 1000);
     }
 
-    protected void updateSignalStrengthText(int rxEqual) {
-        if (rxEqual >= -70) {
+    protected void updateSignalStrengthText(int rxLevel) {
+        if (rxLevel >= -70) {
             tvSignalStrength.setText(getResources().getString(R.string.signal_excellent));
-        } else if (-71 > rxEqual && rxEqual >= -80) {
+        } else if (-71 > rxLevel && rxLevel >= -80) {
             tvSignalStrength.setText(getResources().getString(R.string.signal_good));
-        } else if (-81 > rxEqual && rxEqual >= -115) {
+        } else if (-81 > rxLevel && rxLevel >= -115) {
             tvSignalStrength.setText(getResources().getString(R.string.signal_fair));
         } else {
             tvSignalStrength.setText(getResources().getString(R.string.signal_poor));
@@ -346,7 +365,7 @@ public class HalUtama2G extends AppCompatActivity {
             public void run() {
 
                 CSVWriter writer;
-                String[] headers = "Time, RxEqual, RxLevel, SQI, CellId".split(",");
+                String[] headers = "LAC, ARFCN, RxLevel, BSIC, CID, Network Operator".split(",");
 
                 try {
                     File file = new File(getExternalFilesDir(null), csvFilename + ".csv");
@@ -416,11 +435,11 @@ public class HalUtama2G extends AppCompatActivity {
         top = mid = low = 0;
 
         for (String[] dataVals : data) {
-            int rxEqual = Integer.valueOf(dataVals[1]);
+            int rxlevel = Integer.valueOf(dataVals[1]);
 
-            if (rxEqual >= -70) {
+            if (rxlevel >= -70) {
                 top++;
-            } else if (rxEqual <= -71 && rxEqual >= -80) {
+            } else if (rxlevel <= -71 && rxlevel >= -80) {
                 mid++;
             } else {
                 low++;
@@ -524,10 +543,11 @@ public class HalUtama2G extends AppCompatActivity {
         ((TextView) findViewById(R.id.filenameLabel)).setVisibility(View.INVISIBLE);
         ((TextView) findViewById(R.id.filenameValue)).setVisibility(View.INVISIBLE);
 
-        tvRxEqual.setText("");
+        tvARFCN.setText("");
         tvRxLevel.setText("");
-        tvSQI.setText("");
-        tvCellId.setText("");
+        tvBSIC.setText("");
+        tvCID.setText("");
+        tvNetworkOperator.setText("");
         tvDataPoints.setText("");
 
         popShim.dismiss();
@@ -708,7 +728,7 @@ public class HalUtama2G extends AppCompatActivity {
         Log.d("onDestroyAct SigStr", "+++++++++++++++++++++++++++++++++++ onDestroy");
         try {
             if (signalStrengthListener != null) {
-                tm.listen(signalStrengthListener, SignalStrengthListener.LISTEN_NONE);
+                tm.listen(signalStrengthListener, HalUtama4G.SignalStrengthListener.LISTEN_NONE);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -720,18 +740,18 @@ public class HalUtama2G extends AppCompatActivity {
     //---------------------------------------------------------------------------------------------
     //---------------------------------------------------------------------------------------------
     protected class SignalStrengthListener extends PhoneStateListener {
-        //        @RequiresApi(api = Build.VERSION_CODES.M)
         @Override
-        public void onSignalStrengthsChanged(SignalStrength signalStrength) {
+        public void onSignalStrengthsChanged(android.telephony.SignalStrength signalStrength) {
 
             tm = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
 
-            gsmstr = signalStrength.toString();
-            parts = gsmstr.split(" ");
+
+            ltestr = signalStrength.toString();
+            parts = ltestr.split(" ");
 
             try {
 
-                if (checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                     // TODO: Consider calling
                     //    Activity#requestPermissions
                     // here to request the missing permissions, and then overriding
@@ -741,17 +761,21 @@ public class HalUtama2G extends AppCompatActivity {
                     // for Activity#requestPermissions for more details.
                     return;
                 }
-
-
                 cellInfoList = tm.getAllCellInfo();
+
                 for (CellInfo cellInfo : cellInfoList) {
 
                     if (cellInfo instanceof CellInfoGsm) {
                         // cast to CellInfoLte and call all the CellInfoLte methods you need
                         // Gets the LTE PCI: (returns Physical Cell Id 0..503, Integer.MAX_VALUE if unknown)
-                        cellId = ((CellInfoGsm) cellInfo).getCellIdentity().getCid();
-
-
+                        cellid = ((CellInfoGsm) cellInfo).getCellIdentity().getCid();
+                        rxLevel = ((CellInfoGsm)cellInfo).getCellSignalStrength().getDbm();
+                        bsic = ((CellInfoGsm)cellInfo).getCellIdentity().getBsic();
+                        arfcn = ((CellInfoGsm)cellInfo).getCellIdentity().getArfcn();
+                        lac = ((CellInfoGsm)cellInfo).getCellIdentity().getLac();
+                        mcc = ((CellInfoGsm) cellInfo).getCellIdentity().getMcc();
+                        mnc = ((CellInfoGsm) cellInfo).getCellIdentity().getMnc();
+//
                     }
                 }
             } catch (Exception e) {
@@ -759,6 +783,79 @@ public class HalUtama2G extends AppCompatActivity {
             }
 
             super.onSignalStrengthsChanged(signalStrength);
+        }
+    }
+
+    public boolean checkLocationPermission() {
+        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+
+            // Should we show an explanation?
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.ACCESS_FINE_LOCATION)) {
+
+                // Show an explanation to the user *asynchronously* -- don't block
+                // this thread waiting for the user's response! After the user
+                // sees the explanation, try again to request the permission.
+                new AlertDialog.Builder(this)
+                        .setTitle(R.string.title_location_permission)
+                        .setMessage(R.string.text_location_permission)
+                        .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                //Prompt the user once explanation has been shown
+                                ActivityCompat.requestPermissions(HalUtama2G.this,
+                                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                                        MY_PERMISSIONS_REQUEST_LOCATION);
+                            }
+                        })
+                        .create()
+                        .show();
+
+
+            } else {
+                // No explanation needed, we can request the permission.
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                        MY_PERMISSIONS_REQUEST_LOCATION);
+            }
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case MY_PERMISSIONS_REQUEST_LOCATION: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    // permission was granted, yay! Do the
+                    // location-related task you need to do.
+                    if (ContextCompat.checkSelfPermission(this,
+                            Manifest.permission.ACCESS_FINE_LOCATION)
+                            == PackageManager.PERMISSION_GRANTED) {
+
+                        //Request location updates:
+                        provider = locationManager.getBestProvider(criteria, true);
+                        locationManager.requestLocationUpdates(provider, 400, 1, (android.location.LocationListener) this);
+                    }
+
+                } else {
+
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+
+                }
+                return;
+            }
+
         }
     }
 

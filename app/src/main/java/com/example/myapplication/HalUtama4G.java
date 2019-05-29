@@ -65,14 +65,14 @@ public class HalUtama4G extends AppCompatActivity {
 
     protected String[] parts;
     protected String ltestr;
-    protected int cellPci = 0;
+    protected int cellPci = 0, mcc = 0, mnc = 0;
 
     protected Timer timerCapture;
     protected int numDataPoints = 0;
     protected List<String[]> data;
     protected String csvFilename;
 
-    protected String srsrp, srsrq, scqi, scellPci;
+    protected String srsrp, srsrq, scqi, scellPci, smcc, smnc, snetworkOperator;
 
     protected boolean isRecording = false;
     protected boolean animateRecording = true;
@@ -84,7 +84,8 @@ public class HalUtama4G extends AppCompatActivity {
     protected LineChart mChart;
 
     protected Button btnStartRecording, btnPauseResumeRecording, btnStopRecording;
-    protected TextView tvSignalStrength, tvRSRP, tvRSRQ, tvPCI, tvCQI, tvDataPoints;
+    protected TextView tvSignalStrength, tvRSRP, tvRSRQ, tvPCI, tvCQI, tvNetworkOperator, tvDataPoints;
+    protected String stringNetworkOperator, stringMccMnc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -145,6 +146,7 @@ public class HalUtama4G extends AppCompatActivity {
         tvRSRQ = (TextView) findViewById(R.id.numRsrq);
         tvPCI = (TextView) findViewById(R.id.numPCI);
         tvCQI = (TextView) findViewById(R.id.numCQI);
+        tvNetworkOperator = (TextView) findViewById(R.id.numNetworkOperator);
 
         tvRecPau = (TextView) findViewById(R.id.rec_pau);
         tvDataPoints = (TextView) findViewById(R.id.numDataPoints);
@@ -211,6 +213,8 @@ public class HalUtama4G extends AppCompatActivity {
                 rsrq = Integer.parseInt(parts[10]);
                 cqi = Integer.parseInt(parts[12]);
 
+
+
                 if (rsrp == 2147483647) {
                     rsrp = -141;
                 }
@@ -225,6 +229,30 @@ public class HalUtama4G extends AppCompatActivity {
                 srsrq = String.valueOf(rsrq);
                 scqi = String.valueOf(cqi);
                 scellPci = String.valueOf(cellPci);
+                smcc = String.valueOf(mcc);
+                smnc = String.valueOf(mnc);
+                snetworkOperator = smcc + smnc;
+
+                switch (snetworkOperator) {
+                    case "51010":
+                        stringNetworkOperator = "Telkomsel";
+                        break;
+                    case "51011":
+                        stringNetworkOperator = "XL";
+                        break;
+                    case "51001":
+                        stringNetworkOperator = "Indosat";
+                        break;
+                    case "51089":
+                        stringNetworkOperator = "Tri";
+                        break;
+                    case "51009":
+                        stringNetworkOperator = "SmartFren";
+                        break;
+                    default:
+                        stringNetworkOperator = "Reading";
+                        break;
+                }
 
                 if (isRecording) {
                     String timeCapture = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
@@ -242,7 +270,7 @@ public class HalUtama4G extends AppCompatActivity {
                         tvRSRQ.setText(srsrq);
                         tvPCI.setText(scellPci);
                         tvCQI.setText(scqi);
-
+                        tvNetworkOperator.setText(stringNetworkOperator);
                         tvDataPoints.setText(String.valueOf(numDataPoints));
                     }
                 });
@@ -751,6 +779,8 @@ public class HalUtama4G extends AppCompatActivity {
                         // cast to CellInfoLte and call all the CellInfoLte methods you need
                         // Gets the LTE PCI: (returns Physical Cell Id 0..503, Integer.MAX_VALUE if unknown)
                         cellPci = ((CellInfoLte) cellInfo).getCellIdentity().getPci();
+                        mcc = ((CellInfoLte) cellInfo).getCellIdentity().getMcc();
+                        mnc = ((CellInfoLte) cellInfo).getCellIdentity().getMnc();
                     }
                 }
             } catch (Exception e) {

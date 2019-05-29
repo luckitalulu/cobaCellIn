@@ -88,9 +88,8 @@
             android:layout_centerHorizontal="true"
             android:layout_below="@id/filenameValue"
     >
-
         <TextView
-                android:id="@+id/numRsrp"
+                android:id="@+id/numNetworkOperator2G"
                 android:layout_width="@dimen/detinfo_value_width"
                 android:layout_height="wrap_content"
                 android:gravity="right"
@@ -100,19 +99,41 @@
                 android:textSize="@dimen/detinfo_value_text_size"/>
 
         <TextView
-                android:id="@+id/RsrpLabel"
-                android:layout_toRightOf="@id/numRsrp"
-                android:layout_alignBaseline="@id/numRsrp"
+                android:id="@+id/NetworkOperatorLabel2G"
+                android:layout_toRightOf="@id/numNetworkOperator2G"
+                android:layout_alignBaseline="@id/numNetworkOperator2G"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:text="Rx Equal"
+                android:text="Operator"
                 android:textColor="#8B8682"
                 android:textSize="@dimen/detinfo_value_label_size"/>
 
         <TextView
-                android:id="@+id/numRsrq"
-                android:layout_below="@id/numRsrp"
+                android:id="@+id/numRsrp2G"
+                android:layout_width="@dimen/detinfo_value_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/numNetworkOperator2G"
+                android:gravity="right"
+                android:padding="2dp"
+                android:text=""
+                android:textColor="@color/detinfo_value"
+                android:textSize="@dimen/detinfo_value_text_size"/>
+
+        <TextView
+                android:id="@+id/RsrpLabel2G"
+                android:layout_toRightOf="@id/numRsrp2G"
+                android:layout_alignBaseline="@id/numRsrp2G"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="BSIC"
+                android:textColor="#8B8682"
+                android:textSize="@dimen/detinfo_value_label_size"/>
+
+        <TextView
+                android:id="@+id/numRsrq2G"
+                android:layout_below="@id/numRsrp2G"
                 android:layout_width="@dimen/detinfo_value_width"
                 android:layout_height="wrap_content"
                 android:gravity="right"
@@ -122,9 +143,9 @@
                 android:textSize="@dimen/detinfo_value_text_size" />
 
         <TextView
-                android:id="@+id/RsrqLabel"
-                android:layout_toEndOf="@id/numRsrq"
-                android:layout_alignBaseline="@id/numRsrq"
+                android:id="@+id/RsrqLabel2G"
+                android:layout_toEndOf="@id/numRsrq2G"
+                android:layout_alignBaseline="@id/numRsrq2G"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -132,9 +153,11 @@
                 android:textColor="#8B8682"
                 android:textSize="@dimen/detinfo_value_label_size"/>
 
+
+
         <TextView
-                android:id="@+id/numPCI"
-                android:layout_below="@id/numRsrq"
+                android:id="@+id/numPCI2G"
+                android:layout_below="@id/numRsrq2G"
                 android:layout_width="@dimen/detinfo_value_width"
                 android:layout_height="wrap_content"
                 android:gravity="right"
@@ -144,19 +167,19 @@
                 android:textSize="@dimen/detinfo_value_text_size" />
 
         <TextView
-                android:id="@+id/PCILabel"
-                android:layout_toRightOf="@id/numPCI"
-                android:layout_alignBaseline="@id/numPCI"
+                android:id="@+id/PCILabel2G"
+                android:layout_toRightOf="@id/numPCI2G"
+                android:layout_alignBaseline="@id/numPCI2G"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:text="SQI"
+                android:text="LAC"
                 android:textColor="#8B8682"
                 android:textSize="@dimen/detinfo_value_label_size"/>
 
         <TextView
-                android:id="@+id/numCQI"
-                android:layout_below="@id/numPCI"
+                android:id="@+id/numCQI2G"
+                android:layout_below="@id/numPCI2G"
                 android:layout_width="@dimen/detinfo_value_width"
                 android:layout_height="wrap_content"
                 android:gravity="right"
@@ -166,21 +189,43 @@
                 android:textSize="@dimen/detinfo_value_text_size" />
 
         <TextView
-                android:id="@+id/CQILabel"
+                android:id="@+id/CQILabel2G"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/PCILabel"
-                android:layout_alignBaseline="@id/numCQI"
+                android:layout_below="@+id/PCILabel2G"
+                android:layout_alignBaseline="@id/numCQI2G"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="4dp"
-                android:layout_toRightOf="@id/numCQI"
+                android:layout_toRightOf="@id/numCQI2G"
                 android:text="Cell ID"
                 android:textColor="#8B8682"
                 android:textSize="@dimen/detinfo_value_label_size"/>
+        <TextView
+                android:id="@+id/numUARFCN2G"
+                android:layout_below="@id/numCQI2G"
+                android:layout_width="@dimen/detinfo_value_width"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:padding="2dp"
+                android:text=""
+                android:textColor="@color/detinfo_value"
+                android:textSize="@dimen/detinfo_value_text_size" />
+
+        <TextView
+                android:id="@+id/ARFCNLabel2G"
+                android:layout_toRightOf="@id/numUARFCN2G"
+                android:layout_alignBaseline="@id/numUARFCN2G"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="ARFCN"
+                android:textColor="#8B8682"
+                android:textSize="@dimen/detinfo_value_label_size"/>
+
 
         <TextView
                 android:id="@+id/numDataPoints"
-                android:layout_below="@id/numCQI"
+                android:layout_below="@id/numUARFCN2G"
                 android:layout_width="@dimen/detinfo_value_width"
                 android:layout_height="wrap_content"
                 android:gravity="right"
