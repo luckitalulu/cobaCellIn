@@ -47,8 +47,7 @@
         <activity android:name="com.example.myapplication.HalUtama2G" >
         </activity>
         <activity android:name="com.example.myapplication.Register" >
-        </activity>
-        <!-- <activity android:name=".Util.Server"> -->
+        </activity> <!-- <activity android:name=".Util.Server"> -->
         <!-- </activity> -->
         <!-- <activity android:name=".AppController"> -->
         <!-- </activity> -->

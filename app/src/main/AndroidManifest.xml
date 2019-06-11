@@ -2,12 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.myapplication">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
             android:name=".AppController"
@@ -17,6 +17,7 @@
             android:roundIcon="@drawable/cellin"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+
         <activity android:name=".HalUtamaChoice">
         </activity>
         <activity android:name=".HalUtama3G">
@@ -24,11 +25,10 @@
         <activity android:name=".HalUtama2G">
         </activity>
         <activity android:name=".Register">
-        </activity>
-        <!--<activity android:name=".Util.Server">-->
-        <!--</activity>-->
-        <!--<activity android:name=".AppController">-->
-        <!--</activity>-->
+        </activity> <!-- <activity android:name=".Util.Server"> -->
+        <!-- </activity> -->
+        <!-- <activity android:name=".AppController"> -->
+        <!-- </activity> -->
         <activity android:name=".HalUtama4G">
         </activity>
         <activity android:name=".LogIn">
@@ -40,9 +40,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
         <meta-data
                 android:name="com.google.android.gms.version"
-                android:value="@integer/google_play_services_version" />
+                android:value="@integer/google_play_services_version"/>
     </application>
 
 </manifest>

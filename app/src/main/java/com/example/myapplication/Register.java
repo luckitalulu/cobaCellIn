@@ -9,13 +9,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
+import com.android.volley.*;
 import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.myapplication.Util.Server;
+import com.google.android.material.textfield.TextInputLayout;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -24,162 +25,104 @@ import java.util.Map;
 
 public class Register extends AppCompatActivity {
 
-    ProgressDialog pDialog;
-    Button btn_register, btn_login;
-    EditText txt_username, txt_password, txt_confirm_password;
-    Intent intent;
+    private EditText txtIDUser, txtNamaUser, txtPassword, txtKonfirmasiPassword;
+    private TextInputLayout validasiIDUser, validasiNamaUser,
+            validasiPassword, validasiKonfirmasiPassword;
+    private Button btnRegister;
+    private ProgressBar loading;
+    static String response = "";
 
-    int success;
-    ConnectivityManager conMgr;
+    private static String URL = "https://cellin-test.azurewebsites.net/koneksi/registrasi.php";
 
-    private String url = Server.URL + "register.php";
-
-    private static final String TAG = Register.class.getSimpleName();
-
-    private static final String TAG_SUCCESS = "success";
-    private static final String TAG_MESSAGE = "message";
-
-    String tag_json_obj = "json_obj_req";
+    private String id_user, nama_user, password, konfirmasi_password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrasi);
 
-        conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        {
-            if (conMgr.getActiveNetworkInfo() != null
-                    && conMgr.getActiveNetworkInfo().isAvailable()
-                    && conMgr.getActiveNetworkInfo().isConnected()) {
-            } else {
-                Toast.makeText(getApplicationContext(), "No Internet Connection",
-                        Toast.LENGTH_LONG).show();
-            }
-        }
+        txtIDUser = findViewById(R.id.txtIDUser);
+        txtNamaUser = findViewById(R.id.txtNamaUser);
+        txtPassword = findViewById(R.id.txtPassword);
+        txtKonfirmasiPassword = findViewById(R.id.txtKonfirmasiPassword);
 
-        btn_login = (Button) findViewById(R.id.btn_login);
-        btn_register = (Button) findViewById(R.id.btn_register);
-        txt_username = (EditText) findViewById(R.id.txt_username);
-        txt_password = (EditText) findViewById(R.id.txt_password);
-        txt_confirm_password = (EditText) findViewById(R.id.txt_confirm_password);
+        validasiIDUser = findViewById(R.id.validasiIDUser);
+        validasiNamaUser = findViewById(R.id.validasiNamaUser);
+        validasiPassword = findViewById(R.id.validasiPassword);
+        validasiKonfirmasiPassword = findViewById(R.id.validasiKonfirmasiPassword);
 
-        btn_login.setOnClickListener(new View.OnClickListener() {
+        btnRegister = findViewById(R.id.btnRegister);
+        loading = findViewById(R.id.loading);
 
+        btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                intent = new Intent(Register.this, LogIn.class);
-                finish();
-                startActivity(intent);
-            }
-        });
-
-        btn_register.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                String username = txt_username.getText().toString();
-                String password = txt_password.getText().toString();
-                String confirm_password = txt_confirm_password.getText().toString();
-
-                if (conMgr.getActiveNetworkInfo() != null
-                        && conMgr.getActiveNetworkInfo().isAvailable()
-                        && conMgr.getActiveNetworkInfo().isConnected()) {
-                    checkRegister(username, password, confirm_password);
-                } else {
-                    Toast.makeText(getApplicationContext(), "No Internet Connection", Toast.LENGTH_SHORT).show();
+            public void onClick(View view) {
+                id_user = txtIDUser.getText().toString().trim();
+                nama_user = txtNamaUser.getText().toString().trim();
+                password = txtPassword.getText().toString().trim();
+                konfirmasi_password = txtKonfirmasiPassword.getText().toString().trim();
+                if(id_user.isEmpty()) {
+                    validasiIDUser.setError("ID. User harus diisi!");
+                }else if(nama_user.isEmpty()){
+                    validasiNamaUser.setError("Nama User harus diisi!");
+                }else if(password.isEmpty()){
+                    validasiPassword.setError("Password harus diisi!");
+                }else if(!konfirmasi_password.equals(password)){
+                    validasiKonfirmasiPassword.setError("Konfirmasi password harus sama!");
+                }else{
+                    Registrasi();
                 }
+
             }
         });
-
     }
 
-    private void checkRegister(final String username, final String password, final String confirm_password) {
-        pDialog = new ProgressDialog(this);
-        pDialog.setCancelable(false);
-        pDialog.setMessage("Register ...");
-        showDialog();
-
-        StringRequest strReq = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
-
-            @Override
-            public void onResponse(String response) {
-                Log.e(TAG, "Register Response: " + response.toString());
-                hideDialog();
-
-                try {
-                    JSONObject jObj = new JSONObject(response);
-                    success = jObj.getInt(TAG_SUCCESS);
-
-                    // Check for error node in json
-                    if (success == 1) {
-
-                        Log.e("Successfully Register!", jObj.toString());
-
-                        Toast.makeText(getApplicationContext(),
-                                jObj.getString(TAG_MESSAGE), Toast.LENGTH_LONG).show();
-
-                        txt_username.setText("");
-                        txt_password.setText("");
-                        txt_confirm_password.setText("");
-
-                    } else {
-                        Toast.makeText(getApplicationContext(),
-                                jObj.getString(TAG_MESSAGE), Toast.LENGTH_LONG).show();
-
+    private void Registrasi() {
+        loading.setVisibility(View.VISIBLE);
+        btnRegister.setVisibility(View.GONE);
+        id_user = this.txtIDUser.getText().toString().trim();
+        nama_user = this.txtNamaUser.getText().toString().trim();
+        password = this.txtPassword.getText().toString().trim();
+        konfirmasi_password = this.txtKonfirmasiPassword.getText().toString().trim();
+        StringRequest stringRequest = new StringRequest(StringRequest.Method.POST, URL,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try{
+                            JSONObject jsonObject = new JSONObject(response);
+                            String success = jsonObject.getString("success");
+                            if(success.equals("1")){
+                                Toast.makeText(Register.this, "Register Success!", Toast.LENGTH_SHORT).show();
+                            }
+                        }catch(JSONException e){
+                            e.printStackTrace();
+                            Toast.makeText(Register.this, "Register Error : " +e.toString(), Toast.LENGTH_SHORT).show();
+                            loading.setVisibility(View.GONE);
+                            btnRegister.setVisibility(View.VISIBLE);
+                        }
                     }
-                } catch (JSONException e) {
-                    // JSON error
-                    e.printStackTrace();
-                }
-
-            }
-        }, new Response.ErrorListener() {
-
+                }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.e(TAG, "Login Error: " + error.getMessage());
-                Toast.makeText(getApplicationContext(),
-                        error.getMessage(), Toast.LENGTH_LONG).show();
-
-                hideDialog();
-
+                Toast.makeText(Register.this, "Register Error : " +error.toString(), Toast.LENGTH_SHORT).show();
+                loading.setVisibility(View.GONE);
+                btnRegister.setVisibility(View.VISIBLE);
             }
-        }) {
-
+        })
+        {
             @Override
-            protected Map<String, String> getParams() {
-                // Posting parameters to login url
-                Map<String, String> params = new HashMap<String, String>();
-                params.put("username", username);
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<>();
+                params.put("id_user", id_user);
+                params.put("nama_user", nama_user);
                 params.put("password", password);
-                params.put("confirm_password", confirm_password);
-
                 return params;
             }
-
         };
 
-        // Adding request to request queue
-        AppController.getInstance().addToRequestQueue(strReq, tag_json_obj);
-    }
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
 
-    private void showDialog() {
-        if (!pDialog.isShowing())
-            pDialog.show();
-    }
-
-    private void hideDialog() {
-        if (pDialog.isShowing())
-            pDialog.dismiss();
-    }
-
-    @Override
-    public void onBackPressed() {
-        intent = new Intent(Register.this, LogIn.class);
-        finish();
-        startActivity(intent);
     }
 
 }

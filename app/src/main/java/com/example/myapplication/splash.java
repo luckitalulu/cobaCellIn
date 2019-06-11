@@ -17,7 +17,7 @@ public class splash extends Activity {
                 }catch (InterruptedException e){
                     e.printStackTrace();
                 }finally {
-                    startActivity(new Intent(splash.this,HalUtamaChoice.class));
+                    startActivity(new Intent(splash.this,LogIn.class));
                     finish();
                 }
             }

@@ -24,4 +24,13 @@
     <color name="line_chart_circle_hole_color">#012f65</color>
     <color name="line_chart_highlight_color">#f47575</color>
     <color name="line_chart_value_text_color">#ffffff</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorBg2">#dd000000</color>
+    <color name="colorBg1">#918c8c</color>
+    <color name="colorRed">#ff2026</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorAmber">#ffc400</color>
 </resources>
