@@ -209,6 +209,7 @@
                 <element signature="e#5267#5296#0" expanded="true" />
                 <element signature="e#6082#6104#0" expanded="true" />
               </folding>
+<<<<<<< Updated upstream
             </state>
           </provider>
         </entry>
@@ -218,11 +219,25 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="156">
               <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+=======
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< Updated upstream
+=======
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+>>>>>>> Stashed changes
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_log_in.xml">
           <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
@@ -292,8 +307,14 @@
     </option>
   </component>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="683" />
+=======
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+>>>>>>> Stashed changes
 =======
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
