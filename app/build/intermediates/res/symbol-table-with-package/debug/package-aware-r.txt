@@ -1361,6 +1361,7 @@ drawable ic_group_expand_12
 drawable ic_group_expand_13
 drawable ic_group_expand_14
 drawable ic_group_expand_15
+drawable ic_lock_outline_white
 drawable ic_media_pause_dark
 drawable ic_media_pause_light
 drawable ic_media_play_dark
@@ -1663,7 +1664,9 @@ id btn2G
 id btn3G
 id btn4G
 id btnLogin
+id btnLoginRegister
 id btnRegister
+id btnRegisterLogin
 id button
 id buttonPanel
 id button_0
@@ -1737,6 +1740,12 @@ id end_padder
 id end_text
 id enterAlways
 id enterAlwaysCollapsed
+id etConfirmPassword
+id etFullName
+id etLoginPassword
+id etLoginUsername
+id etPassword
+id etUsername
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_controller_layout
@@ -1775,6 +1784,7 @@ id icon_uri
 id icon_view
 id ifRoom
 id image
+id imageView
 id imgRecording
 id index_entity_types
 id info
@@ -1798,7 +1808,6 @@ id listMode
 id list_item
 id live_stream_indicator
 id live_stream_seek_bar
-id loading
 id loading_indicator
 id logo_only
 id logoutId
@@ -2004,21 +2013,11 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
-id txtIDUser
-id txtKonfirmasiPassword
-id txtNamaUser
-id txtPassword
-id txtRegister
 id uniform
 id unlabeled
 id up
 id url
 id useLogo
-id validasiIDUser
-id validasiKonfirmasiPassword
-id validasiNamaUser
-id validasiPassword
-id view
 id view_offset_helper
 id visible
 id volume_item_container
@@ -2088,6 +2087,7 @@ layout activity_hal_utama_4g
 layout activity_log_in
 layout activity_registrasi
 layout activity_session_manager
+layout activity_user
 layout cast_expanded_controller_activity
 layout cast_help_text
 layout cast_intro_overlay
@@ -2193,6 +2193,7 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string accept
+string already_having_account
 string app_name
 string appbar_scrolling_view_behavior
 string bentuk
@@ -2258,6 +2259,7 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string confirm_password
 string create_calendar_message
 string create_calendar_title
 string debug_menu_ad_information
@@ -2268,6 +2270,7 @@ string decline
 string disclaimer_text
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string full_name
 string grade_label_low
 string grade_label_mid
 string grade_label_top
@@ -2275,7 +2278,9 @@ string hide_bottom_view_on_scroll_behavior
 string id_user
 string konfirmasi_password
 string level_user
+string log_in
 string login_app
+string logout
 string mr_button_content_description
 string mr_cast_button_connected
 string mr_cast_button_connecting
@@ -2303,6 +2308,7 @@ string mr_user_route_category_name
 string mtrl_chip_close_icon_content_description
 string nama_user
 string no_meja
+string not_having_account
 string ok
 string password
 string password_toggle_content_description
@@ -2312,8 +2318,11 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string place_autocomplete_clear_button
 string place_autocomplete_search_hint
+string register
 string registrasi_user
 string search_menu_title
+string sign_in
+string sign_up
 string signal_excellent
 string signal_fair
 string signal_good
@@ -2330,6 +2339,7 @@ string txt_deskripsi
 string txt_harga
 string txt_kd_menu
 string txt_nama_menu
+string username
 string wallet_buy_button_place_holder
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

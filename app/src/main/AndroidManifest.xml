@@ -17,7 +17,8 @@
             android:roundIcon="@drawable/cellin"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-
+        <activity android:name=".User">
+        </activity>
         <activity android:name=".HalUtamaChoice">
         </activity>
         <activity android:name=".HalUtama3G">

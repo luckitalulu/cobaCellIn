@@ -41,6 +41,8 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.myapplication.User" >
+        </activity>
         <activity android:name="com.example.myapplication.HalUtamaChoice" >
         </activity>
         <activity android:name="com.example.myapplication.HalUtama3G" >

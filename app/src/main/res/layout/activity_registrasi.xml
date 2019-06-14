@@ -1,141 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@android:color/holo_orange_light"
-                tools:context=".Register">
-
-    <View
-            android:id="@+id/view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:background="@android:color/holo_orange_light" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/holo_orange_light"
+              android:gravity="center_vertical"
+              android:orientation="vertical"
+              android:padding="50dp"
+              tools:context="Register">
 
     <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="12dp"
-            android:fontFamily="sans-serif-condensed"
-            android:text="Registrasi User"
-            android:textAlignment="center"
-            android:textColor="@color/colorWhite" />
-
-    <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/validasiIDUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="62dp"
-            android:textColor="@color/colorWhite"
-            android:textColorHint="@color/colorWhite"
-            app:errorEnabled="true">
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text="@string/sign_up"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="26sp"
+            android:textStyle="bold" />
 
-        <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtIDUser"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/id_user"
-                android:inputType="text"
-                android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorWhite" />
 
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/validasiNamaUser"
+    <EditText
+            android:id="@+id/etFullName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/validasiIDUser"
-            android:textColor="@color/colorWhite"
-            android:textColorHint="@color/colorWhite"
-            app:errorEnabled="true">
+            android:layout_margin="5dp"
+            android:background="@android:color/white"
+            android:hint="@string/full_name"
+            android:inputType="textPersonName"
+            android:padding="10dp" />
 
-        <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtNamaUser"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/nama_user"
-                android:inputType="text"
-                android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorWhite" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/validasiPassword"
+    <EditText
+            android:id="@+id/etUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/validasiNamaUser"
-            android:textColor="@color/colorWhite"
-            android:textColorHint="@color/colorWhite"
-            app:errorEnabled="true"
-            app:passwordToggleEnabled="true"
-            app:passwordToggleTint="@color/colorAccent">
+            android:layout_margin="5dp"
+            android:background="@android:color/white"
+            android:hint="@string/username"
+            android:inputType="textPersonName"
+            android:padding="10dp" />
 
-        <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/password"
-                android:inputType="textPassword"
-                android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorWhite" />
-    </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/validasiKonfirmasiPassword"
+    <EditText
+            android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginBottom="90dp"
-            android:textColor="@color/colorWhite"
-            android:textColorHint="@color/colorWhite"
-            app:errorEnabled="true"
-            app:passwordToggleEnabled="true"
-            app:passwordToggleTint="@color/colorAccent">
+            android:layout_margin="5dp"
+            android:background="@android:color/white"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="10dp" />
 
-        <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtKonfirmasiPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/konfirmasi_password"
-                android:inputType="textPassword"
-                android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorWhite" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <ProgressBar
-            android:id="@+id/loading"
-            android:layout_marginTop="30dp"
-            android:visibility="gone"
+    <EditText
+            android:id="@+id/etConfirmPassword"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@android:color/white"
+            android:hint="@string/confirm_password"
+            android:inputType="textPassword"
+            android:padding="10dp" />
 
     <Button
             android:id="@+id/btnRegister"
-            android:layout_width="344dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="28dp"
-            android:background="@android:color/darker_gray"
-            android:text="@string/btn_register"
-            android:textColor="@color/colorWhite" />
+            android:layout_margin="5dp"
+            android:background="#f05924"
+            android:text="@string/register"
+            android:textColor="@android:color/white" />
 
-</RelativeLayout>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/already_having_account"
+            android:textColor="#ccc" />
+
+    <Button
+            android:id="@+id/btnRegisterLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#aaa"
+            android:text="@string/log_in"
+            android:textColor="@android:color/white" />
+
+</LinearLayout>

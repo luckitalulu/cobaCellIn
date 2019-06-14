@@ -731,6 +731,7 @@
     <string name="abc_shareactionprovider_share_with_application">Share with <ns1:g example="Mail" id="application_name">%s</ns1:g></string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="accept">Accept</string>
+    <string name="already_having_account">Already Having an Account?</string>
     <string name="app_name">CellIn</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bentuk">Bentuk</string>
@@ -796,6 +797,7 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="confirm_password">Confirm Password</string>
     <string name="create_calendar_message">Allow Ad to create a calendar event?</string>
     <string name="create_calendar_title">Create calendar event</string>
     <string name="debug_menu_ad_information">Ad Information</string>
@@ -809,6 +811,7 @@
     </string>
     <string name="fab_transformation_scrim_behavior" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
     <string name="fab_transformation_sheet_behavior" translatable="false">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
+    <string name="full_name">Full Name</string>
     <string name="grade_label_low">Poor</string>
     <string name="grade_label_mid">Good</string>
     <string name="grade_label_top">Excellent</string>
@@ -816,7 +819,9 @@
     <string name="id_user">ID. User</string>
     <string name="konfirmasi_password">Konfirmasi Password</string>
     <string name="level_user">Email</string>
+    <string name="log_in">Log In</string>
     <string name="login_app">Login App : Masukkan ID. User dan Password</string>
+    <string name="logout">Logout</string>
     <string name="mr_button_content_description">Cast button</string>
     <string name="mr_cast_button_connected">Cast button. Connected</string>
     <string name="mr_cast_button_connecting">Cast button. Connecting</string>
@@ -844,6 +849,7 @@
     <string name="mtrl_chip_close_icon_content_description">Remove %1$s</string>
     <string name="nama_user">Nama User</string>
     <string name="no_meja">No. Meja</string>
+    <string name="not_having_account">Not Having an Account?</string>
     <string name="ok">OK</string>
     <string name="password">Password</string>
     <string name="password_toggle_content_description">Show password</string>
@@ -853,8 +859,11 @@
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
     <string name="place_autocomplete_clear_button">Clear search</string>
     <string name="place_autocomplete_search_hint">Search</string>
+    <string name="register">Register</string>
     <string name="registrasi_user">Registrasi User Baru</string>
     <string name="search_menu_title">Search</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
     <string name="signal_excellent">Excellent</string>
     <string name="signal_fair">Fair</string>
     <string name="signal_good">Good</string>
@@ -871,6 +880,7 @@
     <string name="txt_harga">Harga</string>
     <string name="txt_kd_menu">KD. Menu</string>
     <string name="txt_nama_menu">Nama Menu</string>
+    <string name="username">Username</string>
     <string name="wallet_buy_button_place_holder">Buy with Google</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>

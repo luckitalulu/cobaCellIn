@@ -1,151 +1,162 @@
 package com.example.myapplication;
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.net.ConnectivityManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.android.volley.*;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-import com.example.myapplication.Util.Server;
+import com.android.volley.toolbox.JsonObjectRequest;
 
-import com.google.android.material.textfield.TextInputLayout;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import java.util.HashMap;
-
-import java.util.Map;
 
 
 public class LogIn extends AppCompatActivity {
 
-    // deklarasi objek
-    TextInputLayout validasiIDUser, validasiPassword;
-    EditText txtIDUser, txtPassword;
-    Button btnLogin;
-    TextView txtRegistrasi;
-
-    // deklarasi variabel
-    String id_user, password;
-
-    // deklarasi variabel alamat host
-    public static String URL = "https://cellin-test.azurewebsites.net/koneksi/login.php";
-
-    com.example.myapplication.SessionManager sessionManager;
+    private static final String KEY_STATUS = "status";
+    private static final String KEY_MESSAGE = "message";
+    private static final String KEY_FULL_NAME = "full_name";
+    private static final String KEY_USERNAME = "username";
+    private static final String KEY_PASSWORD = "password";
+    private static final String KEY_EMPTY = "";
+    private EditText etUsername;
+    private EditText etPassword;
+    private String username;
+    private String password;
+    private ProgressDialog pDialog;
+    private String login_url = "https://cellin-test.azurewebsites.net/koneksi/login.php";
+    private SessionHandler session;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
-        sessionManager = new SessionManager(this);
+        session = new SessionHandler(getApplicationContext());
 
-        // inisialisasi variabel objek
-        validasiIDUser = findViewById(R.id.validasiIDUser);
-        validasiPassword = findViewById(R.id.validasiPassword);
-        txtIDUser = findViewById(R.id.txtIDUser);
-        txtPassword = findViewById(R.id.txtPassword);
-        btnLogin = findViewById(R.id.btnLogin);
-        txtRegistrasi = findViewById(R.id.txtRegister);
+        if(session.isLoggedIn()){
+            loadDashboard();
+        }
 
-        // jika tombol login diklik
-        btnLogin.setOnClickListener(new View.OnClickListener() {
+        etUsername = findViewById(R.id.etLoginUsername);
+        etPassword = findViewById(R.id.etLoginPassword);
+
+        Button register = findViewById(R.id.btnLoginRegister);
+        Button login = findViewById(R.id.btnLogin);
+
+        //Launch Registration screen when Register Button is clicked
+        register.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                id_user = txtIDUser.getText().toString().trim();
-                password = txtPassword.getText().toString().trim();
+            public void onClick(View v) {
+                Intent i = new Intent(LogIn.this, Register.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
-                if(id_user.isEmpty()){
-                    validasiIDUser.setError("ID. User harus diisi!");
-                }else if(password.isEmpty()){
-                    validasiIDUser.setError("Password harus diisi!");
-                }else{
-                    auth_user(id_user, password);
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Retrieve the data entered in the edit texts
+                username = etUsername.getText().toString().toLowerCase().trim();
+                password = etPassword.getText().toString().trim();
+                if (validateInputs()) {
+                    login();
                 }
             }
         });
+    }
 
-        // jika tombol register diklik
-        txtRegistrasi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // sintak untuk pindah activity
-                Intent intent = new Intent(LogIn.this, Register.class);
-                LogIn.this.startActivity(intent);
-            }
-        });
+    /**
+     * Launch Dashboard Activity on Successful Login
+     */
+    private void loadDashboard() {
+        Intent i = new Intent(getApplicationContext(), HalUtamaChoice.class);
+        startActivity(i);
+        finish();
 
     }
 
-    // method login
-    private void auth_user(final String id_user, final String password){
+    /**
+     * Display Progress bar while Logging in
+     */
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL,
-                new Response.Listener<String>() {
+    private void displayLoader() {
+        pDialog = new ProgressDialog(LogIn.this);
+        pDialog.setMessage("Logging In.. Please wait...");
+        pDialog.setIndeterminate(false);
+        pDialog.setCancelable(false);
+        pDialog.show();
+
+    }
+
+    private void login() {
+        displayLoader();
+        JSONObject request = new JSONObject();
+        try {
+            //Populate the request parameters
+            request.put(KEY_USERNAME, username);
+            request.put(KEY_PASSWORD, password);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        JsonObjectRequest jsArrayRequest = new JsonObjectRequest
+                (Request.Method.POST, login_url, request, new Response.Listener<JSONObject>() {
                     @Override
-                    public void onResponse(String response) {
+                    public void onResponse(JSONObject response) {
+                        pDialog.dismiss();
                         try {
-                            JSONObject jsonObject = new JSONObject(response);
-                            String success = jsonObject.getString("success");
-                            JSONArray jsonArray = jsonObject.getJSONArray("login");
-                            if(success.equals("1")){
-                                for(int i=0 ; i<jsonArray.length() ; i++){
-                                    JSONObject jsonObject1 = jsonArray.getJSONObject(i);
+                            //Check if user got logged in successfully
 
-                                    String nama_user = jsonObject1.getString("nama_user").trim();
+                            if (response.getInt(KEY_STATUS) == 0) {
+                                session.loginUser(username,response.getJSONObject(KEY_FULL_NAME).toString());
+                                loadDashboard();
 
-                                    sessionManager.createSession(id_user, nama_user);
-
-                                    Toast.makeText(LogIn.this,
-                                            "Login berhasil ! \n Nama : "+nama_user,
-                                            Toast.LENGTH_SHORT)
-                                            .show();
-                                }
                             }else{
-                                Toast.makeText(LogIn.this,
-                                        "ID. User dan Password tidak ditemukan! ",
-                                        Toast.LENGTH_SHORT)
-                                        .show();
+                                Toast.makeText(getApplicationContext(),
+                                        response.getJSONObject(KEY_MESSAGE).toString(), Toast.LENGTH_SHORT).show();
+
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
-                            Toast.makeText(LogIn.this,
-                                    "Error login : " + e.toString(),
-                                    Toast.LENGTH_SHORT)
-                                    .show();
                         }
                     }
-                },
-                new Response.ErrorListener() {
+                }, new Response.ErrorListener() {
+
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(LogIn.this,
-                                "Error login : " + error.toString(),
-                                Toast.LENGTH_SHORT)
-                                .show();
-                    }
-                })
-        {
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> params = new HashMap<>();
-                params.put("id_user", id_user);     // sesuaikan dengan $_POST pada PHP
-                params.put("password", password);
-                return params;
-            }
-        };
+                        pDialog.dismiss();
 
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
+                        //Display error message whenever an error occurs
+                        Toast.makeText(getApplicationContext(),
+                                error.getMessage(), Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+
+        // Access the RequestQueue through your singleton class.
+        VolleyController.getInstance(this).addToRequestQueue(jsArrayRequest);
     }
 
+    /**
+     * Validates inputs and shows error if any
+     * @return
+     */
+    private boolean validateInputs() {
+        if(KEY_EMPTY.equals(username)){
+            etUsername.setError("Username cannot be empty");
+            etUsername.requestFocus();
+            return false;
+        }
+        if(KEY_EMPTY.equals(password)){
+            etPassword.setError("Password cannot be empty");
+            etPassword.requestFocus();
+            return false;
+        }
+        return true;
+    }
 }

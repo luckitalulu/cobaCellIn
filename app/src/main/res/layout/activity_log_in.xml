@@ -1,104 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@android:color/holo_orange_light"
-                tools:context=".LogIn">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/holo_orange_light"
+              android:gravity="center_vertical"
+              android:orientation="vertical"
+              android:padding="50dp"
+              tools:context=".LogIn">
 
-    <View
-            android:id="@+id/view"
-            android:layout_width="wrap_content"
+    <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:background="@android:color/holo_orange_light" android:layout_marginLeft="0dp"
-            android:layout_marginTop="6dp" android:layout_marginStart="0dp"/>
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_lock_outline_white" />
+
+    <EditText
+            android:id="@+id/etLoginUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@android:color/white"
+            android:hint="@string/username"
+            android:inputType="textPersonName"
+            android:padding="10dp" />
 
 
+    <EditText
+            android:id="@+id/etLoginPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@android:color/white"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="10dp" />
 
     <Button
             android:id="@+id/btnLogin"
-            android:layout_width="344dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="65dp"
-            android:background="@drawable/button_white"
-            android:text="@string/btn_login"
-            android:textColor="@color/colorBg2" />
-
-
-    <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/validasiIDUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="201dp"
-            android:textColor="@color/colorWhite"
-            android:textColorHint="@color/colorWhite"
-            app:errorEnabled="true">
-
-        <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtIDUser"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/id_user"
-                android:inputType="text"
-                android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorWhite" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/validasiPassword"
+            android:layout_margin="5dp"
+            android:background="#f05924"
+            android:text="@string/sign_in"
+            android:textColor="@android:color/white" />
+    <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/validasiIDUser"
-            android:textColor="@color/colorWhite"
-            android:textColorHint="@color/colorWhite"
-            app:errorEnabled="true"
-            app:passwordToggleEnabled="true"
-            app:passwordToggleTint="@color/colorAccent">
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="@string/not_having_account"
+            android:textColor="#ccc" />
 
-        <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/password"
-                android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorWhite"
-                android:inputType="textPassword" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
+    <Button
+            android:id="@+id/btnLoginRegister"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="156dp"
-            android:fontFamily="sans-serif-condensed"
-            android:text="@string/login_app"
-            android:textColor="@color/colorWhite" />
+            android:layout_margin="5dp"
+            android:background="#aaa"
+            android:text="@string/register"
+            android:textColor="@android:color/white" />
 
-    <TextView
-            android:id="@+id/txtRegister"
-            android:layout_width="176dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="22dp"
-            android:text="@string/registrasi_user"
-            android:textAlignment="center"
-            android:textColor="@color/colorWhite"
-            android:textColorHint="@color/colorWhite" />
 
-</RelativeLayout>
+</LinearLayout>
