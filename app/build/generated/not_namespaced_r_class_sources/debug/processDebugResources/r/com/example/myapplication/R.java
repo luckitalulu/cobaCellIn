@@ -23599,4 +23599,7 @@ public final class R {
      */
     public static final int WalletFragmentStyle_maskedWalletDetailsTextAppearance=10;
   }
+  public static final class xml {
+    public static final int network_security_config=0x7f120000;
+  }
 }
