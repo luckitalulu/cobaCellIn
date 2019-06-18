@@ -2,59 +2,30 @@
 <instant-run
     abi="armeabi-v7a,armeabi"
     api-level="22"
-    build-mode="FULL"
+    build-mode="COLD"
     density="xhdpi"
     format="10"
+    ir-eligibility="COMPATIBLE"
     plugin-version="3.4.1"
-    timestamp="1560749147414"
+    timestamp="1560853504080"
     token="3525077032397603905"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="722" />
+        duration="829" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="674" />
+        duration="71" />
     <task
         name="verifier"
-        duration="9" />
+        duration="28" />
 
     <artifact
-        location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-        type="SPLIT" />
-    <artifact
         location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
         type="SPLIT" />
     <artifact
         location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
@@ -62,7 +33,7 @@
 
     <build
         build-mode="FULL"
-        timestamp="1560749147414"
+        timestamp="1560853166492"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
@@ -74,19 +45,22 @@
             location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
             location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
             location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
             location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
@@ -95,7 +69,16 @@
             location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1560853504080"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
             location="C:\Lucki\SKRIPSI\cobaCellIn\app\build\intermediates\instant-run-apk\debug\app-debug.apk"

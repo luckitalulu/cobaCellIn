@@ -43,7 +43,7 @@ public class Register extends AppCompatActivity {
     private String confirmPassword;
     private String fullName;
     private ProgressDialog pDialog;
-    private String register_url = "https://cellin-test.azurewebsites.net/koneksi/registrasi.php";
+    private String register_url = "https://cellin-test1.000webhostapp.com/koneksi/registrasi.php";
     private SessionHandler session;
 
     @Override
@@ -172,6 +172,7 @@ public class Register extends AppCompatActivity {
                         //Display error message whenever an error occurs
                         Toast.makeText(getApplicationContext(),
                                 error.getMessage(), Toast.LENGTH_SHORT).show();
+                        Log.e("Error:","Error Message:"+error.getMessage());
 
                     }
                 }) {
