@@ -13,7 +13,6 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.android.volley.*;
-import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
@@ -22,7 +21,6 @@ import com.google.android.material.textfield.TextInputLayout;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -127,14 +125,14 @@ public class Register extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
                         pDialog.dismiss();
                         try {
-                            String key = response.getString("status");
+                            Integer key = response.getInt("status");
                             //Check if user got registered successfully
-                            if (key.equals("0")) {
+                            if (key.equals(0)) {
                                 //Set the user session
                                 session.loginUser(username,fullName);
                                 loadDashboard();
 
-                            }else if(key.equals("1")){
+                            }else if(key.equals(1)){
                                 //Display error message if username is already existsing
                                 etUsername.setError("Username already taken!");
                                 etUsername.requestFocus();
@@ -154,29 +152,13 @@ public class Register extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         pDialog.dismiss();
-                        NetworkResponse response = error.networkResponse;
-                        if (error instanceof ServerError && response != null) {
-                            try {
-                                String res = new String(response.data,
-                                        HttpHeaderParser.parseCharset(response.headers, "utf-8"));
-                                // Now you can use any deserializer to make sense of data
-                                JSONObject obj = new JSONObject(res);
-                            } catch (UnsupportedEncodingException e1) {
-                                // Couldn't properly decode data to string
-                                e1.printStackTrace();
-                            } catch (JSONException e2) {
-                                // returned data is not JSONObject?
-                                e2.printStackTrace();
-                            }
-                        }
+
                         //Display error message whenever an error occurs
                         Toast.makeText(getApplicationContext(),
                                 error.getMessage(), Toast.LENGTH_SHORT).show();
-                        Log.e("Error:","Error Message:"+error.getMessage());
 
                     }
-                }) {
-        };
+                });
 
 
         // Access the RequestQueue through your singleton class.

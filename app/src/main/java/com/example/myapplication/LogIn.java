@@ -112,8 +112,8 @@ public class LogIn extends AppCompatActivity {
                         try {
                             //Check if user got logged in successfully
 
-                            if (response.getInt(KEY_STATUS) == 0) {
-                                session.loginUser(username,response.getJSONObject(KEY_FULL_NAME).toString());
+                            if (response.getString("status").equals("0")) {
+                                session.loginUser(username,response.getString(KEY_FULL_NAME));
                                 loadDashboard();
 
                             }else{
