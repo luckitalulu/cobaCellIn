@@ -16,7 +16,6 @@ import com.android.volley.*;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.myapplication.Util.Server;
 import com.google.android.material.textfield.TextInputLayout;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -102,6 +101,8 @@ public class Register extends AppCompatActivity {
      */
     private void loadDashboard() {
         Intent i = new Intent(getApplicationContext(), HalUtamaChoice.class);
+        i.putExtra("usernameIntent",username);
+        i.putExtra("fullnameIntent",fullName);
         startActivity(i);
         finish();
 
@@ -125,14 +126,14 @@ public class Register extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
                         pDialog.dismiss();
                         try {
-                            Integer key = response.getInt("status");
+                            String key = response.getString("status");
                             //Check if user got registered successfully
-                            if (key.equals(0)) {
+                            if (key.equals("0")) {
                                 //Set the user session
                                 session.loginUser(username,fullName);
                                 loadDashboard();
 
-                            }else if(key.equals(1)){
+                            }else if(key.equals("1")){
                                 //Display error message if username is already existsing
                                 etUsername.setError("Username already taken!");
                                 etUsername.requestFocus();

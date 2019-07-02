@@ -8,18 +8,31 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
             android:name=".AppController"
             android:allowBackup="true"
             android:icon="@drawable/cellin"
             android:label="@string/app_name"
+            android:networkSecurityConfig="@xml/network_security_config"
             android:roundIcon="@drawable/cellin"
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
-            android:networkSecurityConfig="@xml/network_security_config"
             android:usesCleartextTraffic="true">
+        <provider
+                android:authorities="com.example.myapplication.provider"
+                android:name="androidx.core.content.FileProvider"
+                android:exported="false"
+                android:grantUriPermissions="true">
 
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/fileproviderpaths" />
+
+        </provider>
+        <activity android:name=".Upload">
+        </activity>
         <activity android:name=".HalUtamaChoice">
         </activity>
         <activity android:name=".HalUtama3G">

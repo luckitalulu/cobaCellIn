@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.GradientDrawable;
 import android.location.Criteria;
@@ -96,7 +97,6 @@ public class HalUtama2G extends AppCompatActivity {
 
         criteria = new Criteria();
         criteria.setAccuracy(Criteria.ACCURACY_FINE);
-        checkLocationPermission();
         final int min = 1;
         final int max = 100;
         final int Id = new Random().nextInt((max - min) + 1) + min;
@@ -570,7 +570,7 @@ public class HalUtama2G extends AppCompatActivity {
 
         ((TextView) viewGraph.findViewById(R.id.filenameValue)).setText(csvFilename);
 
-        Button btn;
+        Button btn, btnUploadIntent;
         GradientDrawable gd;
 
         btn = (Button) viewGraph.findViewById(R.id.newRecording);
@@ -580,6 +580,15 @@ public class HalUtama2G extends AppCompatActivity {
         btn = (Button) viewGraph.findViewById(R.id.displayGrade);
         gd = (GradientDrawable) (btn.getBackground());
         gd.setColor(getResources().getColor(R.color.button_start_recording));
+
+        btnUploadIntent = (Button)viewGraph.findViewById(R.id.displayGoToUpload);
+        btnUploadIntent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Upload.class);
+                startActivity(i);
+            }
+        });
 
         ((Button) viewGraph.findViewById(R.id.displayGrade)).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -751,16 +760,6 @@ public class HalUtama2G extends AppCompatActivity {
 
             try {
 
-                if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                    // TODO: Consider calling
-                    //    Activity#requestPermissions
-                    // here to request the missing permissions, and then overriding
-                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                    //                                          int[] grantResults)
-                    // to handle the case where the user grants the permission. See the documentation
-                    // for Activity#requestPermissions for more details.
-                    return;
-                }
                 cellInfoList = tm.getAllCellInfo();
 
                 for (CellInfo cellInfo : cellInfoList) {
@@ -785,78 +784,4 @@ public class HalUtama2G extends AppCompatActivity {
             super.onSignalStrengthsChanged(signalStrength);
         }
     }
-
-    public boolean checkLocationPermission() {
-        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        if (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED) {
-
-            // Should we show an explanation?
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                    Manifest.permission.ACCESS_FINE_LOCATION)) {
-
-                // Show an explanation to the user *asynchronously* -- don't block
-                // this thread waiting for the user's response! After the user
-                // sees the explanation, try again to request the permission.
-                new AlertDialog.Builder(this)
-                        .setTitle(R.string.title_location_permission)
-                        .setMessage(R.string.text_location_permission)
-                        .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                //Prompt the user once explanation has been shown
-                                ActivityCompat.requestPermissions(HalUtama2G.this,
-                                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                                        MY_PERMISSIONS_REQUEST_LOCATION);
-                            }
-                        })
-                        .create()
-                        .show();
-
-
-            } else {
-                // No explanation needed, we can request the permission.
-                ActivityCompat.requestPermissions(this,
-                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                        MY_PERMISSIONS_REQUEST_LOCATION);
-            }
-            return false;
-        } else {
-            return true;
-        }
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode,
-                                           String permissions[], int[] grantResults) {
-        switch (requestCode) {
-            case MY_PERMISSIONS_REQUEST_LOCATION: {
-                // If request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-                    // permission was granted, yay! Do the
-                    // location-related task you need to do.
-                    if (ContextCompat.checkSelfPermission(this,
-                            Manifest.permission.ACCESS_FINE_LOCATION)
-                            == PackageManager.PERMISSION_GRANTED) {
-
-                        //Request location updates:
-                        provider = locationManager.getBestProvider(criteria, true);
-                        locationManager.requestLocationUpdates(provider, 400, 1, (android.location.LocationListener) this);
-                    }
-
-                } else {
-
-                    // permission denied, boo! Disable the
-                    // functionality that depends on this permission.
-
-                }
-                return;
-            }
-
-        }
-    }
-
 }

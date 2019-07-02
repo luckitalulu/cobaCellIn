@@ -39,7 +39,6 @@
     <string name="txt_harga">Harga</string>
 
 
-
     <string name="username">Username</string>
     <string name="sign_in">Sign In</string>
     <string name="register">Register</string>
@@ -50,4 +49,9 @@
     <string name="not_having_account">Not Having an Account?</string>
     <string name="sign_up">Sign Up</string>
     <string name="logout">Logout</string>
+
+    <string name="permission_camera_rationale">Location permission is needed to get cell location.</string>
+    <string name="permissions_not_granted">Permissions were not granted.</string>
+    <string name="permision_available_location">Location Permission has been granted. Cell location could be set.
+    </string>
 </resources>

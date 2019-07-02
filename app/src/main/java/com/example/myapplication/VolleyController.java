@@ -5,6 +5,8 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 
+import java.util.TimerTask;
+
 public class VolleyController {
     private static VolleyController mInstance;
     private RequestQueue mRequestQueue;
@@ -21,6 +23,8 @@ public class VolleyController {
         }
         return mInstance;
     }
+
+
 
     private RequestQueue getRequestQueue() {
         if (mRequestQueue == null) {

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@android:color/holo_orange_light"
+>
+
+    <ImageView
+            android:id="@+id/ivAttachment"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginBottom="32dp"
+            android:layout_centerInParent="true"/>
+
+
+    <Button
+            android:layout_centerVertical="true"
+            android:id="@+id/upload_file"
+            android:layout_width="245dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="25dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/rounded_button"
+            android:text="Upload File"
+            android:textSize="25sp"
+            android:layout_below="@+id/upload"
+            android:textColor="@android:color/white"
+            android:onClick="onNewRecording"/>
+    <Button
+            android:id="@+id/upload"
+            android:layout_width="245dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="25dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/rounded_button"
+            android:text="Choose File"
+            android:textSize="25sp"
+            android:layout_below="@+id/selected_file_name"
+            android:textColor="@android:color/white"
+            android:onClick="onNewRecording"
+            android:layout_marginTop="11dp"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+    android:id="@+id/selected_file_name"
+    android:layout_below="@id/ivAttachment"/>
+</RelativeLayout>

@@ -4,16 +4,16 @@
         xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-        android:gravity="center"
+                android:gravity="center"
               android:background="@android:color/holo_orange_light">
     <ImageView
             android:layout_width="283dp"
             android:layout_height="283dp"
-            android:id="@+id/cellIn"
+            android:background="@drawable/cellin"
             android:layout_gravity="center"
             android:layout_marginTop="72dp"
             android:layout_marginBottom="32dp"
-    />
+            android:id="@+id/logo_cellin_image"/>
     <Button
             android:text="2G"
             android:layout_width="wrap_content"

@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.Manifest;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -11,6 +12,7 @@ import android.graphics.drawable.GradientDrawable;
 import android.location.Criteria;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -32,6 +34,10 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
@@ -44,13 +50,17 @@ import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.formatter.PercentFormatter;
 
+import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.HttpURLConnection;
 import java.text.DecimalFormat;
 import java.util.*;
 
 import au.com.bytecode.opencsv.CSVWriter;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class HalUtama4G extends AppCompatActivity {
 
@@ -58,6 +68,16 @@ public class HalUtama4G extends AppCompatActivity {
     private LocationManager locationManager;
     private Criteria criteria;
     private String provider;
+
+
+    private static final String KEY_TIMECAPTURED = "timecature";
+    private static final String KEY_RSRP = "srsrp";
+    private static final String KEY_RSRQ = "srsrq";
+    private static final String KEY_CELLPCI = "scellPci";
+    private static final String KEY_CQI = "scqi";
+    private static final String KEY_USERNAME = "username";
+    private String data4g_url = "https://cellin-test1.000webhostapp.com/koneksi/data4g.php";
+
 
     protected SignalStrengthListener signalStrengthListener;
     protected TelephonyManager tm;
@@ -71,14 +91,18 @@ public class HalUtama4G extends AppCompatActivity {
     protected int numDataPoints = 0;
     protected List<String[]> data;
     protected String csvFilename;
+//    String publicFilePath = null;
+//    String publicFileName = null;
 
-    protected String srsrp, srsrq, scqi, scellPci, smcc, smnc, snetworkOperator;
+    protected String srsrp, srsrq, scqi, scellPci, smcc, smnc, snetworkOperator, usernameIntent4G;
 
     protected boolean isRecording = false;
     protected boolean animateRecording = true;
     protected TextView tvRecPau;
     protected ImageView recImage;
     protected Animation recAnimation;
+
+    Context context = this;
 
     protected PopupWindow popShim;
     protected LineChart mChart;
@@ -92,10 +116,10 @@ public class HalUtama4G extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hal_utama_4g);
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-
+        Intent intent = new Intent();
+        usernameIntent4G = intent.getStringExtra("usernameIntent4G");
         criteria = new Criteria();
         criteria.setAccuracy(Criteria.ACCURACY_FINE);
-        checkLocationPermission();
         final int min = 1;
         final int max = 100;
         final int Id = new Random().nextInt((max - min) + 1) + min;
@@ -116,6 +140,9 @@ public class HalUtama4G extends AppCompatActivity {
         gd.setColor(getResources().getColor(R.color.button_stop_recording));
 
         recImage = (ImageView) findViewById(R.id.imgRecording);
+
+
+
 
         animateRecording = true;
 
@@ -254,10 +281,62 @@ public class HalUtama4G extends AppCompatActivity {
                         break;
                 }
 
+
                 if (isRecording) {
                     String timeCapture = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
                     data.add(new String[]{timeCapture, srsrp, srsrq, scellPci, scqi});
                     ++numDataPoints;
+                    JSONObject request = new JSONObject();
+                    try {
+                        //Populate the request parameters
+                        request.put(KEY_USERNAME,usernameIntent4G);
+                        request.put(KEY_TIMECAPTURED, timeCapture);
+                        request.put(KEY_RSRP, srsrp);
+                        request.put(KEY_RSRQ, srsrq);
+                        request.put(KEY_CELLPCI,scellPci);
+                        request.put(KEY_CQI,scqi);
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    JsonObjectRequest jsArrayRequest = new JsonObjectRequest
+                            (Request.Method.POST, data4g_url, request, new Response.Listener<JSONObject>() {
+                                @Override
+                                public void onResponse(JSONObject response) {
+                                    try {
+                                        String key = response.getString("status");
+                                        //Check if user got registered successfully
+                                        if (key.equals("0")) {
+                                            //Set the user session
+
+                                        }else if(key.equals("1")){
+                                            //Display error message if username is already existsing
+
+
+                                        }else{
+
+
+                                        }
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
+
+                                    }
+                                }
+                            }, new Response.ErrorListener() {
+
+                                @Override
+                                public void onErrorResponse(VolleyError error) {
+
+                                    //Display error message whenever an error occurs
+                                    Toast.makeText(getApplicationContext(),
+                                            error.getMessage(), Toast.LENGTH_SHORT).show();
+
+                                }
+                            });
+
+
+                    // Access the RequestQueue through your singleton class.
+                    VolleyController.getInstance(HalUtama4G.this).addToRequestQueue(jsArrayRequest);
                 }
 
                 runOnUiThread(new Runnable() {
@@ -272,6 +351,8 @@ public class HalUtama4G extends AppCompatActivity {
                         tvCQI.setText(scqi);
                         tvNetworkOperator.setText(stringNetworkOperator);
                         tvDataPoints.setText(String.valueOf(numDataPoints));
+
+
                     }
                 });
             }
@@ -336,6 +417,7 @@ public class HalUtama4G extends AppCompatActivity {
 
         View viewShim = view.inflate(HalUtama4G.this, R.layout.layout_shim, null);
 
+
         popShim = new PopupWindow(
                 viewShim,
                 LinearLayout.LayoutParams.MATCH_PARENT,
@@ -387,18 +469,48 @@ public class HalUtama4G extends AppCompatActivity {
                     writer.flush();
                     writer.close();
                     Toast.makeText(HalUtama4G.this, "CSV file written", Toast.LENGTH_SHORT).show();
+//                    Uri path = Uri.fromFile(file);
+//                    publicFilePath= path.getAbsolutePath();
+//                    publicFileName = file.getPath()
+//                    dialog = ProgressDialog.show(HalUtama4G.this,"","Uploading file...", true);
+//                    new Thread(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            uploadFile();
+//                        }
+//                    })
+
 
                 } catch (IOException e) {
                     Log.d("CSV Writer", "Error writing CSV file : " + e);
                     Toast.makeText(HalUtama4G.this, "Error writing CSV file", Toast.LENGTH_SHORT).show();
                 }
+
             }
         }, 0);
     }
 
+//    public void uploadFile(String sourceFileUri){
+//        String filename = publicFilePath;
+//        HttpURLConnection conn = null;
+//        DataOutputStream dataOutputStream = null;
+//        String lineEnd ="\r\n";
+//        String twoHyphens = "--";
+//        String boundary = "*****";
+//        int bytesRead, bytesAvailable, bufferSize;
+//        byte[] buffer;
+//        int maxBufferSize = 1*1024*1024;
+//        File sourceFile = new File(publicFilePath);
+//
+//        if (!sourceFile.isFile()){
+//            if (dialog )
+//        }
+//    }
+
     protected void onDisplayGrade(final View view) {
 
         final View viewGrade = view.inflate(HalUtama4G.this, R.layout.layout_grade, null);
+
 
         final PopupWindow pop = new PopupWindow(
                 viewGrade,
@@ -580,7 +692,7 @@ public class HalUtama4G extends AppCompatActivity {
 
         ((TextView) viewGraph.findViewById(R.id.filenameValue)).setText(csvFilename);
 
-        Button btn;
+        Button btn, btnUploadIntent;
         GradientDrawable gd;
 
         btn = (Button) viewGraph.findViewById(R.id.newRecording);
@@ -590,6 +702,15 @@ public class HalUtama4G extends AppCompatActivity {
         btn = (Button) viewGraph.findViewById(R.id.displayGrade);
         gd = (GradientDrawable) (btn.getBackground());
         gd.setColor(getResources().getColor(R.color.button_start_recording));
+
+        btnUploadIntent = (Button)viewGraph.findViewById(R.id.displayGoToUpload);
+        btnUploadIntent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),Upload.class);
+                startActivity(i);
+            }
+        });
 
         ((Button) viewGraph.findViewById(R.id.displayGrade)).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -760,17 +881,6 @@ public class HalUtama4G extends AppCompatActivity {
             parts = ltestr.split(" ");
 
             try {
-
-                if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                    // TODO: Consider calling
-                    //    Activity#requestPermissions
-                    // here to request the missing permissions, and then overriding
-                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                    //                                          int[] grantResults)
-                    // to handle the case where the user grants the permission. See the documentation
-                    // for Activity#requestPermissions for more details.
-                    return;
-                }
                 cellInfoList = tm.getAllCellInfo();
 
                 for (CellInfo cellInfo : cellInfoList) {
@@ -788,79 +898,6 @@ public class HalUtama4G extends AppCompatActivity {
             }
 
             super.onSignalStrengthsChanged(signalStrength);
-        }
-    }
-
-    public boolean checkLocationPermission() {
-        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        if (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED) {
-
-            // Should we show an explanation?
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                    Manifest.permission.ACCESS_FINE_LOCATION)) {
-
-                // Show an explanation to the user *asynchronously* -- don't block
-                // this thread waiting for the user's response! After the user
-                // sees the explanation, try again to request the permission.
-                new AlertDialog.Builder(this)
-                        .setTitle(R.string.title_location_permission)
-                        .setMessage(R.string.text_location_permission)
-                        .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                //Prompt the user once explanation has been shown
-                                ActivityCompat.requestPermissions(HalUtama4G.this,
-                                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                                        MY_PERMISSIONS_REQUEST_LOCATION);
-                            }
-                        })
-                        .create()
-                        .show();
-
-
-            } else {
-                // No explanation needed, we can request the permission.
-                ActivityCompat.requestPermissions(this,
-                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                        MY_PERMISSIONS_REQUEST_LOCATION);
-            }
-            return false;
-        } else {
-            return true;
-        }
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode,
-                                           String permissions[], int[] grantResults) {
-        switch (requestCode) {
-            case MY_PERMISSIONS_REQUEST_LOCATION: {
-                // If request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-                    // permission was granted, yay! Do the
-                    // location-related task you need to do.
-                    if (ContextCompat.checkSelfPermission(this,
-                            Manifest.permission.ACCESS_FINE_LOCATION)
-                            == PackageManager.PERMISSION_GRANTED) {
-
-                        //Request location updates:
-                        provider = locationManager.getBestProvider(criteria, true);
-                        locationManager.requestLocationUpdates(provider, 400, 1, (LocationListener) this);
-                    }
-
-                } else {
-
-                    // permission denied, boo! Disable the
-                    // functionality that depends on this permission.
-
-                }
-                return;
-            }
-
         }
     }
 

@@ -1692,7 +1692,6 @@ id cast_featurehighlight_help_text_body_view
 id cast_featurehighlight_help_text_header_view
 id cast_featurehighlight_view
 id cast_notification_id
-id cellIn
 id center
 id center_horizontal
 id center_vertical
@@ -1729,6 +1728,7 @@ id design_navigation_view
 id dimensions
 id direct
 id disableHome
+id displayGoToUpload
 id displayGrade
 id displayGraph
 id donate_with
@@ -1784,7 +1784,6 @@ id icon_uri
 id icon_view
 id ifRoom
 id image
-id imageView
 id imgRecording
 id index_entity_types
 id info
@@ -1797,6 +1796,7 @@ id intent_extra_data
 id invisible
 id italic
 id item_touch_helper_previous_elevation
+id ivAttachment
 id labeled
 id largeLabel
 id large_icon_uri
@@ -1809,6 +1809,7 @@ id list_item
 id live_stream_indicator
 id live_stream_seek_bar
 id loading_indicator
+id logo_cellin_image
 id logo_only
 id logoutId
 id masked
@@ -1945,6 +1946,7 @@ id seek_bar
 id seek_bar_controls
 id select_dialog_listview
 id selected
+id selected_file_name
 id selectionDetails
 id shortcut
 id showCustom
@@ -2016,6 +2018,8 @@ id transition_transform
 id uniform
 id unlabeled
 id up
+id upload
+id upload_file
 id url
 id useLogo
 id view_offset_helper
@@ -2086,7 +2090,7 @@ layout activity_hal_utama_3g
 layout activity_hal_utama_4g
 layout activity_log_in
 layout activity_registrasi
-layout activity_session_manager
+layout activity_upload
 layout activity_user
 layout cast_expanded_controller_activity
 layout cast_help_text
@@ -2316,6 +2320,9 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string permision_available_location
+string permission_camera_rationale
+string permissions_not_granted
 string place_autocomplete_clear_button
 string place_autocomplete_search_hint
 string register
@@ -2970,4 +2977,5 @@ styleable ViewBackgroundHelper android_background backgroundTint backgroundTintM
 styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable WalletFragmentOptions appTheme environment fragmentMode fragmentStyle
 styleable WalletFragmentStyle buyButtonAppearance buyButtonHeight buyButtonText buyButtonWidth maskedWalletDetailsBackground maskedWalletDetailsButtonBackground maskedWalletDetailsButtonTextAppearance maskedWalletDetailsHeaderTextAppearance maskedWalletDetailsLogoImageType maskedWalletDetailsLogoTextColor maskedWalletDetailsTextAppearance
+xml fileproviderpaths
 xml network_security_config
