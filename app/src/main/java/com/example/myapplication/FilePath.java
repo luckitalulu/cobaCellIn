@@ -36,8 +36,8 @@ public class FilePath {
                             + split[1];
                 }
             }
-            // DownloadsProvider
-            else if (isDownloadsDocument(uri)) {
+//            DownloadsProvider
+             if (isDownloadsDocument(uri)) {
 
                 final String id = DocumentsContract.getDocumentId(uri);
                 final Uri contentUri = ContentUris.withAppendedId(

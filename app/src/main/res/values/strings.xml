@@ -19,6 +19,14 @@
     <string name="btn_register">Register</string>
     <string name="btn_simpan">Simpan</string>
 
+
+    <string-array name="list_file">
+        <item>2G</item>
+        <item>3G</item>
+        <item>4G</item>
+    </string-array>
+
+
     <!-- User -->
     <string name="id_user">ID. User</string>
     <string name="nama_user">Nama User</string>

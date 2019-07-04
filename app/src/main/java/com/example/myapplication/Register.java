@@ -40,7 +40,7 @@ public class Register extends AppCompatActivity {
     private String confirmPassword;
     private String fullName;
     private ProgressDialog pDialog;
-    private String register_url = "https://cellin-test1.000webhostapp.com/koneksi/registrasi.php";
+    private String register_url = "https://cellin.tech/koneksi/registrasi.php";
     private SessionHandler session;
 
     @Override

@@ -444,26 +444,26 @@ public final class R {
         public static final int seek_bar_controls = 0x7f09015c;
         public static final int selectionDetails = 0x7f090160;
         public static final int slide = 0x7f090167;
-        public static final int standard = 0x7f090174;
-        public static final int start_text = 0x7f090177;
-        public static final int status_text = 0x7f090179;
-        public static final int strict_sandbox = 0x7f09017c;
-        public static final int subtitle_view = 0x7f09017f;
-        public static final int tab_host = 0x7f090181;
-        public static final int terrain = 0x7f090185;
-        public static final int test = 0x7f090186;
-        public static final int text = 0x7f090187;
-        public static final int text1 = 0x7f090188;
-        public static final int text2 = 0x7f090189;
-        public static final int textTitle = 0x7f09018d;
-        public static final int text_empty_message = 0x7f09018f;
-        public static final int text_list_view = 0x7f090191;
-        public static final int thing_proto = 0x7f090195;
-        public static final int title_view = 0x7f09019a;
-        public static final int toolbar = 0x7f09019b;
-        public static final int url = 0x7f0901a9;
-        public static final int wide = 0x7f0901ae;
-        public static final int wrap_content = 0x7f0901b1;
+        public static final int standard = 0x7f090175;
+        public static final int start_text = 0x7f090178;
+        public static final int status_text = 0x7f09017a;
+        public static final int strict_sandbox = 0x7f09017d;
+        public static final int subtitle_view = 0x7f090180;
+        public static final int tab_host = 0x7f090182;
+        public static final int terrain = 0x7f090186;
+        public static final int test = 0x7f090187;
+        public static final int text = 0x7f090188;
+        public static final int text1 = 0x7f090189;
+        public static final int text2 = 0x7f09018a;
+        public static final int textTitle = 0x7f09018e;
+        public static final int text_empty_message = 0x7f090190;
+        public static final int text_list_view = 0x7f090192;
+        public static final int thing_proto = 0x7f090196;
+        public static final int title_view = 0x7f09019b;
+        public static final int toolbar = 0x7f09019c;
+        public static final int url = 0x7f0901aa;
+        public static final int wide = 0x7f0901af;
+        public static final int wrap_content = 0x7f0901b2;
     }
     public static final class integer {
         private integer() {}
@@ -474,16 +474,16 @@ public final class R {
     public static final class layout {
         private layout() {}
 
-        public static final int cast_expanded_controller_activity = 0x7f0c0024;
-        public static final int cast_help_text = 0x7f0c0025;
-        public static final int cast_intro_overlay = 0x7f0c0026;
-        public static final int cast_mini_controller = 0x7f0c0027;
-        public static final int cast_tracks_chooser_dialog_layout = 0x7f0c0028;
-        public static final int cast_tracks_chooser_dialog_row_layout = 0x7f0c0029;
-        public static final int place_autocomplete_fragment = 0x7f0c005a;
-        public static final int place_autocomplete_item_powered_by_google = 0x7f0c005b;
-        public static final int place_autocomplete_item_prediction = 0x7f0c005c;
-        public static final int place_autocomplete_progress = 0x7f0c005d;
+        public static final int cast_expanded_controller_activity = 0x7f0c0023;
+        public static final int cast_help_text = 0x7f0c0024;
+        public static final int cast_intro_overlay = 0x7f0c0025;
+        public static final int cast_mini_controller = 0x7f0c0026;
+        public static final int cast_tracks_chooser_dialog_layout = 0x7f0c0027;
+        public static final int cast_tracks_chooser_dialog_row_layout = 0x7f0c0028;
+        public static final int place_autocomplete_fragment = 0x7f0c0059;
+        public static final int place_autocomplete_item_powered_by_google = 0x7f0c005a;
+        public static final int place_autocomplete_item_prediction = 0x7f0c005b;
+        public static final int place_autocomplete_progress = 0x7f0c005c;
     }
     public static final class raw {
         private raw() {}

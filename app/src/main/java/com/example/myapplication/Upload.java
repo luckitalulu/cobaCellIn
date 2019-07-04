@@ -2,19 +2,21 @@ package com.example.myapplication;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
-import android.media.Image;
 import android.net.Uri;
-import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.bumptech.glide.Glide;
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -26,33 +28,51 @@ public class Upload extends AppCompatActivity {
     private static final int PICK_FILE_REQUEST = 1;
     private static final String TAG = Upload.class.getSimpleName();
     private String selectedFilePath;
-    private String SERVER_URL = "https://cellin-tech/uploadtoserver.php";
+    private String SERVER_URL_2G = "http://cellin.tech/uploadtoserver2g.php";
+    private String SERVER_URL_3G = "http://cellin.tech/uploadtoserver3g.php";
+    private String SERVER_URL_4G = "http://cellin.tech/uploadtoserver4g.php";
+    String SERVER_URL;
     ImageView varIvAttachment;
     Button bUpload, chooseFile;
     TextView tvFileName;
     ProgressDialog dialog;
+    Spinner spinner;
+    Context uploadContext;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload);
+
+        spinner = (Spinner)findViewById(R.id.sp_name);
+        if (spinner.getSelectedItem().equals("2G")){
+            SERVER_URL = SERVER_URL_2G;
+        }
+        else if (spinner.getSelectedItem().equals("3G")){
+            SERVER_URL = SERVER_URL_3G;
+        }
+        else if (spinner.getSelectedItem().equals("4G")){
+            SERVER_URL = SERVER_URL_4G;
+        }
         bUpload = (Button) findViewById(R.id.upload_file);
         chooseFile =(Button) findViewById(R.id.upload);
         tvFileName = (TextView)findViewById(R.id.selected_file_name);
         varIvAttachment = (ImageView)findViewById(R.id.ivAttachment);
+
+
+
         Glide.with(getApplicationContext()).load(R.drawable.cellin).into(varIvAttachment);
         bUpload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(selectedFilePath != null){
                     dialog = ProgressDialog.show(Upload.this,"","Uploading File...",true);
-
                     new Thread(new Runnable() {
                         @Override
                         public void run() {
                             //creating new thread to handle Http Operations
-                            uploadFile(selectedFilePath);
+                            uploadFile();
                         }
                     }).start();
                 }else{
@@ -75,6 +95,7 @@ public class Upload extends AppCompatActivity {
         Intent intent = new Intent();
         //sets the select file to all types of files
         intent.setType("*/*");
+
         //allows to select data and return it
         intent.setAction(Intent.ACTION_GET_CONTENT);
         //starts new activity to select file and return data
@@ -106,121 +127,93 @@ public class Upload extends AppCompatActivity {
     }
 
     //android upload file to server
-    public void uploadFile(final String selectedFilePath){
 
-        int serverResponseCode = 0;
+    private void uploadFile() {
+        // Map is used to multipart the file using okhttp3.RequestBody
+        File file = new File(selectedFilePath);
 
-        HttpURLConnection connection;
-        DataOutputStream dataOutputStream;
-        String lineEnd = "\r\n";
-        String twoHyphens = "--";
-        String boundary = "*****";
+        // Parsing any Media type file
+        RequestBody requestBody = RequestBody.create(MediaType.parse("*/*"), file);
+        MultipartBody.Part fileToUpload = MultipartBody.Part.createFormData("file", file.getName(), requestBody);
+        RequestBody filename = RequestBody.create(MediaType.parse("text/plain"), file.getName());
 
-
-        int bytesRead,bytesAvailable,bufferSize;
-        byte[] buffer;
-        int maxBufferSize = 1 * 1024 * 1024;
-        File selectedFile = new File(selectedFilePath);
-
-
-        String[] parts = selectedFilePath.split("/");
-        final String fileName = parts[parts.length-1];
-
-        if (!selectedFile.isFile()){
-            dialog.dismiss();
-
-            runOnUiThread(new Runnable() {
+        if (spinner.getSelectedItem().equals("4G")){
+            ApiConfig4g getResponse = AppConfig.getRetrofit().create(ApiConfig4g.class);
+            Call<ServerResponse> call = getResponse.uploadFile(fileToUpload, filename);
+            call.enqueue(new Callback<ServerResponse>() {
                 @Override
-                public void run() {
-                    tvFileName.setText("Source File Doesn't Exist: " + selectedFilePath);
+                public void onResponse(Call<ServerResponse> call, Response<ServerResponse> response) {
+                    ServerResponse serverResponse = response.body();
+                    if (serverResponse != null) {
+                        if (serverResponse.getSuccess()) {
+                            Toast.makeText(getApplicationContext(), serverResponse.getMessage(), Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getApplicationContext(), serverResponse.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        assert serverResponse != null;
+                        Log.v("Response", serverResponse.toString());
+                    }
+                    dialog.dismiss();
+                }
+                @Override
+                public void onFailure(Call<ServerResponse> call, Throwable t) {
+
                 }
             });
-        }else{
-            try{
-                FileInputStream fileInputStream = new FileInputStream(selectedFile);
-                URL url = new URL(SERVER_URL);
-                connection = (HttpURLConnection) url.openConnection();
-                connection.setDoInput(true);//Allow Inputs
-                connection.setDoOutput(true);//Allow Outputs
-                connection.setUseCaches(false);//Don't use a cached Copy
-                connection.setRequestMethod("POST");
-                connection.setRequestProperty("Connection", "Keep-Alive");
-                connection.setRequestProperty("ENCTYPE", "multipart/form-data");
-                connection.setRequestProperty("Content-Type", "multipart/form-data;boundary=" + boundary);
-                connection.setRequestProperty("uploaded_file",selectedFilePath);
-
-                //creating new dataoutputstream
-                dataOutputStream = new DataOutputStream(connection.getOutputStream());
-
-                //writing bytes to data outputstream
-                dataOutputStream.writeBytes(twoHyphens + boundary + lineEnd);
-                dataOutputStream.writeBytes("Content-Disposition: form-data; name=\"uploaded_file\";filename=\""
-                        + selectedFilePath + "\"" + lineEnd);
-
-                dataOutputStream.writeBytes(lineEnd);
-
-                //returns no. of bytes present in fileInputStream
-                bytesAvailable = fileInputStream.available();
-                //selecting the buffer size as minimum of available bytes or 1 MB
-                bufferSize = Math.min(bytesAvailable,maxBufferSize);
-                //setting the buffer as byte array of size of bufferSize
-                buffer = new byte[bufferSize];
-
-                //reads bytes from FileInputStream(from 0th index of buffer to buffersize)
-                bytesRead = fileInputStream.read(buffer,0,bufferSize);
-
-                //loop repeats till bytesRead = -1, i.e., no bytes are left to read
-                while (bytesRead > 0){
-                    //write the bytes read from inputstream
-                    dataOutputStream.write(buffer,0,bufferSize);
-                    bytesAvailable = fileInputStream.available();
-                    bufferSize = Math.min(bytesAvailable,maxBufferSize);
-                    bytesRead = fileInputStream.read(buffer,0,bufferSize);
-                }
-
-                dataOutputStream.writeBytes(lineEnd);
-                dataOutputStream.writeBytes(twoHyphens + boundary + twoHyphens + lineEnd);
-
-                serverResponseCode = connection.getResponseCode();
-                String serverResponseMessage = connection.getResponseMessage();
-
-                Log.i(TAG, "Server Response is: " + serverResponseMessage + ": " + serverResponseCode);
-
-                //response code of 200 indicates the server status OK
-                if(serverResponseCode == 200){
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            tvFileName.setText("File Upload completed. fileName");
+        } else if (spinner.getSelectedItem().equals("3G")){
+            ApiConfig3g getResponse = AppConfig.getRetrofit().create(ApiConfig3g.class);
+            Call<ServerResponse> call = getResponse.uploadFile(fileToUpload, filename);
+            call.enqueue(new Callback<ServerResponse>() {
+                @Override
+                public void onResponse(Call<ServerResponse> call, Response<ServerResponse> response) {
+                    ServerResponse serverResponse = response.body();
+                    if (serverResponse != null) {
+                        if (serverResponse.getSuccess()) {
+                            Toast.makeText(getApplicationContext(), serverResponse.getMessage(), Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getApplicationContext(), serverResponse.getMessage(), Toast.LENGTH_SHORT).show();
                         }
-                    });
-                }
-
-                //closing the input and output streams
-                fileInputStream.close();
-                dataOutputStream.flush();
-                dataOutputStream.close();
-
-
-
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        Toast.makeText(Upload.this,"File Not Found",Toast.LENGTH_SHORT).show();
+                    } else {
+                        assert serverResponse != null;
+                        Log.v("Response", serverResponse.toString());
                     }
-                });
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-                Toast.makeText(Upload.this, "URL error!", Toast.LENGTH_SHORT).show();
+                    dialog.dismiss();
+                }
+                @Override
+                public void onFailure(Call<ServerResponse> call, Throwable t) {
 
-            } catch (IOException e) {
-                e.printStackTrace();
-//                Toast.makeText(Upload.this, "Cannot Read/Write File!", Toast.LENGTH_SHORT).show();
-            }
-            dialog.dismiss();
+                }
+            });
+        } else {
+            ApiConfig2g getResponse = AppConfig.getRetrofit().create(ApiConfig2g.class);
+            Call<ServerResponse> call = getResponse.uploadFile(fileToUpload, filename);
+            call.enqueue(new Callback<ServerResponse>() {
+                @Override
+                public void onResponse(Call<ServerResponse> call, Response<ServerResponse> response) {
+                    ServerResponse serverResponse = response.body();
+                    if (serverResponse != null) {
+                        if (serverResponse.getSuccess()) {
+                            Toast.makeText(getApplicationContext(), serverResponse.getMessage(), Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getApplicationContext(), serverResponse.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        assert serverResponse != null;
+                        Log.v("Response", serverResponse.toString());
+                    }
+                    dialog.dismiss();
+                }
+                @Override
+                public void onFailure(Call<ServerResponse> call, Throwable t) {
+
+                }
+            });
         }
 
+
+
+
     }
+
 }

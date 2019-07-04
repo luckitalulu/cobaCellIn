@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
     <domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="true">https://cellin-test.azurewebsites.net/koneksi/registrasi.php</domain>
+        <domain includeSubdomains="true">cellin.tech</domain>
     </domain-config>
 </network-security-config>

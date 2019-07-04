@@ -16,9 +16,15 @@
             android:layout_centerInParent="true"/>
 
 
-    <Button
-            android:layout_centerVertical="true"
-            android:id="@+id/upload_file"
+    <Spinner
+            android:padding="20dp"
+            android:id="@+id/sp_name"
+            android:layout_below="@id/ivAttachment"
+            android:entries="@array/list_file"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></Spinner>
+
+    <Button android:id="@+id/upload_file"
             android:layout_width="245dp"
             android:layout_height="65dp"
             android:layout_marginBottom="25dp"
@@ -41,11 +47,11 @@
             android:layout_below="@+id/selected_file_name"
             android:textColor="@android:color/white"
             android:onClick="onNewRecording"
-            android:layout_marginTop="11dp"/>
+            android:layout_marginTop="24dp"/>
 
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
     android:id="@+id/selected_file_name"
-    android:layout_below="@id/ivAttachment"/>
+    android:layout_below="@id/sp_name"/>
 </RelativeLayout>

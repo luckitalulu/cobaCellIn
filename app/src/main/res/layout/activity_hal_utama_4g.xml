@@ -122,13 +122,13 @@
                 android:textSize="@dimen/detinfo_value_text_size"/>
 
         <TextView
+                android:text="LTE RSRP"
                 android:id="@+id/RsrpLabel"
                 android:layout_toRightOf="@id/numRsrp"
                 android:layout_alignBaseline="@id/numRsrp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:text="LTE RSRP"
                 android:textColor="#8B8682"
                 android:textSize="@dimen/detinfo_value_label_size"/>
 
@@ -144,13 +144,13 @@
                 android:textSize="@dimen/detinfo_value_text_size" />
 
         <TextView
+                android:text="LTE RSRQ"
                 android:id="@+id/RsrqLabel"
                 android:layout_toRightOf="@id/numRsrq"
                 android:layout_alignBaseline="@id/numRsrq"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:text="LTE RSRQ"
                 android:textColor="#8B8682"
                 android:textSize="@dimen/detinfo_value_label_size"/>
 
@@ -166,13 +166,13 @@
                 android:textSize="@dimen/detinfo_value_text_size" />
 
         <TextView
+                android:text="LTE PCI"
                 android:id="@+id/PCILabel"
                 android:layout_toRightOf="@id/numPCI"
                 android:layout_alignBaseline="@id/numPCI"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:text="LTE PCI"
                 android:textColor="#8B8682"
                 android:textSize="@dimen/detinfo_value_label_size"/>
 
@@ -188,6 +188,7 @@
                 android:textSize="@dimen/detinfo_value_text_size" />
 
         <TextView
+                android:text="LTE CQI"
                 android:id="@+id/CQILabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -196,7 +197,6 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="4dp"
                 android:layout_toRightOf="@id/numCQI"
-                android:text="LTE CQI"
                 android:textColor="#8B8682"
                 android:textSize="@dimen/detinfo_value_label_size" />
 

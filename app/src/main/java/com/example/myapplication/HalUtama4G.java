@@ -76,7 +76,7 @@ public class HalUtama4G extends AppCompatActivity {
     private static final String KEY_CELLPCI = "scellPci";
     private static final String KEY_CQI = "scqi";
     private static final String KEY_USERNAME = "username";
-    private String data4g_url = "https://cellin-test1.000webhostapp.com/koneksi/data4g.php";
+//    private String data4g_url = "https://cellin-test1.000webhostapp.com/koneksi/data4g.php";
 
 
     protected SignalStrengthListener signalStrengthListener;
@@ -284,59 +284,8 @@ public class HalUtama4G extends AppCompatActivity {
 
                 if (isRecording) {
                     String timeCapture = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
-                    data.add(new String[]{timeCapture, srsrp, srsrq, scellPci, scqi});
+                    data.add(new String[]{usernameIntent4G, srsrp, srsrq,scellPci, scqi,timeCapture});
                     ++numDataPoints;
-                    JSONObject request = new JSONObject();
-                    try {
-                        //Populate the request parameters
-                        request.put(KEY_USERNAME,usernameIntent4G);
-                        request.put(KEY_TIMECAPTURED, timeCapture);
-                        request.put(KEY_RSRP, srsrp);
-                        request.put(KEY_RSRQ, srsrq);
-                        request.put(KEY_CELLPCI,scellPci);
-                        request.put(KEY_CQI,scqi);
-
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    JsonObjectRequest jsArrayRequest = new JsonObjectRequest
-                            (Request.Method.POST, data4g_url, request, new Response.Listener<JSONObject>() {
-                                @Override
-                                public void onResponse(JSONObject response) {
-                                    try {
-                                        String key = response.getString("status");
-                                        //Check if user got registered successfully
-                                        if (key.equals("0")) {
-                                            //Set the user session
-
-                                        }else if(key.equals("1")){
-                                            //Display error message if username is already existsing
-
-
-                                        }else{
-
-
-                                        }
-                                    } catch (JSONException e) {
-                                        e.printStackTrace();
-
-                                    }
-                                }
-                            }, new Response.ErrorListener() {
-
-                                @Override
-                                public void onErrorResponse(VolleyError error) {
-
-                                    //Display error message whenever an error occurs
-                                    Toast.makeText(getApplicationContext(),
-                                            error.getMessage(), Toast.LENGTH_SHORT).show();
-
-                                }
-                            });
-
-
-                    // Access the RequestQueue through your singleton class.
-                    VolleyController.getInstance(HalUtama4G.this).addToRequestQueue(jsArrayRequest);
                 }
 
                 runOnUiThread(new Runnable() {

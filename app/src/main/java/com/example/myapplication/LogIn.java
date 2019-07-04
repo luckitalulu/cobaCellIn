@@ -28,7 +28,7 @@ public class LogIn extends AppCompatActivity {
     private String username;
     private String password;
     private ProgressDialog pDialog;
-    private String login_url = "https://cellin-test1.000webhostapp.com/koneksi/login.php";
+    private String login_url = "https://cellin.tech/koneksi/login.php";
     private SessionHandler session;
 
     @Override

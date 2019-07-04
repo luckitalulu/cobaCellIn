@@ -102,12 +102,12 @@
 
         <TextView
                 android:id="@+id/NetworkOperatorLabel"
+                android:text="Operator"
                 android:layout_toRightOf="@id/numNetworkOperator"
                 android:layout_alignBaseline="@id/numNetworkOperator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:text="Operator"
                 android:textColor="#8B8682"
                 android:textSize="@dimen/detinfo_value_label_size"/>
 
@@ -123,13 +123,13 @@
                 android:textSize="@dimen/detinfo_value_text_size"/>
 
         <TextView
+                android:text="PSC"
                 android:id="@+id/RsrpLabel"
                 android:layout_toRightOf="@id/numRsrp"
                 android:layout_alignBaseline="@id/numRsrp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:text="PSC"
                 android:textColor="#8B8682"
                 android:textSize="@dimen/detinfo_value_label_size"/>
 
@@ -145,13 +145,13 @@
                 android:textSize="@dimen/detinfo_value_text_size" />
 
         <TextView
+                android:text="RSCP"
                 android:id="@+id/RscpLabel"
                 android:layout_toRightOf="@id/numRsrq"
                 android:layout_alignBaseline="@id/numRsrq"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:text="RSCP"
                 android:textColor="#8B8682"
                 android:textSize="@dimen/detinfo_value_label_size"/>
 
@@ -167,13 +167,13 @@
                 android:textSize="@dimen/detinfo_value_text_size" />
 
         <TextView
+                android:text="LAC"
                 android:id="@+id/LacLabel"
                 android:layout_toRightOf="@id/numPCI"
                 android:layout_alignBaseline="@id/numPCI"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:text="LAC"
                 android:textColor="#8B8682"
                 android:textSize="@dimen/detinfo_value_label_size"/>
 
@@ -189,13 +189,13 @@
                 android:textSize="@dimen/detinfo_value_text_size" />
 
         <TextView
+                android:text="UARFCN"
                 android:id="@+id/ARFCNLabel"
                 android:layout_toRightOf="@id/numUARFCN"
                 android:layout_alignBaseline="@id/numUARFCN"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:text="UARFCN"
                 android:textColor="#8B8682"
                 android:textSize="@dimen/detinfo_value_label_size"/>
 
@@ -211,6 +211,7 @@
                 android:textSize="@dimen/detinfo_value_text_size" />
 
         <TextView
+                android:text="CID"
                 android:id="@+id/CQILabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -219,7 +220,6 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="4dp"
                 android:layout_toRightOf="@id/numCQI"
-                android:text="CID"
                 android:textColor="#8B8682"
                 android:textSize="@dimen/detinfo_value_label_size"/>
 
@@ -235,13 +235,13 @@
                 android:textSize="@dimen/detinfo_value_text_size" />
 
         <TextView
+                android:text="Data Points"
                 android:id="@+id/numDataPointsLabel"
                 android:layout_toRightOf="@id/numDataPoints"
                 android:layout_alignBaseline="@id/numDataPoints"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:text="Data Points"
                 android:textColor="#8B8682"
                 android:textSize="@dimen/detinfo_value_label_size"/>
 
@@ -263,6 +263,7 @@
     />
 
     <Button
+            android:text="Pause"
             android:id="@+id/pause_resume_recording"
             android:layout_width="125dp"
             android:layout_height="65dp"
@@ -271,7 +272,6 @@
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="15dp"
             android:background="@drawable/rounded_button"
-            android:text="Pause"
             android:textSize="25sp"
             android:textColor="@android:color/white"
             android:onClick="onPauseResumeRecording"
@@ -279,6 +279,7 @@
     />
 
     <Button
+            android:text="Stop"
             android:id="@+id/stop_recording"
             android:layout_width="125dp"
             android:layout_height="65dp"
@@ -287,7 +288,6 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="15dp"
             android:background="@drawable/rounded_button"
-            android:text="Stop"
             android:textSize="25sp"
             android:textColor="#8B8682"
             android:onClick="onStopRecording"
