@@ -1602,6 +1602,7 @@ id ARFCNLabel2G
 id CQILabel
 id CQILabel2G
 id CTRL
+id EarfcnLabel
 id FUNCTION
 id LacLabel
 id META
@@ -1751,7 +1752,6 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_controller_layout
 id expanded_menu
-id fileID
 id filenameLabel
 id filenameValue
 id fill
@@ -1882,6 +1882,7 @@ id numCQI
 id numCQI2G
 id numDataPoints
 id numDataPointsLabel
+id numEarfcn
 id numNetworkOperator
 id numNetworkOperator2G
 id numPCI
@@ -2024,6 +2025,7 @@ id upload
 id upload_file
 id url
 id useLogo
+id username
 id view_offset_helper
 id visible
 id volume_item_container

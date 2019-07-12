@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 
 import java.util.Date;
-import java.util.HashMap;
 
 public class SessionHandler {
 
@@ -24,12 +23,18 @@ public class SessionHandler {
         this.mEditor = mPreferences.edit();
     }
 
+    public String setKeyUsername(){
+        String username = mPreferences.getString(KEY_USERNAME,"UNKNOWN");
+        return username;
+    }
+
     /**
      * Logs in the user by saving user details and setting session
      *
      * @param username
      * @param fullName
      */
+
     public void loginUser(String username, String fullName) {
         mEditor.putString(KEY_USERNAME, username);
         mEditor.putString(KEY_FULL_NAME, fullName);
@@ -50,6 +55,7 @@ public class SessionHandler {
         Date currentDate = new Date();
 
         long millis = mPreferences.getLong(KEY_EXPIRES, 0);
+        String username = mPreferences.getString(KEY_USERNAME,"UNKNOWN");
 
         /* If shared preferences does not have a value
          then user is not logged in

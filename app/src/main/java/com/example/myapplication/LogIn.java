@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -74,7 +75,9 @@ public class LogIn extends AppCompatActivity {
      * Launch Dashboard Activity on Successful Login
      */
     private void loadDashboard() {
-        Intent i = new Intent(getApplicationContext(), HalUtamaChoice.class);
+        SharedPreferences prefs = getSharedPreferences("MyApp", MODE_PRIVATE);
+        prefs.edit().putString("username", username).apply();
+        Intent i = new Intent(this, HalUtamaChoice.class);
         startActivity(i);
         finish();
 

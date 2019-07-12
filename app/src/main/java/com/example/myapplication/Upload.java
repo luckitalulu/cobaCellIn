@@ -152,7 +152,7 @@ public class Upload extends AppCompatActivity {
                         }
                     } else {
                         assert serverResponse != null;
-                        Log.v("Response", serverResponse.toString());
+//                        Log.v("Response", serverResponse.toString());
                     }
                     dialog.dismiss();
                 }
@@ -185,7 +185,7 @@ public class Upload extends AppCompatActivity {
 
                 }
             });
-        } else {
+        } else if (spinner.getSelectedItem().equals("2G")){
             ApiConfig2g getResponse = AppConfig.getRetrofit().create(ApiConfig2g.class);
             Call<ServerResponse> call = getResponse.uploadFile(fileToUpload, filename);
             call.enqueue(new Callback<ServerResponse>() {

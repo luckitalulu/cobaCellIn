@@ -1,19 +1,11 @@
 package com.example.myapplication;
 
-import android.Manifest;
-import android.app.AlertDialog;
-import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.graphics.drawable.GradientDrawable;
 import android.location.Criteria;
-import android.location.LocationListener;
 import android.location.LocationManager;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 //import android.support.v4.app.ActivityCompat;
@@ -32,12 +24,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
@@ -50,17 +36,13 @@ import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.formatter.PercentFormatter;
 
-import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.net.HttpURLConnection;
 import java.text.DecimalFormat;
 import java.util.*;
 
 import au.com.bytecode.opencsv.CSVWriter;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 public class HalUtama4G extends AppCompatActivity {
 
@@ -85,7 +67,7 @@ public class HalUtama4G extends AppCompatActivity {
 
     protected String[] parts;
     protected String ltestr;
-    protected int cellPci = 0, mcc = 0, mnc = 0;
+    protected int cellPci = 0, mcc = 0, mnc = 0, earfcn = 0;
 
     protected Timer timerCapture;
     protected int numDataPoints = 0;
@@ -94,7 +76,7 @@ public class HalUtama4G extends AppCompatActivity {
 //    String publicFilePath = null;
 //    String publicFileName = null;
 
-    protected String srsrp, srsrq, scqi, scellPci, smcc, smnc, snetworkOperator, usernameIntent4G;
+    protected String srsrp, srsrq, scqi, scellPci, smcc, smnc, searfcn, snetworkOperator, username;
 
     protected boolean isRecording = false;
     protected boolean animateRecording = true;
@@ -108,7 +90,7 @@ public class HalUtama4G extends AppCompatActivity {
     protected LineChart mChart;
 
     protected Button btnStartRecording, btnPauseResumeRecording, btnStopRecording;
-    protected TextView tvSignalStrength, tvRSRP, tvRSRQ, tvPCI, tvCQI, tvNetworkOperator, tvDataPoints;
+    protected TextView tvSignalStrength, tvRSRP, tvRSRQ, tvPCI, tvCQI, tvEarfcn, tvNetworkOperator, tvDataPoints;
     protected String stringNetworkOperator, stringMccMnc;
 
     @Override
@@ -116,8 +98,8 @@ public class HalUtama4G extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hal_utama_4g);
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        Intent intent = new Intent();
-        usernameIntent4G = intent.getStringExtra("usernameIntent4G");
+        SharedPreferences prefs4g = getSharedPreferences("HalUtama4G", MODE_PRIVATE);
+        username = prefs4g.getString("username", "UNKNOWN");
         criteria = new Criteria();
         criteria.setAccuracy(Criteria.ACCURACY_FINE);
         final int min = 1;
@@ -173,6 +155,7 @@ public class HalUtama4G extends AppCompatActivity {
         tvRSRQ = (TextView) findViewById(R.id.numRsrq);
         tvPCI = (TextView) findViewById(R.id.numPCI);
         tvCQI = (TextView) findViewById(R.id.numCQI);
+        tvEarfcn = (TextView) findViewById(R.id.numEarfcn);
         tvNetworkOperator = (TextView) findViewById(R.id.numNetworkOperator);
 
         tvRecPau = (TextView) findViewById(R.id.rec_pau);
@@ -209,7 +192,7 @@ public class HalUtama4G extends AppCompatActivity {
 
         String startDate = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
 
-        csvFilename = startDate;
+        csvFilename = username+"-"+startDate;
         csvFilename = csvFilename.replace(' ', '_').replace(",", "");
         ((TextView) findViewById(R.id.filenameValue)).setText(csvFilename);
 
@@ -256,6 +239,7 @@ public class HalUtama4G extends AppCompatActivity {
                 srsrq = String.valueOf(rsrq);
                 scqi = String.valueOf(cqi);
                 scellPci = String.valueOf(cellPci);
+                searfcn = String.valueOf(earfcn);
                 smcc = String.valueOf(mcc);
                 smnc = String.valueOf(mnc);
                 snetworkOperator = smcc + smnc;
@@ -284,7 +268,7 @@ public class HalUtama4G extends AppCompatActivity {
 
                 if (isRecording) {
                     String timeCapture = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
-                    data.add(new String[]{usernameIntent4G, srsrp, srsrq,scellPci, scqi,timeCapture});
+                    data.add(new String[]{username, srsrp, srsrq, scellPci, scqi, searfcn, timeCapture});
                     ++numDataPoints;
                 }
 
@@ -298,6 +282,7 @@ public class HalUtama4G extends AppCompatActivity {
                         tvRSRQ.setText(srsrq);
                         tvPCI.setText(scellPci);
                         tvCQI.setText(scqi);
+                        tvEarfcn.setText(searfcn);
                         tvNetworkOperator.setText(stringNetworkOperator);
                         tvDataPoints.setText(String.valueOf(numDataPoints));
 
@@ -408,7 +393,7 @@ public class HalUtama4G extends AppCompatActivity {
             public void run() {
 
                 CSVWriter writer;
-                String[] headers = "Time, RSRP, RSRQ, PCI, CQI".split(",");
+                String[] headers = "Username, RSRP, RSRQ, PCI, CQI, Time".split(",");
                 try {
                     File file = new File(getExternalFilesDir(null), csvFilename + ".csv");
                     writer = new CSVWriter(new FileWriter(file, true), ',');
@@ -619,6 +604,7 @@ public class HalUtama4G extends AppCompatActivity {
         tvRSRQ.setText("");
         tvPCI.setText("");
         tvCQI.setText("");
+        tvEarfcn.setText("");
         tvDataPoints.setText("");
 
         popShim.dismiss();
@@ -838,6 +824,7 @@ public class HalUtama4G extends AppCompatActivity {
                         // cast to CellInfoLte and call all the CellInfoLte methods you need
                         // Gets the LTE PCI: (returns Physical Cell Id 0..503, Integer.MAX_VALUE if unknown)
                         cellPci = ((CellInfoLte) cellInfo).getCellIdentity().getPci();
+                        earfcn = ((CellInfoLte)cellInfo).getCellIdentity().getEarfcn();
                         mcc = ((CellInfoLte) cellInfo).getCellIdentity().getMcc();
                         mnc = ((CellInfoLte) cellInfo).getCellIdentity().getMnc();
                     }

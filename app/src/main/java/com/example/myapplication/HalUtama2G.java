@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.GradientDrawable;
 import android.location.Criteria;
@@ -57,7 +58,7 @@ public class HalUtama2G extends AppCompatActivity {
     private Criteria criteria;
     private String provider;
 
-    protected HalUtama2G.SignalStrengthListener signalStrengthListener;
+    protected SignalStrengthListener signalStrengthListener;
     protected TelephonyManager tm;
     protected List<CellInfo> cellInfoList;
 
@@ -72,7 +73,7 @@ public class HalUtama2G extends AppCompatActivity {
     protected List<String[]> data;
     protected String csvFilename;
 
-    protected String slac, sarfcn, srxlevel, sbsic, scid, snetworkOperator, smcc, smnc;
+    protected String slac, sarfcn, srxlevel, sbsic, scid, snetworkOperator, smcc, smnc, username;
 
     protected boolean isRecording = false;
     protected boolean animateRecording = true;
@@ -80,13 +81,15 @@ public class HalUtama2G extends AppCompatActivity {
     protected ImageView recImage;
     protected Animation recAnimation;
 
+    Context context = this;
+
     protected PopupWindow popShim;
     protected LineChart mChart;
 
     protected Button btnStartRecording, btnPauseResumeRecording, btnStopRecording;
     protected TextView tvSignalStrength, tvLAC, tvARFCN, tvRxLevel, tvBSIC, tvCID, tvDataPoints, tvNetworkOperator;
     protected String stringNetworkOperator, stringMccMnc;
-    Context context;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,7 +97,8 @@ public class HalUtama2G extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hal_utama_2g);
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-
+        SharedPreferences prefs2g = getSharedPreferences("HalUtama2G", MODE_PRIVATE);
+        username = prefs2g.getString("username", "UNKNOWN");
         criteria = new Criteria();
         criteria.setAccuracy(Criteria.ACCURACY_FINE);
         final int min = 1;
@@ -185,7 +189,7 @@ public class HalUtama2G extends AppCompatActivity {
 
         String startDate = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
 
-        csvFilename = startDate;
+        csvFilename = username+"-"+startDate;
         csvFilename = csvFilename.replace(' ', '_').replace(",", "");
         ((TextView) findViewById(R.id.filenameValue)).setText(csvFilename);
 
@@ -243,7 +247,7 @@ public class HalUtama2G extends AppCompatActivity {
 
                 if (isRecording) {
                     String timeCapture = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
-                    data.add(new String[]{timeCapture, slac, sarfcn, srxlevel, sbsic, scid, snetworkOperator});
+                    data.add(new String[]{username, sbsic, srxlevel, slac, scid, sarfcn,  timeCapture});
                     ++numDataPoints;
                 }
 
@@ -365,7 +369,7 @@ public class HalUtama2G extends AppCompatActivity {
             public void run() {
 
                 CSVWriter writer;
-                String[] headers = "LAC, ARFCN, RxLevel, BSIC, CID, Network Operator".split(",");
+                String[] headers = "Username,  BSIC, RxLevel, LAC,  CellID, ARFCN, TimeCapture".split(",");
 
                 try {
                     File file = new File(getExternalFilesDir(null), csvFilename + ".csv");

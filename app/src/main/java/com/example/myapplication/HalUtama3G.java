@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.GradientDrawable;
 import android.location.Criteria;
@@ -57,7 +58,8 @@ public class HalUtama3G extends AppCompatActivity {
     private Criteria criteria;
     private String provider;
 
-    protected HalUtama3G.SignalStrengthListener signalStrengthListener;
+
+    protected SignalStrengthListener signalStrengthListener;
     protected TelephonyManager tm;
     protected List<CellInfo> cellInfoList;
 
@@ -72,7 +74,7 @@ public class HalUtama3G extends AppCompatActivity {
     protected List<String[]> data;
     protected String csvFilename;
 
-    protected String spsc, srscp, slac, scid, suarfcn, snetworkOperator, smcc, smnc;
+    protected String spsc, srscp, slac, scid, suarfcn, srnc, snetworkOperator, smcc, smnc, username;
 
     protected boolean isRecording = false;
     protected boolean animateRecording = true;
@@ -80,13 +82,14 @@ public class HalUtama3G extends AppCompatActivity {
     protected ImageView recImage;
     protected Animation recAnimation;
 
+    Context context = this;
+
     protected PopupWindow popShim;
     protected LineChart mChart;
 
     protected Button btnStartRecording, btnPauseResumeRecording, btnStopRecording;
     protected TextView tvSignalStrength, tvPSC, tvRSCP, tvLAC, tvCID, tvUARFCN, tvNetworkOperator, tvDataPoints;
     protected String stringNetworkOperator, stringMccMnc;
-    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,7 +97,8 @@ public class HalUtama3G extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hal_utama_3g);
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-
+        SharedPreferences prefs3g = getSharedPreferences("HalUtama3G", MODE_PRIVATE);
+        username = prefs3g.getString("username", "UNKNOWN");
         criteria = new Criteria();
         criteria.setAccuracy(Criteria.ACCURACY_FINE);
         final int min = 1;
@@ -185,7 +189,7 @@ public class HalUtama3G extends AppCompatActivity {
 
         String startDate = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
 
-        csvFilename = startDate;
+        csvFilename = username+"-"+startDate;
         csvFilename = csvFilename.replace(' ', '_').replace(",", "");
         ((TextView) findViewById(R.id.filenameValue)).setText(csvFilename);
 
@@ -210,7 +214,7 @@ public class HalUtama3G extends AppCompatActivity {
                 srscp = String.valueOf(rscp);
                 slac= String.valueOf(lac);
                 scid = String.valueOf(cellid);
-                suarfcn= String.valueOf(lac);
+                suarfcn= String.valueOf(uarfcn);
                 smcc = String.valueOf(mcc);
                 smnc = String.valueOf(mnc);
                 snetworkOperator = smcc + smnc;
@@ -224,6 +228,7 @@ public class HalUtama3G extends AppCompatActivity {
                 if (suarfcn.equals("2147483647")){
                     suarfcn = "Error Reading";
                 }
+
 
                 switch (snetworkOperator) {
                     case "51010":
@@ -249,7 +254,7 @@ public class HalUtama3G extends AppCompatActivity {
 
                 if (isRecording) {
                     String timeCapture = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
-                    data.add(new String[]{timeCapture, spsc, srscp, slac, scid, suarfcn, snetworkOperator});
+                    data.add(new String[]{username, spsc, srscp, slac, scid, suarfcn, timeCapture});
                     ++numDataPoints;
                 }
 
@@ -371,7 +376,7 @@ public class HalUtama3G extends AppCompatActivity {
             public void run() {
 
                 CSVWriter writer;
-                String[] headers = "PSC, RSCP, LAC, CellID, UARFCN, Network Operator".split(",");
+                String[] headers = "Username, PSC, RSCP, LAC, CellID, UARFCN, Network Operator".split(",");
 
                 try {
                     File file = new File(getExternalFilesDir(null), csvFilename + ".csv");
@@ -441,11 +446,11 @@ public class HalUtama3G extends AppCompatActivity {
         top = mid = low = 0;
 
         for (String[] dataVals : data) {
-            int ecno = Integer.valueOf(dataVals[1]);
+            int rscp = Integer.valueOf(dataVals[1]);
 
-            if (ecno >= -70) {
+            if (rscp >= -70) {
                 top++;
-            } else if (ecno <= -71 && ecno >= -80) {
+            } else if (rscp <= -71 && rscp >= -80) {
                 mid++;
             } else {
                 low++;

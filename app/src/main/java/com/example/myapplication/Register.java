@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.util.Log;
@@ -100,9 +101,10 @@ public class Register extends AppCompatActivity {
      * Launch Dashboard Activity on Successful Sign Up
      */
     private void loadDashboard() {
-        Intent i = new Intent(getApplicationContext(), HalUtamaChoice.class);
+        SharedPreferences prefs = getSharedPreferences("MyApp", MODE_PRIVATE);
+        prefs.edit().putString("username", username).apply();
+        Intent i = new Intent(this, LogIn.class);
         i.putExtra("usernameIntent",username);
-        i.putExtra("fullnameIntent",fullName);
         startActivity(i);
         finish();
 

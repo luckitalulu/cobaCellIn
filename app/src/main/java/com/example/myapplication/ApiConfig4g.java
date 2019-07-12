@@ -8,7 +8,7 @@ import retrofit2.http.POST;
 import retrofit2.http.Part;
 interface ApiConfig4g {
     @Multipart
-    @POST("uploadtoserver4g.php")
+    @POST ("uploadtoserver4g.php")
     Call<ServerResponse> uploadFile(@Part MultipartBody.Part file,
                                     @Part("file") RequestBody name);
 }

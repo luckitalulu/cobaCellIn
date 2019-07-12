@@ -51,8 +51,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_marginTop="20dp"
-            android:textColor="#ccc" />
-
+            android:textColor="#ccc"/>
     <Button
             android:id="@+id/btnLoginRegister"
             android:text="@string/register"
@@ -60,7 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="#aaa"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"/>
 
 
 </LinearLayout>
